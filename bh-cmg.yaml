@@ -1,0 +1,61 @@
+study_id: BHCMG
+study_accession:
+study_title: Baylor-Hopkins Center for Mendelian Genomics (BHCMG)
+study_desc: The BHCMG is a multi-center collaboration aimed at identifying the genes responsible for Mendelian phenotypes by whole exome and whole genome sequencing.
+url: https://bhcmg.org/fhir
+identifier_prefix: https://bhcmg.org/fhir/ids
+dd_prefix: https://github.com/anvilproject/acr-harmonized-data-model/fhir
+output_filename: bhcmg
+id_colname: subject_id
+
+projection_version: current
+whistle_src: _entry.wstl
+
+# This is where the harmony file will be written
+code_harmonization_dir: harmony/dsc
+
+# This is the prefix associated with the final study harmony file
+# This must match whatever is used in the whistle code (which is data-harmony
+# at this time)
+harmony_prefix: data-harmony
+
+# List each file required to support the level of harmonized terms required
+# by this project.
+code_harmonization:
+  - harmony/study.csv
+  - harmony/dataset.csv
+  - harmony/demographics.csv
+  - harmony/encounter.csv
+  - harmony/misc.csv
+projections:
+  study: projector/study_only
+  dataset: projector/dataset
+  harmonized: projector/harmonized
+
+require_official: True
+curies:
+  http://purl.obolibrary.org/obo/hp.owl: HP
+  http://purl.obolibrary.org/obo/mondo.owl: MONDO
+  http://purl.obolibrary.org/obo/maxo.owl: MAXO
+  http://purl.obolibrary.org/obo/ncit.owl: NCIT
+env:
+  local: dev
+  dev: dev
+  qa: tbd-qa
+  prod: tbd-prod
+dataset:
+  study_meta:
+    filename: data/tables/DSC/study.csv
+    data_dictionary:
+      filename: data/dd/study.csv
+  study_contacts:
+    hidden: true
+    filename: data/tables/DSC/contacts.csv
+    data_dictionary:
+      filename: data/dd/contacts.csv
+    embed:
+      dataset: study_meta
+      colname: Study Code
+active_tables:
+  ALL: true
+#  family: true
