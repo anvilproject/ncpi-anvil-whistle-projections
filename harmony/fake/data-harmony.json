@@ -1,0 +1,595 @@
+{
+  "id": "data-harmony",
+  "resourceType": "ConceptMap",
+  "version": "v1",
+  "group": [
+    {
+      "source": "Sex",
+      "target": "http://hl7.org/fhir/administrative-gender",
+      "element": [
+        {
+          "code": "female",
+          "display": "Female",
+          "target": [
+            {
+              "code": "female",
+              "display": "Female",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "male",
+          "display": "Male",
+          "target": [
+            {
+              "code": "male",
+              "display": "Male",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Other",
+          "display": "Other",
+          "target": [
+            {
+              "code": "other",
+              "display": "Other",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "unknown",
+          "display": "Unknown",
+          "target": [
+            {
+              "code": "unknown",
+              "display": "Unknown",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Sex",
+      "target": "self",
+      "element": [
+        {
+          "code": "female",
+          "display": "Female",
+          "target": [
+            {
+              "code": "female",
+              "display": "Female",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "male",
+          "display": "Male",
+          "target": [
+            {
+              "code": "male",
+              "display": "Male",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Other",
+          "display": "Other",
+          "target": [
+            {
+              "code": "Other",
+              "display": "Other",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "unknown",
+          "display": "Unknown",
+          "target": [
+            {
+              "code": "unknown",
+              "display": "Unknown",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Race",
+      "target": "urn:oid:2.16.840.1.113883.6.238",
+      "element": [
+        {
+          "code": "American Indian or Alaska Native",
+          "display": "American Indian or Alaska Native",
+          "target": [
+            {
+              "code": "1002-5",
+              "display": "American Indian or Alaska Native",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Asian",
+          "display": "Asian",
+          "target": [
+            {
+              "code": "2028-9",
+              "display": "Asian",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Black or African American",
+          "display": "Black or African American",
+          "target": [
+            {
+              "code": "2054-5",
+              "display": "Black or African American",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Other",
+          "display": "Other",
+          "target": [
+            {
+              "code": "2131-1",
+              "display": "Other Race",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "More than one race",
+          "display": "More than one race",
+          "target": [
+            {
+              "code": "2131-1",
+              "display": "Other Race",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Native Hawaiian or Other Pacific Islander",
+          "display": "Native Hawaiian or Other Pacific Islander",
+          "target": [
+            {
+              "code": "2076-8",
+              "display": "Native Hawaiian or Other Pacific Islander",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "White",
+          "display": "White",
+          "target": [
+            {
+              "code": "2106-3",
+              "display": "White",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "East Asian",
+          "display": "UK only; do not use for US data",
+          "target": [
+            {
+              "code": "2028-9",
+              "display": "Asian",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Latin American",
+          "display": "UK only; do not use for US data",
+          "target": [
+            {
+              "code": "2178-2",
+              "display": "Latin American",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Middle Eastern or North African",
+          "display": "UK only; do not use for US data",
+          "target": [
+            {
+              "code": "2106-3",
+              "display": "White",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "South Asian",
+          "display": "UK only; do not use for US data",
+          "target": [
+            {
+              "code": "2028-9",
+              "display": "Asian",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Race",
+      "target": "self",
+      "element": [
+        {
+          "code": "American Indian or Alaska Native",
+          "display": "American Indian or Alaska Native",
+          "target": [
+            {
+              "code": "American Indian or Alaska Native",
+              "display": "American Indian or Alaska Native",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Asian",
+          "display": "Asian",
+          "target": [
+            {
+              "code": "Asian",
+              "display": "Asian",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Black or African American",
+          "display": "Black or African American",
+          "target": [
+            {
+              "code": "Black or African American",
+              "display": "Black or African American",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Other",
+          "display": "Other",
+          "target": [
+            {
+              "code": "Other",
+              "display": "Other",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "More than one race",
+          "display": "More than one race",
+          "target": [
+            {
+              "code": "More than one race",
+              "display": "More than one race",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Native Hawaiian or Other Pacific Islander",
+          "display": "Native Hawaiian or Other Pacific Islander",
+          "target": [
+            {
+              "code": "Native Hawaiian or Other Pacific Islander",
+              "display": "Native Hawaiian or Other Pacific Islander",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "White",
+          "display": "White",
+          "target": [
+            {
+              "code": "White",
+              "display": "White",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Prefer not to answer",
+          "display": "Prefer not to answer",
+          "target": [
+            {
+              "code": "Prefer not to answer",
+              "display": "Prefer not to answer",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Unknown",
+          "display": "Unknown",
+          "target": [
+            {
+              "code": "Unknown",
+              "display": "Unknown",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "East Asian",
+          "display": "UK only; do not use for US data",
+          "target": [
+            {
+              "code": "East Asian",
+              "display": "UK only; do not use for US data",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Latin American",
+          "display": "UK only; do not use for US data",
+          "target": [
+            {
+              "code": "Latin American",
+              "display": "UK only; do not use for US data",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Middle Eastern or North African",
+          "display": "UK only; do not use for US data",
+          "target": [
+            {
+              "code": "Middle Eastern or North African",
+              "display": "UK only; do not use for US data",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "South Asian",
+          "display": "UK only; do not use for US data",
+          "target": [
+            {
+              "code": "South Asian",
+              "display": "UK only; do not use for US data",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Race",
+      "target": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+      "element": [
+        {
+          "code": "Prefer not to answer",
+          "display": "Prefer not to answer",
+          "target": [
+            {
+              "code": "ASKU",
+              "display": "asked but unknown",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Unknown",
+          "display": "Unknown",
+          "target": [
+            {
+              "code": "UNK",
+              "display": "Unknown",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Ethnicity",
+      "target": "urn:oid:2.16.840.1.113883.6.238",
+      "element": [
+        {
+          "code": "Hispanic or Latino",
+          "display": "Hispanic or Latino",
+          "target": [
+            {
+              "code": "2135-2",
+              "display": "Hispanic or Latino",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Not Hispanic or Latino",
+          "display": "Not Hispanic or Latino",
+          "target": [
+            {
+              "code": "2186-5",
+              "display": "Not Hispanic or Latino",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Ethnicity",
+      "target": "self",
+      "element": [
+        {
+          "code": "Hispanic or Latino",
+          "display": "Hispanic or Latino",
+          "target": [
+            {
+              "code": "Hispanic or Latino",
+              "display": "Hispanic or Latino",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Not Hispanic or Latino",
+          "display": "Not Hispanic or Latino",
+          "target": [
+            {
+              "code": "Not Hispanic or Latino",
+              "display": "Not Hispanic or Latino",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Prefer not to answer",
+          "display": "Prefer not to answer",
+          "target": [
+            {
+              "code": "Prefer not to answer",
+              "display": "Prefer not to answer",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Unknown",
+          "display": "Unknown",
+          "target": [
+            {
+              "code": "Unknown",
+              "display": "Unknown",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Ethnicity",
+      "target": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+      "element": [
+        {
+          "code": "Prefer not to answer",
+          "display": "Prefer not to answer",
+          "target": [
+            {
+              "code": "ASKU",
+              "display": "asked but unknown",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Unknown",
+          "display": "Unknown",
+          "target": [
+            {
+              "code": "UNK",
+              "display": "Unknown",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "DataSet",
+      "target": "https://github.com/anvilproject/acr-harmonized-data-model/fhir/CodeSystem/data-dictionary/dataset",
+      "element": [
+        {
+          "code": "study_meta",
+          "display": "study_meta",
+          "target": [
+            {
+              "code": "study_meta",
+              "display": "study_meta",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "study_meta",
+      "target": "https://github.com/anvilproject/acr-harmonized-data-model/fhir/CodeSystem/data-dictionary/study_meta",
+      "element": [
+        {
+          "code": "external_study_id",
+          "display": "External Study ID",
+          "target": [
+            {
+              "code": "external_study_id",
+              "display": "External Study ID",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "parent_study_id",
+          "display": "External Study ID",
+          "target": [
+            {
+              "code": "parent_study_id",
+              "display": "External Study ID",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "funding_source",
+          "display": "Funding Source",
+          "target": [
+            {
+              "code": "funding_source",
+              "display": "Funding Source",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "principal_investigator",
+          "display": "Principal Investigator",
+          "target": [
+            {
+              "code": "principal_investigator",
+              "display": "Principal Investigator",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "study_title",
+          "display": "Study Title",
+          "target": [
+            {
+              "code": "study_title",
+              "display": "Study Title",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

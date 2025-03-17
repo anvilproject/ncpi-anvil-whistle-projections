@@ -1,18 +1,18 @@
-study_id: BHCMG
+study_id: Fake_Study
 study_accession:
-study_title: Baylor-Hopkins Center for Mendelian Genomics (BHCMG)
-study_desc: The BHCMG is a multi-center collaboration aimed at identifying the genes responsible for Mendelian phenotypes by whole exome and whole genome sequencing.
-url: https://bhcmg.org/fhir
-identifier_prefix: https://bhcmg.org/fhir/ids
+study_title: This Is a Fake Study for Running Whistler
+study_desc: This a fake study to test running whistler.
+url: https://fake.org/fhir
+identifier_prefix: https://fake.org/fhir/ids
 dd_prefix: https://github.com/anvilproject/acr-harmonized-data-model/fhir
-output_filename: bhcmg
+output_filename: fake
 id_colname: subject_id
 
 projection_version: current
 whistle_src: _entry.wstl
 
 # This is where the harmony file will be written
-code_harmonization_dir: harmony/bhcmg
+code_harmonization_dir: harmony/fake
 
 # This is the prefix associated with the final study harmony file
 # This must match whatever is used in the whistle code (which is data-harmony
@@ -45,7 +45,7 @@ env:
   prod: tbd-prod
 dataset:
   study_meta:
-    filename: data/tables/bhcmg/BH_CMG_Study_Draft.csv
+    filename: data/tables/fake/fake_study.csv
     data_dictionary:
       filename: data/dd/study.csv
 active_tables:

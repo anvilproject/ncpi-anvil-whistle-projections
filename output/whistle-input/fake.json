@@ -1,0 +1,188 @@
+{
+  "config": {
+    "missing": [
+      "NA",
+      "",
+      "Not Provided"
+    ]
+  },
+  "study": {
+    "id": "Fake_Study",
+    "accession": null,
+    "title": "This Is a Fake Study for Running Whistler",
+    "desc": "This a fake study to test running whistler.",
+    "identifier-prefix": "https://fake.org/fhir/ids",
+    "dd-prefix": "https://github.com/anvilproject/acr-harmonized-data-model/fhir",
+    "url": "https://fake.org/fhir",
+    "publisher": "NCPI FHIR Working Group",
+    "data-dictionary": [
+      {
+        "url": "https://github.com/anvilproject/acr-harmonized-data-model/fhir/CodeSystem/data-dictionary/dataset",
+        "study": "Fake_Study",
+        "table_name": "DataSet",
+        "values": [
+          {
+            "varname": "study_meta",
+            "desc": "study_meta",
+            "type": "DD-Table",
+            "url": "https://github.com/anvilproject/acr-harmonized-data-model/fhir/CodeSystem/data-dictionary/study_meta",
+            "values": [
+              {
+                "code": "external_study_id",
+                "description": "External Study ID"
+              },
+              {
+                "code": "parent_study_id",
+                "description": "External Study ID"
+              },
+              {
+                "code": "funding_source",
+                "description": "Funding Source"
+              },
+              {
+                "code": "principal_investigator",
+                "description": "Principal Investigator"
+              },
+              {
+                "code": "study_title",
+                "description": "Study Title"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "table_name": "study_meta",
+        "url": "https://github.com/anvilproject/acr-harmonized-data-model/fhir/CodeSystem/data-dictionary/study_meta",
+        "variables": [
+          {
+            "varname": "external_study_id",
+            "desc": "External Study ID",
+            "type": "string",
+            "values": []
+          },
+          {
+            "varname": "parent_study_id",
+            "desc": "External Study ID",
+            "type": "string",
+            "values": []
+          },
+          {
+            "varname": "funding_source",
+            "desc": "Funding Source",
+            "type": "string",
+            "values": []
+          },
+          {
+            "varname": "principal_investigator",
+            "desc": "Principal Investigator",
+            "type": "string",
+            "values": []
+          },
+          {
+            "varname": "study_title",
+            "desc": "Study Title",
+            "type": "string",
+            "values": []
+          }
+        ]
+      }
+    ],
+    "annotations": {}
+  },
+  "code-systems": [
+    {
+      "url": "https://github.com/anvilproject/acr-harmonized-data-model/fhir/CodeSystem/data-dictionary/dataset",
+      "study": "Fake_Study",
+      "table_name": "DataSet",
+      "values": [
+        {
+          "code": "study_meta",
+          "description": "study_meta"
+        }
+      ]
+    },
+    {
+      "varname": null,
+      "url": "https://github.com/anvilproject/acr-harmonized-data-model/fhir/CodeSystem/data-dictionary/study_meta",
+      "study": "Fake_Study",
+      "values": [
+        {
+          "code": "external_study_id",
+          "description": "External Study ID"
+        },
+        {
+          "code": "parent_study_id",
+          "description": "External Study ID"
+        },
+        {
+          "code": "funding_source",
+          "description": "Funding Source"
+        },
+        {
+          "code": "principal_investigator",
+          "description": "Principal Investigator"
+        },
+        {
+          "code": "study_title",
+          "description": "Study Title"
+        }
+      ],
+      "table_name": "study_meta"
+    },
+    {
+      "varname": "external_study_id",
+      "url": "https://github.com/anvilproject/acr-harmonized-data-model/fhir/CodeSystem/data-dictionary/study_meta/external_study_id",
+      "study": "Fake_Study",
+      "table_name": "study_meta",
+      "values": []
+    },
+    {
+      "varname": "parent_study_id",
+      "url": "https://github.com/anvilproject/acr-harmonized-data-model/fhir/CodeSystem/data-dictionary/study_meta/parent_study_id",
+      "study": "Fake_Study",
+      "table_name": "study_meta",
+      "values": []
+    },
+    {
+      "varname": "funding_source",
+      "url": "https://github.com/anvilproject/acr-harmonized-data-model/fhir/CodeSystem/data-dictionary/study_meta/funding_source",
+      "study": "Fake_Study",
+      "table_name": "study_meta",
+      "values": []
+    },
+    {
+      "varname": "principal_investigator",
+      "url": "https://github.com/anvilproject/acr-harmonized-data-model/fhir/CodeSystem/data-dictionary/study_meta/principal_investigator",
+      "study": "Fake_Study",
+      "table_name": "study_meta",
+      "values": []
+    },
+    {
+      "varname": "study_title",
+      "url": "https://github.com/anvilproject/acr-harmonized-data-model/fhir/CodeSystem/data-dictionary/study_meta/study_title",
+      "study": "Fake_Study",
+      "table_name": "study_meta",
+      "values": []
+    }
+  ],
+  "harmony": [],
+  "study_meta": [
+    {
+      "id": "6dd14c00-c336-45fa-8f65-19ff166ac8c4",
+      "external_study_id": "Super Fake Study",
+      "parent_study_id": "",
+      "funding_source": "Funding Source|Funding Source 2",
+      "principal_investigator": "John Doe|Jane Doe",
+      "study_title": "This Is a Fake Study for Running Whistler"
+    },
+    {
+      "id": "0c9d277b-ac49-4a39-89b0-19ee37cc11da",
+      "external_study_id": "Fake Study|Fake Study 2",
+      "parent_study_id": "6dd14c00-c336-45fa-8f65-19ff166ac8c4",
+      "funding_source": "Funding Source 3",
+      "principal_investigator": "Larry Smith",
+      "study_title": "This Is Not the Super Fake Study for Running Whistler"
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "research_study": [
+    {
+      "extension": [
+        {
+          "extension": [
+            {
+              "url": "name",
+              "valueString": "John Doe"
+            },
+            {
+              "url": "role",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "code": "primary-investigator",
+                    "system": "https://hl7.org/fhir/valueset-research-study-party-role.html"
+                  }
+                ]
+              }
+            }
+          ],
+          "url": "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/research-study-associated-party"
+        },
+        {
+          "extension": [
+            {
+              "url": "name",
+              "valueString": "Jane Doe"
+            },
+            {
+              "url": "role",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "code": "primary-investigator",
+                    "system": "https://hl7.org/fhir/valueset-research-study-party-role.html"
+                  }
+                ]
+              }
+            }
+          ],
+          "url": "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/research-study-associated-party"
+        }
+      ],
+      "id": "6dd14c00-c336-45fa-8f65-19ff166ac8c4",
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/researchstudy",
+          "use": "official",
+          "value": "Super Fake Study"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "relatedArtifact": [
+        {
+          "display": "Funding Source",
+          "label": "funding source",
+          "type": "documentation"
+        },
+        {
+          "display": "Funding Source 2",
+          "label": "funding source",
+          "type": "documentation"
+        }
+      ],
+      "resourceType": "ResearchStudy",
+      "status": "active"
+    },
+    {
+      "extension": [
+        {
+          "extension": [
+            {
+              "url": "name",
+              "valueString": "Larry Smith"
+            },
+            {
+              "url": "role",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "code": "primary-investigator",
+                    "system": "https://hl7.org/fhir/valueset-research-study-party-role.html"
+                  }
+                ]
+              }
+            }
+          ],
+          "url": "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/research-study-associated-party"
+        }
+      ],
+      "id": "0c9d277b-ac49-4a39-89b0-19ee37cc11da",
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/researchstudy",
+          "use": "official",
+          "value": "Fake Study"
+        },
+        {
+          "system": "https://fake.org/fhir/ids/researchstudy",
+          "value": "Fake Study 2"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "partOf": {
+        "reference": "ResearchStudy/6dd14c00-c336-45fa-8f65-19ff166ac8c4"
+      },
+      "relatedArtifact": [
+        {
+          "display": "Funding Source 3",
+          "label": "funding source",
+          "type": "documentation"
+        }
+      ],
+      "resourceType": "ResearchStudy",
+      "status": "active"
+    }
+  ]
+}
