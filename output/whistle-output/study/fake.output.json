@@ -117,9 +117,11 @@
           }
         ]
       },
-      "partOf": {
-        "reference": "ResearchStudy/6dd14c00-c336-45fa-8f65-19ff166ac8c4"
-      },
+      "partOf": [
+        {
+          "reference": "ResearchStudy/6dd14c00-c336-45fa-8f65-19ff166ac8c4"
+        }
+      ],
       "relatedArtifact": [
         {
           "display": "Funding Source 3",

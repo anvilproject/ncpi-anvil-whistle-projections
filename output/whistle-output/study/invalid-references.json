@@ -1,0 +1,7 @@
+{
+  "Fake_Study": {
+    "http://localhost:8080/fhir": {
+      "bad_references": []
+    }
+  }
+}

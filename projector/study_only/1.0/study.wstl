@@ -5,7 +5,7 @@ def Study(study, study_meta) {
     title: study.study_title;
 
     if (study_meta.parent_study_id?) {
-        partOf: {
+        partOf[]: {
             reference: $StrCat("ResearchStudy","/",study_meta.parent_study_id)
         }
     }    
