@@ -19,7 +19,7 @@
 //
 // We will ignore any race details that are not checked 
 // Add the ethnicity extension
-def EthnicityExtension(ethnicity) {
+def EthnicityExtension(ethnicity, ethnicity_display) {
     if (ethnicity? and ethnicity ~= "NA") {
         var EthnicityValueCoding : HarmonizeMappedFirst(ethnicity, "Ethnicity");
 
@@ -29,12 +29,12 @@ def EthnicityExtension(ethnicity) {
                 extension[0].valueCoding : EthnicityValueCoding;
                 extension[0].url : "ombCategory";
 
-                extension[1].valueString (if ethnicity?): ethnicity;
-                extension[1].url (if ethnicity?): "text";
+                extension[1].valueString (if ethnicity_display?): ethnicity_display;
+                extension[1].url (if ethnicity_display?): "text";
             } else {
-                if (ethnicity?) {
+                if (ethnicity_display?) {
                     url : "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity";
-                    extension[0].valueString: ethnicity;
+                    extension[0].valueString: ethnicity_display;
                     extension[0].url: "text";
                 }
             }    

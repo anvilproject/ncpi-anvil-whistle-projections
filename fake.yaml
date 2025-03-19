@@ -26,10 +26,11 @@ code_harmonization:
   - harmony/dataset.csv
   - harmony/demographics.csv
   - harmony/encounter.csv
+  - harmony/identifier_curies.csv
   - harmony/misc.csv
 projections:
-  study: projector/study_only
-  dataset: projector/dataset
+  study: projector/harmonized
+  dataset: projector/harmonized
   harmonized: projector/harmonized
 
 require_official: True
@@ -48,6 +49,18 @@ dataset:
     filename: data/tables/fake/fake_study.csv
     data_dictionary:
       filename: data/dd/study.csv
+  participant:
+    filename: data/tables/fake/fake_participant.csv
+    data_dictionary:
+      filename: data/dd/participant.csv
+  demographics:
+    hidden: true
+    filename: data/tables/fake/fake_demographics.csv
+    data_dictionary:
+      filename: data/dd/demographics.csv
+    embed:
+      dataset: participant
+      colname: subject_id
 active_tables:
   ALL: true
 #  family: true
