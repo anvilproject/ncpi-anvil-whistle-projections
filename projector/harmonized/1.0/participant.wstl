@@ -1,0 +1,44 @@
+def ParticipantIdentifier(external_id) {
+    var identifier_parts: $StrSplit(external_id, ":");
+    value: identifier_parts[1];
+    system: HarmonizeAsSystem(identifier_parts[0], "ext_identifiers")
+}
+
+def AgeAtLastVitalStatus(age) {
+    if (age?) {
+    url: "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/research-age-at-last-vital-status";
+    valueQuantity.value: $ParseInt(age);
+    }
+}
+
+def DobMethod(method) {
+    if (method?) {
+        var MethodValueCoding: HarmonizeMappedFirst(method, "Date of Birth Type");
+
+        if (MethodValueCoding?) {
+            url: "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/research-date-of-birth-method";
+            valueCoding : MethodValueCoding;      
+        } 
+}
+}
+
+def Participant(study, participant) {
+    meta.tag[]: StudyMeta(study);
+    id: participant.id;
+    resourceType: "Patient";
+    identifier[]: ParticipantIdentifier(participant.external_id);
+    identifier[0].use: "official";
+
+    var races: $StrSplit(participant.demographics[0].race, "|");
+    extension[]: RaceExtension(races[], participant.demographics[0].race_display);
+    extension[]: EthnicityExtension(participant.demographics[0].ethnicity, participant.demographics[0].ethnicity_display);
+    extension[]: SexExtension(participant.demographics[0].sex);
+    extension[]: AgeAtLastVitalStatus(participant.demographics[0].age_at_last_vital_status);
+    deceasedBoolean (if participant.demographics[0].vital_status = "Dead"): true;
+    birthDate: participant.demographics[0].date_of_birth;
+    extension[]: DobMethod(participant.demographics[0].date_of_birth_type);
+}
+
+def ProcessParticipants(study, participants) {
+    out participant: Participant(study, participants);
+}
