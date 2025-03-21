@@ -46,16 +46,16 @@ env:
   prod: tbd-prod
 dataset:
   study_meta:
-    filename: data/tables/fake/fake_study.csv
+    filename: data/tables/fake/0ink0ink_Study.csv
     data_dictionary:
       filename: data/dd/study.csv
   participant:
-    filename: data/tables/fake/fake_participant.csv
+    filename: data/tables/fake/0ink0ink_Subject.csv
     data_dictionary:
       filename: data/dd/participant.csv
   demographics:
     hidden: true
-    filename: data/tables/fake/fake_demographics.csv
+    filename: data/tables/fake/0ink0ink_Demographics.csv
     data_dictionary:
       filename: data/dd/demographics.csv
     embed:

@@ -14,7 +14,7 @@
 
 def Group_Participants(subjects) {
         entity: {
-        reference: $StrCat("Patient","/",subjects.external_id)
+        reference: $StrCat("Patient","/",subjects.subject_id)
       }
     }
 

@@ -1,7 +1,8 @@
-def ParticipantIdentifier(external_id) {
-    var identifier_parts: $StrSplit(external_id, ":");
-    value: identifier_parts[1];
-    system: HarmonizeAsSystem(identifier_parts[0], "ext_identifiers")
+//Function that splits id into parts, if there is a curie separated by ":" from the id number
+//def ParticipantIdentifier(external_id) {
+//   var identifier_parts: $StrSplit(external_id, ":");
+//   value: identifier_parts[1];
+//   system: HarmonizeAsSystem(identifier_parts[0], "ext_identifiers")
 }
 
 def AgeAtLastVitalStatus(age) {
@@ -26,7 +27,7 @@ def Participant(study, participant) {
     meta.tag[]: StudyMeta(study);
     id: participant.id;
     resourceType: "Patient";
-    identifier[]: ParticipantIdentifier(participant.external_id);
+    identifier[]: Key_Identifier(study, "Patient", participant.id);
     identifier[0].use: "official";
 
     var races: $StrSplit(participant.demographics[0].race, "|");
