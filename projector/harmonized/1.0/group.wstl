@@ -32,9 +32,7 @@ def Group(study, subjects) {
     quantity: $ListLen(subjects[*]);
     resourceType: "Group";
 
-    //member[]: Reference_Enrollment(study, subjects[])
-
-    member[]: Group_Participants(subjects[])
+    member[]: Group_Participants(subjects[]);
 }
 
 // Description: Wrapper to create the group(s)

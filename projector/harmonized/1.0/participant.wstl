@@ -3,7 +3,7 @@
 //   var identifier_parts: $StrSplit(external_id, ":");
 //   value: identifier_parts[1];
 //   system: HarmonizeAsSystem(identifier_parts[0], "ext_identifiers")
-}
+//}
 
 def AgeAtLastVitalStatus(age) {
     if (age?) {
