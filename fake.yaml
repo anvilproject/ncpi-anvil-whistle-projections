@@ -26,10 +26,11 @@ code_harmonization:
   - harmony/dataset.csv
   - harmony/demographics.csv
   - harmony/encounter.csv
+  - harmony/identifier_curies.csv
   - harmony/misc.csv
 projections:
-  study: projector/study_only
-  dataset: projector/dataset
+  study: projector/harmonized
+  dataset: projector/harmonized
   harmonized: projector/harmonized
 
 require_official: True
@@ -45,9 +46,21 @@ env:
   prod: tbd-prod
 dataset:
   study_meta:
-    filename: data/tables/fake/fake_study.csv
+    filename: data/tables/fake/0ink0ink_Study.csv
     data_dictionary:
       filename: data/dd/study.csv
+  participant:
+    filename: data/tables/fake/0ink0ink_Subject.csv
+    data_dictionary:
+      filename: data/dd/participant.csv
+  demographics:
+    hidden: true
+    filename: data/tables/fake/0ink0ink_Demographics.csv
+    data_dictionary:
+      filename: data/dd/demographics.csv
+    embed:
+      dataset: participant
+      colname: subject_id
 active_tables:
   ALL: true
 #  family: true

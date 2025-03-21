@@ -18,7 +18,7 @@
 //   race - The value to be mapped to an OMB race value from the Harmony file
 //
 // We will ignore any race details that are not checked 
-def RaceExtension(race) {
+def RaceExtension(race, race_display) {
     if (race? and race ~= "NA") {
         var RaceValueCoding: HarmonizeMappedFirst(race, "Race");
 
@@ -26,12 +26,12 @@ def RaceExtension(race) {
             url: "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race";
             extension[0].valueCoding : RaceValueCoding;
             extension[0].url : "ombCategory";
-            extension[1].valueString (if race?): race;
-            extension[1].url (if race?): "text";
+            extension[1].valueString (if race_display?): race_display;
+            extension[1].url (if race_display?): "text";
         } else {
             url: "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race";
-            extension[0].valueString: race;
-            extension[0].url (if race?): "text";           
+            extension[0].valueString: race_display;
+            extension[0].url (if race_display?): "text";           
         }
     }
 }

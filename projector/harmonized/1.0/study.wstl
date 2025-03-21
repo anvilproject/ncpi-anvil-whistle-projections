@@ -1,1 +1,49 @@
-../../dataset/1.0/study.wstl
+def Study(study, study_meta) {
+    meta.tag[]: StudyMeta(study);
+    id: study_meta.id;
+    resourceType: "ResearchStudy";
+    title: study.study_title;
+
+    if (study_meta.parent_study_id?) {
+        partOf[]: {
+            reference: $StrCat("ResearchStudy","/",study_meta.parent_study_id)
+        }
+    }    
+
+    var identifiers: $StrSplit(study_meta.external_study_id, "|");
+    identifier[]: Key_Identifier(study, "ResearchStudy", identifiers[]);
+    identifier[0].use: "official";
+
+    status: "active";
+
+    var funding_sources: $StrSplit(study_meta.funding_source, "|");
+    relatedArtifact[]: FundingArtifact(funding_sources[]);
+
+    var principal_investigators: $StrSplit(study_meta.principal_investigator, "|");
+    extension[]: PrincipalInvestigatorExtension(principal_investigators[]);
+}
+
+def FundingArtifact(funding) {
+    if (funding?) {
+    type: "documentation";
+    label: "funding source";
+    display: funding;
+    }
+}
+
+def PrincipalInvestigatorExtension(pi) {
+    if (pi?) {
+        url: "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/research-study-associated-party";
+        extension[0].valueString : pi;
+        extension[0].url : "name";
+        extension[1].url: "role";
+        extension[1].valueCodeableConcept.coding[]: {
+        system: "https://hl7.org/fhir/valueset-research-study-party-role.html"; 
+        code: "primary-investigator";
+    }
+    }
+}
+
+def ProcessStudy(study, study_meta) {
+    out research_study: Study(study, study_meta);
+}

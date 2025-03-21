@@ -41,6 +41,17 @@
           ]
         },
         {
+          "code": "intersex",
+          "display": "Intersex",
+          "target": [
+            {
+              "code": "intersex",
+              "display": "Intersex",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
           "code": "unknown",
           "display": "Unknown",
           "target": [
@@ -91,6 +102,17 @@
           ]
         },
         {
+          "code": "intersex",
+          "display": "Intersex",
+          "target": [
+            {
+              "code": "intersex",
+              "display": "Intersex",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
           "code": "unknown",
           "display": "Unknown",
           "target": [
@@ -108,7 +130,7 @@
       "target": "urn:oid:2.16.840.1.113883.6.238",
       "element": [
         {
-          "code": "American Indian or Alaska Native",
+          "code": "american_indian_or_alaskan_native",
           "display": "American Indian or Alaska Native",
           "target": [
             {
@@ -119,7 +141,7 @@
           ]
         },
         {
-          "code": "Asian",
+          "code": "asian",
           "display": "Asian",
           "target": [
             {
@@ -130,7 +152,7 @@
           ]
         },
         {
-          "code": "Black or African American",
+          "code": "black_or_african_american",
           "display": "Black or African American",
           "target": [
             {
@@ -141,7 +163,7 @@
           ]
         },
         {
-          "code": "Other",
+          "code": "other_race",
           "display": "Other",
           "target": [
             {
@@ -163,7 +185,7 @@
           ]
         },
         {
-          "code": "Native Hawaiian or Other Pacific Islander",
+          "code": "native_hawaiian_or_pacific_islander",
           "display": "Native Hawaiian or Other Pacific Islander",
           "target": [
             {
@@ -174,7 +196,7 @@
           ]
         },
         {
-          "code": "White",
+          "code": "white",
           "display": "White",
           "target": [
             {
@@ -235,45 +257,56 @@
       "target": "self",
       "element": [
         {
-          "code": "American Indian or Alaska Native",
+          "code": "american_indian_or_alaskan_native",
           "display": "American Indian or Alaska Native",
           "target": [
             {
-              "code": "American Indian or Alaska Native",
+              "code": "american_indian_or_alaskan_native",
               "display": "American Indian or Alaska Native",
               "equivalence": "equivalent"
             }
           ]
         },
         {
-          "code": "Asian",
+          "code": "asian",
           "display": "Asian",
           "target": [
             {
-              "code": "Asian",
+              "code": "asian",
               "display": "Asian",
               "equivalence": "equivalent"
             }
           ]
         },
         {
-          "code": "Black or African American",
+          "code": "black_or_african_american",
           "display": "Black or African American",
           "target": [
             {
-              "code": "Black or African American",
+              "code": "black_or_african_american",
               "display": "Black or African American",
               "equivalence": "equivalent"
             }
           ]
         },
         {
-          "code": "Other",
+          "code": "other_race",
           "display": "Other",
           "target": [
             {
-              "code": "Other",
+              "code": "other_race",
               "display": "Other",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "asked_but_unknown",
+          "display": "Asked but Unknown",
+          "target": [
+            {
+              "code": "asked_but_unknown",
+              "display": "Asked but Unknown",
               "equivalence": "equivalent"
             }
           ]
@@ -290,22 +323,22 @@
           ]
         },
         {
-          "code": "Native Hawaiian or Other Pacific Islander",
+          "code": "native_hawaiian_or_pacific_islander",
           "display": "Native Hawaiian or Other Pacific Islander",
           "target": [
             {
-              "code": "Native Hawaiian or Other Pacific Islander",
+              "code": "native_hawaiian_or_pacific_islander",
               "display": "Native Hawaiian or Other Pacific Islander",
               "equivalence": "equivalent"
             }
           ]
         },
         {
-          "code": "White",
+          "code": "white",
           "display": "White",
           "target": [
             {
-              "code": "White",
+              "code": "white",
               "display": "White",
               "equivalence": "equivalent"
             }
@@ -323,11 +356,11 @@
           ]
         },
         {
-          "code": "Unknown",
+          "code": "unknown",
           "display": "Unknown",
           "target": [
             {
-              "code": "Unknown",
+              "code": "unknown",
               "display": "Unknown",
               "equivalence": "equivalent"
             }
@@ -381,6 +414,23 @@
     },
     {
       "source": "Race",
+      "target": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor/",
+      "element": [
+        {
+          "code": "asked_but_unknown",
+          "display": "Asked but Unknown",
+          "target": [
+            {
+              "code": "ASKU",
+              "display": "asked but unknown",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Race",
       "target": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
       "element": [
         {
@@ -395,7 +445,7 @@
           ]
         },
         {
-          "code": "Unknown",
+          "code": "unknown",
           "display": "Unknown",
           "target": [
             {
@@ -412,7 +462,7 @@
       "target": "urn:oid:2.16.840.1.113883.6.238",
       "element": [
         {
-          "code": "Hispanic or Latino",
+          "code": "hispanic_or_latino",
           "display": "Hispanic or Latino",
           "target": [
             {
@@ -423,7 +473,7 @@
           ]
         },
         {
-          "code": "Not Hispanic or Latino",
+          "code": "not_hispanic_or_latino",
           "display": "Not Hispanic or Latino",
           "target": [
             {
@@ -440,22 +490,22 @@
       "target": "self",
       "element": [
         {
-          "code": "Hispanic or Latino",
+          "code": "hispanic_or_latino",
           "display": "Hispanic or Latino",
           "target": [
             {
-              "code": "Hispanic or Latino",
+              "code": "hispanic_or_latino",
               "display": "Hispanic or Latino",
               "equivalence": "equivalent"
             }
           ]
         },
         {
-          "code": "Not Hispanic or Latino",
+          "code": "not_hispanic_or_latino",
           "display": "Not Hispanic or Latino",
           "target": [
             {
-              "code": "Not Hispanic or Latino",
+              "code": "not_hispanic_or_latino",
               "display": "Not Hispanic or Latino",
               "equivalence": "equivalent"
             }
@@ -473,11 +523,22 @@
           ]
         },
         {
-          "code": "Unknown",
+          "code": "asked_but_unknown",
+          "display": "asked but unknown",
+          "target": [
+            {
+              "code": "asked_but_unknown",
+              "display": "asked but unknown",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "unknown",
           "display": "Unknown",
           "target": [
             {
-              "code": "Unknown",
+              "code": "unknown",
               "display": "Unknown",
               "equivalence": "equivalent"
             }
@@ -501,12 +562,179 @@
           ]
         },
         {
-          "code": "Unknown",
+          "code": "asked_but_unknown",
+          "display": "asked but unknown",
+          "target": [
+            {
+              "code": "ASKU",
+              "display": "asked but unknown",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "unknown",
           "display": "Unknown",
           "target": [
             {
               "code": "UNK",
               "display": "Unknown",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Date of Birth Type",
+      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig-2/CodeSystem/research-data-date-of-birth-method",
+      "element": [
+        {
+          "code": "exact",
+          "display": "Exact",
+          "target": [
+            {
+              "code": "exact",
+              "display": "Exact",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "year_only",
+          "display": "Year Only",
+          "target": [
+            {
+              "code": "year-only",
+              "display": "Year Only",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "shifted",
+          "display": "Shifted",
+          "target": [
+            {
+              "code": "shifted",
+              "display": "Shifted",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "decade_only",
+          "display": "Decade Only",
+          "target": [
+            {
+              "code": "decade-only",
+              "display": "Decade Only",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "other",
+          "display": "Other",
+          "target": [
+            {
+              "code": "other",
+              "display": "Other",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Date of Birth Type",
+      "target": "self",
+      "element": [
+        {
+          "code": "exact",
+          "display": "Exact",
+          "target": [
+            {
+              "code": "exact",
+              "display": "Exact",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "year_only",
+          "display": "Year Only",
+          "target": [
+            {
+              "code": "year_only",
+              "display": "Year Only",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "shifted",
+          "display": "Shifted",
+          "target": [
+            {
+              "code": "shifted",
+              "display": "Shifted",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "decade_only",
+          "display": "Decade Only",
+          "target": [
+            {
+              "code": "decade_only",
+              "display": "Decade Only",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "other",
+          "display": "Other",
+          "target": [
+            {
+              "code": "other",
+              "display": "Other",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "ext_identifiers",
+      "target": "https://anvilproject.github.io/acr-harmonized-data-model/participant",
+      "element": [
+        {
+          "code": "FKPART",
+          "display": "Fake Participant Identifier",
+          "target": [
+            {
+              "code": "fkpart",
+              "display": "FKPART",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "ext_identifiers",
+      "target": "self",
+      "element": [
+        {
+          "code": "FKPART",
+          "display": "Fake Participant Identifier",
+          "target": [
+            {
+              "code": "FKPART",
+              "display": "Fake Participant Identifier",
               "equivalence": "equivalent"
             }
           ]
@@ -524,6 +752,17 @@
             {
               "code": "study_meta",
               "display": "study_meta",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "participant",
+          "display": "participant",
+          "target": [
+            {
+              "code": "participant",
+              "display": "participant",
               "equivalence": "equivalent"
             }
           ]
@@ -585,6 +824,45 @@
             {
               "code": "study_title",
               "display": "Study Title",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "participant",
+      "target": "https://github.com/anvilproject/acr-harmonized-data-model/fhir/CodeSystem/data-dictionary/participant",
+      "element": [
+        {
+          "code": "subject_id",
+          "display": "Subject ID",
+          "target": [
+            {
+              "code": "subject_id",
+              "display": "Subject ID",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "subject_type",
+          "display": "Subject Type",
+          "target": [
+            {
+              "code": "subject_type",
+              "display": "Subject Type",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "organism_type",
+          "display": "Organism Type",
+          "target": [
+            {
+              "code": "organism_type",
+              "display": "Organism Type",
               "equivalence": "equivalent"
             }
           ]

@@ -1,1 +1,11 @@
-../../dataset/1.0/_non_self_harmony.wstl
+// Description: Strip out all self referenced codings.
+//
+// Arguments:
+//  coding - This is a single result from $HarmonizeCode
+//
+// The result here is only external mappings will be returned
+def NonSelfOnly(coding) {
+    if (coding.system ~= "self" and ~$MatchesRegex(coding.system, "-unharmonized")) {
+        $this: coding;
+    }
+}

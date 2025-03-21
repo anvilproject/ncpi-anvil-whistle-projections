@@ -11,6 +11,13 @@
 //
 // We don't currently have access to consent details, so this just builds the 
 // entire enrollment for the study. 
+
+def Group_Participants(subjects) {
+        entity: {
+        reference: $StrCat("Patient","/",subjects.subject_id)
+      }
+    }
+
 def Group(study, subjects) {
     meta.tag[]: StudyMeta(study);
     meta.profile[]: "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/research-study-group";
@@ -24,6 +31,8 @@ def Group(study, subjects) {
     actual: true;
     quantity: $ListLen(subjects[*]);
     resourceType: "Group";
+
+    member[]: Group_Participants(subjects[]);
 }
 
 // Description: Wrapper to create the group(s)
@@ -31,6 +40,6 @@ def Group(study, subjects) {
 //  study - This is the full study object created by Whistler
 //  demo - Array of demo objects  
 def ProcessGroup(study, participant) {
-    out research_study: Group(study, participant[*]);
+    out research_study: Group(study, participant);
 }
 
