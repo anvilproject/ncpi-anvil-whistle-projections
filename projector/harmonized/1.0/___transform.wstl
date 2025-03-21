@@ -1,4 +1,5 @@
 def Transform_Dataset(resource) {
     $this: ProcessStudy(resource.study, resource.study_meta[]); // resource.participant
     $this: ProcessParticipants(resource.study, resource.participant[]);
+    $this: ProcessGroup(resource.study, resource.participant);
 }
