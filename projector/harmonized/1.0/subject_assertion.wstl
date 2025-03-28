@@ -1,0 +1,98 @@
+def ConditionAssertion(study, condition) {
+    meta.tag[]: StudyMeta(study);
+    //meta.profile[]: "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/ncpi-condition";
+    resourceType: "Observation";
+    status: "final";
+    identifier[]: BuildConditionIdentifier(study, condition.code, condition.subject_id);
+    identifier[0].use: "official";
+    //subject: ParticipantsCondition(condition);
+    code: CompletePartialCoding(condition.code, condition.display, "curie_system");    
+    //_effectiveDateTime (if condition.age_at_assertion?): AgeAtExtension(study, condition.subject_id, condition.age_at_assertion, "years");
+    
+    valueCodeableConcept.coding[]: AssertionCode(condition.value_code, condition.value_display, "condition_assertion");
+
+    //category.coding[] (if condition.assertion_type?): {
+    //   system: "https://nih-ncpi.github.io/ncpi-fhir-ig-2/CodeSystem/condition-type";
+    //   code: condition.assertion_type;
+    //}
+
+    component[0] (if condition.age_at_event?): BuildAgeAtOnset(study, condition);
+    //component[1] (if condition.age_at_resolution?): BuildAgeAtResolution(study, condition);
+}
+
+// misc.csv harmony file. Local code yes/no. Use CompletePartialCoding function, use value_code, NOT value_display
+def AssertionCode(resource_code, resource_display, resource_system) {
+    if (resource_code?) {
+    coding[]: {
+        system: HarmonizeAsSystem(resource_code, resource_system);
+        code: resource_code;
+        display: resource_display;
+    }
+    text: resource_display;
+    }
+}
+
+def BuildAgeAtResolution(study, condition) {
+    code: {
+        coding[]: {
+            code: "age_at_resolution";
+            system: "https://anvilproject.org/acr-harmonized-data-model/";
+            display: "Age at resolution";
+            }
+            }
+    _valueDateTime: AgeAtExtension(study, condition.subject_id, condition.age_at_resolution, "years")
+}
+
+def BuildAgeAtOnset(study, condition) {
+    code: {
+        coding[]: {
+            code: "age_at_onset";
+            system: "https://anvilproject.org/acr-harmonized-data-model/";
+            display: "Age at onset";
+            }
+            }
+    _valueDateTime: AgeAtExtension(study, condition.subject_id, condition.age_at_event, "years")
+}
+
+
+def BuildConditionIdentifier(study, required condition_code, required subject_id) {
+    $this: Key_Identifier(study, "Condition", $StrCat(subject_id, ".", condition_code));
+}
+
+def ParticipantsCondition(condition) {
+      reference: $StrCat("Patient","/",condition.subject_id)
+}
+
+// Currently supporting both "MIM" and "OMIM" curies for the OMIM ontology.
+def BuildConditionCode(condition) {
+    if (condition.code?) {
+        var SplitCode: $StrSplit(condition.code, ":");
+    coding[]: {
+        system: HarmonizeAsSystem(SplitCode[0], "curie_system");
+        code: condition.code;
+        display: condition.display;
+    }
+    text: condition.display;
+    }
+}
+
+def CompletePartialCoding(resource_code, resource_display, resource_system) {
+    if (resource_code?) {
+        var SplitCode: $StrSplit(resource_code, ":");
+    coding[]: {
+        system: HarmonizeAsSystem(SplitCode[0], resource_system);
+        code: resource_code;
+        display: resource_display;
+    }
+    text: resource_display;
+    }
+}
+
+def SubjectAssertion(study, assertion){
+
+}
+
+def ProcessCondition(study, participant) {
+    out condition: ConditionAssertion(study, participant.condition[]);
+    //out assertion: 
+} 

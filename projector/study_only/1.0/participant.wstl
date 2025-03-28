@@ -1,0 +1,12 @@
+def Participant(study, participant) {
+    meta.tag[]: StudyMeta(study);
+    id: participant.id;
+    resourceType: "Patient";
+    identifier[]: Key_Identifier(study, "Patient", participant.external_id);
+    identifier[0].use: "official";
+    extension[]: RaceExtension(participant.demographics[0].race);
+}
+
+def ProcessParticipants(study, participants) {
+    out participant: Participant(study, participants);
+}
