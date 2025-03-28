@@ -1,1 +1,8 @@
-../../dataset/1.0/_harmonize_selection.wstl
+
+// Return the coding only if the filter, prefix, matches the codings
+// system. 
+def HarmonizeSelection(coding, prefix) {
+    if ($MatchesRegex(coding.system, $StrCat(prefix, "*"))) {
+        $this: coding;
+    }
+}

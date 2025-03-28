@@ -1,0 +1,5 @@
+family_id,family_member,other_family_member,relationship_code,access_policy_id
+0ink_fam01,0ink0ink007,0ink0ink001,SIS,0ink_GRU
+0ink_fam01,0ink0ink001,0ink0ink007,BRO,0ink_GRU
+0ink_fam02,0ink0ink006,0ink0ink010,FTH,0ink_GRU
+0ink_fam02,0ink0ink010,0ink0ink006,DAU,0ink_GRU

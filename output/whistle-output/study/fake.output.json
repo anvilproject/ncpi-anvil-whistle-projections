@@ -1,4 +1,268 @@
 {
+  "participant": [
+    {
+      "birthDate": "2000",
+      "extension": [
+        {
+          "extension": [
+            {
+              "url": "ombCategory",
+              "valueCoding": {
+                "code": "2028-9",
+                "display": "Asian",
+                "system": "urn:oid:2.16.840.1.113883.6.238",
+                "version": "v1"
+              }
+            },
+            {
+              "url": "text",
+              "valueString": "Asian"
+            }
+          ],
+          "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
+        },
+        {
+          "extension": [
+            {
+              "url": "ombCategory",
+              "valueCoding": {
+                "code": "UNK",
+                "display": "Unknown",
+                "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+                "version": "v1"
+              }
+            },
+            {
+              "url": "text",
+              "valueString": "Unknown"
+            }
+          ],
+          "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
+        },
+        {
+          "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
+          "valueCoding": {
+            "code": "male",
+            "display": "Male",
+            "system": "http://hl7.org/fhir/administrative-gender",
+            "version": "v1"
+          }
+        },
+        {
+          "url": "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/research-date-of-birth-method",
+          "valueCoding": {
+            "code": "year-only",
+            "display": "Year Only",
+            "system": "https://nih-ncpi.github.io/ncpi-fhir-ig-2/CodeSystem/research-data-date-of-birth-method",
+            "version": "v1"
+          }
+        }
+      ],
+      "id": "29c32248-0bf5-4bd3-af87-ec4b4d6cb7e2",
+      "identifier": [
+        {
+          "system": "https://anvilproject.github.io/acr-harmonized-data-model/participant",
+          "use": "official",
+          "value": "29c32248"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Patient"
+    },
+    {
+      "birthDate": "1987-04-23",
+      "extension": [
+        {
+          "extension": [
+            {
+              "url": "ombCategory",
+              "valueCoding": {
+                "code": "2106-3",
+                "display": "White",
+                "system": "urn:oid:2.16.840.1.113883.6.238",
+                "version": "v1"
+              }
+            },
+            {
+              "url": "text",
+              "valueString": "White and Pacific Islander"
+            }
+          ],
+          "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
+        },
+        {
+          "extension": [
+            {
+              "url": "ombCategory",
+              "valueCoding": {
+                "code": "2076-8",
+                "display": "Native Hawaiian or Other Pacific Islander",
+                "system": "urn:oid:2.16.840.1.113883.6.238",
+                "version": "v1"
+              }
+            },
+            {
+              "url": "text",
+              "valueString": "White and Pacific Islander"
+            }
+          ],
+          "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
+        },
+        {
+          "extension": [
+            {
+              "url": "ombCategory",
+              "valueCoding": {
+                "code": "UNK",
+                "display": "Unknown",
+                "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+                "version": "v1"
+              }
+            },
+            {
+              "url": "text",
+              "valueString": "Unknown"
+            }
+          ],
+          "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
+        },
+        {
+          "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
+          "valueCoding": {
+            "code": "female",
+            "display": "Female",
+            "system": "http://hl7.org/fhir/administrative-gender",
+            "version": "v1"
+          }
+        },
+        {
+          "url": "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/research-date-of-birth-method",
+          "valueCoding": {
+            "code": "exact",
+            "display": "Exact",
+            "system": "https://nih-ncpi.github.io/ncpi-fhir-ig-2/CodeSystem/research-data-date-of-birth-method",
+            "version": "v1"
+          }
+        }
+      ],
+      "id": "cd4de057-9035-4061-b7a8-435c18a7ec6c",
+      "identifier": [
+        {
+          "system": "https://anvilproject.github.io/acr-harmonized-data-model/participant",
+          "use": "official",
+          "value": "cd4de057"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Patient"
+    },
+    {
+      "deceasedBoolean": true,
+      "extension": [
+        {
+          "extension": [
+            {
+              "url": "ombCategory",
+              "valueCoding": {
+                "code": "UNK",
+                "display": "Unknown",
+                "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+                "version": "v1"
+              }
+            },
+            {
+              "url": "text",
+              "valueString": "Unknown"
+            }
+          ],
+          "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
+        },
+        {
+          "extension": [
+            {
+              "url": "ombCategory",
+              "valueCoding": {
+                "code": "2135-2",
+                "display": "Hispanic or Latino",
+                "system": "urn:oid:2.16.840.1.113883.6.238",
+                "version": "v1"
+              }
+            },
+            {
+              "url": "text",
+              "valueString": "Hispanic or Latino"
+            }
+          ],
+          "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
+        },
+        {
+          "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
+          "valueCoding": {
+            "code": "unknown",
+            "display": "Unknown",
+            "system": "http://hl7.org/fhir/administrative-gender",
+            "version": "v1"
+          }
+        },
+        {
+          "url": "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/research-age-at-last-vital-status",
+          "valueQuantity": {
+            "value": 10950
+          }
+        }
+      ],
+      "id": "9ca1559b-94cd-46fc-8582-1ff907cdb13d",
+      "identifier": [
+        {
+          "system": "https://anvilproject.github.io/acr-harmonized-data-model/participant",
+          "use": "official",
+          "value": "9ca1559b"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Patient"
+    },
+    {
+      "id": "9c1dea0b-7011-438f-8c6e-7e3c7cfd68ec",
+      "identifier": [
+        {
+          "system": "https://anvilproject.github.io/acr-harmonized-data-model/participant",
+          "use": "official",
+          "value": "9c1dea0b"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Patient"
+    }
+  ],
   "research_study": [
     {
       "extension": [

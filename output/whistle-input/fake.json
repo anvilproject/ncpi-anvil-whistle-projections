@@ -48,6 +48,26 @@
                 "description": "Study Title"
               }
             ]
+          },
+          {
+            "varname": "participant",
+            "desc": "participant",
+            "type": "DD-Table",
+            "url": "https://github.com/anvilproject/acr-harmonized-data-model/fhir/CodeSystem/data-dictionary/participant",
+            "values": [
+              {
+                "code": "subject_id",
+                "description": "Subject ID"
+              },
+              {
+                "code": "subject_type",
+                "description": "Subject Type"
+              },
+              {
+                "code": "organism_type",
+                "description": "Organism Type"
+              }
+            ]
           }
         ]
       },
@@ -86,6 +106,30 @@
             "values": []
           }
         ]
+      },
+      {
+        "table_name": "participant",
+        "url": "https://github.com/anvilproject/acr-harmonized-data-model/fhir/CodeSystem/data-dictionary/participant",
+        "variables": [
+          {
+            "varname": "subject_id",
+            "desc": "Subject ID",
+            "type": "string",
+            "values": []
+          },
+          {
+            "varname": "subject_type",
+            "desc": "Subject Type",
+            "type": "string",
+            "values": []
+          },
+          {
+            "varname": "organism_type",
+            "desc": "Organism Type",
+            "type": "string",
+            "values": []
+          }
+        ]
       }
     ],
     "annotations": {}
@@ -99,6 +143,10 @@
         {
           "code": "study_meta",
           "description": "study_meta"
+        },
+        {
+          "code": "participant",
+          "description": "participant"
         }
       ]
     },
@@ -164,6 +212,47 @@
       "study": "Fake_Study",
       "table_name": "study_meta",
       "values": []
+    },
+    {
+      "varname": null,
+      "url": "https://github.com/anvilproject/acr-harmonized-data-model/fhir/CodeSystem/data-dictionary/participant",
+      "study": "Fake_Study",
+      "values": [
+        {
+          "code": "subject_id",
+          "description": "Subject ID"
+        },
+        {
+          "code": "subject_type",
+          "description": "Subject Type"
+        },
+        {
+          "code": "organism_type",
+          "description": "Organism Type"
+        }
+      ],
+      "table_name": "participant"
+    },
+    {
+      "varname": "subject_id",
+      "url": "https://github.com/anvilproject/acr-harmonized-data-model/fhir/CodeSystem/data-dictionary/participant/subject_id",
+      "study": "Fake_Study",
+      "table_name": "participant",
+      "values": []
+    },
+    {
+      "varname": "subject_type",
+      "url": "https://github.com/anvilproject/acr-harmonized-data-model/fhir/CodeSystem/data-dictionary/participant/subject_type",
+      "study": "Fake_Study",
+      "table_name": "participant",
+      "values": []
+    },
+    {
+      "varname": "organism_type",
+      "url": "https://github.com/anvilproject/acr-harmonized-data-model/fhir/CodeSystem/data-dictionary/participant/organism_type",
+      "study": "Fake_Study",
+      "table_name": "participant",
+      "values": []
     }
   ],
   "harmony": [],
@@ -183,6 +272,88 @@
       "funding_source": "Funding Source 3",
       "principal_investigator": "Larry Smith",
       "study_title": "This Is Not the Super Fake Study for Running Whistler"
+    }
+  ],
+  "participant": [
+    {
+      "id": "29c32248-0bf5-4bd3-af87-ec4b4d6cb7e2",
+      "subject_id": "29c32248",
+      "external_id": "FKPART:29c32248",
+      "subject_type": "participant",
+      "organism_type": "human",
+      "demographics": [
+        {
+          "table_name": "demographics",
+          "id": "565cb35e-10f8-4785-9513-37822831cb86",
+          "subject_id": "29c32248",
+          "date_of_birth": "2000",
+          "date_of_birth_type": "year_only",
+          "sex": "male",
+          "sex_display": "Male",
+          "race": "asian",
+          "race_display": "Asian",
+          "ethnicity": "unknown",
+          "ethnicity_display": "Unknown",
+          "age_at_last_vital_status": "",
+          "vital_status": "Unspecified"
+        }
+      ]
+    },
+    {
+      "id": "cd4de057-9035-4061-b7a8-435c18a7ec6c",
+      "subject_id": "cd4de057",
+      "external_id": "FKPART:cd4de057",
+      "subject_type": "participant",
+      "organism_type": "human",
+      "demographics": [
+        {
+          "table_name": "demographics",
+          "id": "258bc1b0-b3ea-44a7-8776-3a71fb537363",
+          "subject_id": "cd4de057",
+          "date_of_birth": "1987-04-23",
+          "date_of_birth_type": "exact",
+          "sex": "female",
+          "sex_display": "Female",
+          "race": "white|native_hawaiian_or_pacific_islander",
+          "race_display": "White and Pacific Islander",
+          "ethnicity": "unknown",
+          "ethnicity_display": "Unknown",
+          "age_at_last_vital_status": "",
+          "vital_status": "Unspecified"
+        }
+      ]
+    },
+    {
+      "id": "9ca1559b-94cd-46fc-8582-1ff907cdb13d",
+      "subject_id": "9ca1559b",
+      "external_id": "FKPART:9ca1559b",
+      "subject_type": "participant",
+      "organism_type": "human",
+      "demographics": [
+        {
+          "table_name": "demographics",
+          "id": "cdd5f737-f006-4505-ad4c-4700323fc78c",
+          "subject_id": "9ca1559b",
+          "date_of_birth": "",
+          "date_of_birth_type": "",
+          "sex": "unknown",
+          "sex_display": "Unknown",
+          "race": "unknown",
+          "race_display": "Unknown",
+          "ethnicity": "hispanic_or_latino",
+          "ethnicity_display": "Hispanic or Latino",
+          "age_at_last_vital_status": "10950",
+          "vital_status": "Dead"
+        }
+      ]
+    },
+    {
+      "id": "9c1dea0b-7011-438f-8c6e-7e3c7cfd68ec",
+      "subject_id": "9c1dea0b",
+      "external_id": "FKPART:9c1dea0b",
+      "subject_type": "participant",
+      "organism_type": "human",
+      "demographics": []
     }
   ]
 }
