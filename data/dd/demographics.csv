@@ -1,0 +1,12 @@
+variable_name,description,data_type,enumerations,min,max,Comment
+id,ID,String,,,,,
+date_of_birth,Date of Birth,Integer,,,,,
+date_of_birth_type,Date of Birth Type,Enumeration,Exact;Year Only;Shifted;Decade Only;Other,,,,
+sex,Sex,Enumeration,Female;Male;Unknown;Intersex,,,,
+sex_display,Sex Display,String,,,,,
+race,Race,Enumeration,American Indian or Alaska Native;Asian;Black or African American;Native Hawaiian or Pacific Islander;White;Other Race;Unknown;Asked but Unknown,,,,
+race_display,Race Display,String,,,,,
+ethnicity,Ethnicity,Enumeration,Hispanic or Latino;Not Hispanic or Latino;Unknown;Asked but Unknown,,,,
+ethnicity_display,Ethnicity Display,String,,,,,
+age_at_last_vital_status,Age at Last Vital Status,Integer,,,,,
+vital_status,Vital Status,Enumeration,Alive;Dead;Not Reported;Unknown;Unspecified,,,,
