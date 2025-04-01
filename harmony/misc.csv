@@ -1,1 +1,7 @@
 local code,text,table_name,parent_varname,local code system,code,display,code system,comment
+SNOMED:373066001,Yes,,,condition_assertion,Present,Present,https://nih-ncpi.github.io/ncpi-fhir-ig-2/CodeSystem/condition-assertion,,
+SNOMED:373066001,Yes,,,condition_assertion,SNOMED:373066001,Yes,http://snomed.info/sct,,
+SNOMED:373067005,No,,,condition_assertion,Absent,Absent,https://nih-ncpi.github.io/ncpi-fhir-ig-2/CodeSystem/condition-assertion,,
+SNOMED:373067005,No,,,condition_assertion,SNOMED:373067005,No,http://snomed.info/sct,,
+SNOMED:261665006,Unknown,,,condition_assertion,Unknown,Unknown,https://nih-ncpi.github.io/ncpi-fhir-ig-2/CodeSystem/condition-assertion,,
+SNOMED:261665006,Unknown,,,condition_assertion,SNOMED:261665006,Unknown,http://snomed.info/sct,,
