@@ -1,5 +1,16 @@
 {
   "Fake_Study": {
-    "http://localhost:8080/fhir": {}
+    "http://localhost:8080/fhir": {
+      "Patient": [
+        "29c32248-0bf5-4bd3-af87-ec4b4d6cb7e2",
+        "9c1dea0b-7011-438f-8c6e-7e3c7cfd68ec",
+        "9ca1559b-94cd-46fc-8582-1ff907cdb13d",
+        "cd4de057-9035-4061-b7a8-435c18a7ec6c"
+      ],
+      "ResearchStudy": [
+        "0c9d277b-ac49-4a39-89b0-19ee37cc11da",
+        "6dd14c00-c336-45fa-8f65-19ff166ac8c4"
+      ]
+    }
   }
 }

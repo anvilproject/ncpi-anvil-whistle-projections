@@ -1,0 +1,11 @@
+// Description: Return external code's system.
+//
+// Arguments:
+//  code - Code to be harmonized
+//  system - The system where the code should be quried
+//
+
+def HarmonizeAsSystem(code, system) {
+    var coding: HarmonizeMapped(code, system);
+    $this: coding[0].system;
+}

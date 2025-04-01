@@ -1,0 +1,10 @@
+def SexExtension(sex) {
+    if (sex? and sex ~= "NA") {
+        var SexValueCoding: HarmonizeMappedFirst(sex, "Sex");
+
+        if (SexValueCoding?) {
+            url: "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex";
+            valueCoding : SexValueCoding;      
+        } 
+}
+}
