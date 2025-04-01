@@ -1,0 +1,11 @@
+subject_id,date_of_birth,date_of_birth_type,sex,sex_display,race,race_display,ethnicity,ethnicity_display,age_at_last_vital_status,vital_status,access_policy_id
+0ink0ink001,1987,year_only,female,Female,white,White,hispanic_or_latino,Hispanic or Latino,38,alive,0ink_GRU
+0ink0ink002,1966,year_only,female,Female,asian,Asian,not_hispanic_or_latino,Not hispanic or Latino,59,not_reported,0ink_GRU
+0ink0ink003,2000,year_only,male,Male,asked_but_unknown,Asked but Unknown,not_hispanic_or_latino,Not hispanic or Latino,25,unknown,0ink_GRU
+0ink0ink004,1957,year_only,male,Male,black_or_african_american,Black or African American,hispanic_or_latino,Hispanic or Latino,68,alive,0ink_GRU
+0ink0ink005,1991,year_only,female,Female,white,White,not_hispanic_or_latino,Not hispanic or Latino,34,dead,0ink_GRU
+0ink0ink006,1955,year_only,male,Male,native_hawaiian_or_pacific_islander,Native Hawaiian or Other Pacific Islander,not_hispanic_or_latino,Not hispanic or Latino,70,alive,0ink_GRU
+0ink0ink007,1990,year_only,male,Male,other_race,Other Race,hispanic_or_latino,Hispanic or Latino,35,alive,0ink_GRU
+0ink0ink008,2005,year_only,female,Female,white,White,not_hispanic_or_latino,Not hispanic or Latino,20,unknown,0ink_GRU
+0ink0ink009,1979,year_only,male,Male,asian,Asian,not_hispanic_or_latino,Not hispanic or Latino,46,not_reported,0ink_GRU
+0ink0ink010,1986,year_only,female,Female,white,White,not_hispanic_or_latino,Not hispanic or Latino,39,alive,0ink_GRU

@@ -1,0 +1,91 @@
+subject_id,assertion_type,age_at_assertion,age_at_event,age_at_resolution,code,display,value_code,value_display,value_number,value_units,value_units_display,access_policy_id
+0ink0ink001,disease,38,35,,OMIM:236600,"HYDROCEPHALUS, CONGENITAL, 1; HYC1",SNOMED:373066001,Yes,,,,0ink_GRU
+0ink0ink001,phenotypic_feature,38,,,HP:0000238,Hydrocephalus,SNOMED:373066001,Yes,,,,0ink_GRU
+0ink0ink001,phenotypic_feature,38,,,HP:0001249,Intellectual disability,SNOMED:373067005,No,,,,0ink_GRU
+0ink0ink001,phenotypic_feature,38,15,25,HP:0001250,Seizure,SNOMED:373066001,Yes,,,,0ink_GRU
+0ink0ink001,clinical_finding,38,,,SNOMED:57054005,Acute myocardial infarction,SNOMED:373066001,Yes,,,,0ink_GRU
+0ink0ink001,clinical_finding,38,,,SNOMED:422868009,Unexplained weight loss,SNOMED:373066001,Yes,,,,0ink_GRU
+0ink0ink001,clinical_finding,38,,33,SNOMED:233604007,Pneumonia,SNOMED:373067005,No,,,,0ink_GRU
+0ink0ink001,clinical_finding,38,,,SNOMED:271603002,Height / growth measure,,,66,[in_us],inch,0ink_GRU
+0ink0ink001,clinical_finding,38,,,SNOMED:726527001,Weight,,,182,[lb_av],pound,0ink_GRU
+0ink0ink002,disease,59,,,OMIM:236600,"HYDROCEPHALUS, CONGENITAL, 1; HYC1",SNOMED:373066001,Yes,,,,0ink_GRU
+0ink0ink002,phenotypic_feature,59,,,HP:0000238,Hydrocephalus,SNOMED:373066001,Yes,,,,0ink_GRU
+0ink0ink002,phenotypic_feature,59,,,HP:0001249,Intellectual disability,SNOMED:373067005,No,,,,0ink_GRU
+0ink0ink002,phenotypic_feature,59,,,HP:0001250,Seizure,SNOMED:373067005,No,,,,0ink_GRU
+0ink0ink002,clinical_finding,59,,,SNOMED:57054005,Acute myocardial infarction,SNOMED:373066001,Yes,,,,0ink_GRU
+0ink0ink002,clinical_finding,59,,,SNOMED:422868009,Unexplained weight loss,SNOMED:373067005,No,,,,0ink_GRU
+0ink0ink002,clinical_finding,59,54,55,SNOMED:233604007,Pneumonia,SNOMED:373067005,No,,,,0ink_GRU
+0ink0ink002,clinical_finding,59,,,SNOMED:271603002,Height / growth measure,,,75,[in_us],inch,0ink_GRU
+0ink0ink002,clinical_finding,59,,,SNOMED:726527001,Weight,,,195,[lb_av],pound,0ink_GRU
+0ink0ink003,disease,25,,,OMIM:236600,"HYDROCEPHALUS, CONGENITAL, 1; HYC1",SNOMED:373067005,No,,,,0ink_GRU
+0ink0ink003,phenotypic_feature,25,,,HP:0000238,Hydrocephalus,SNOMED:373067005,No,,,,0ink_GRU
+0ink0ink003,phenotypic_feature,25,,,HP:0001249,Intellectual disability,SNOMED:373067005,No,,,,0ink_GRU
+0ink0ink003,phenotypic_feature,25,20,24,HP:0001250,Seizure,SNOMED:373066001,Yes,,,,0ink_GRU
+0ink0ink003,clinical_finding,25,,,SNOMED:57054005,Acute myocardial infarction,SNOMED:373066001,Yes,,,,0ink_GRU
+0ink0ink003,clinical_finding,25,,,SNOMED:422868009,Unexplained weight loss,SNOMED:373066001,Yes,,,,0ink_GRU
+0ink0ink003,clinical_finding,25,,,SNOMED:233604007,Pneumonia,SNOMED:373067005,No,,,,0ink_GRU
+0ink0ink003,clinical_finding,25,20,,SNOMED:271603002,Height / growth measure,,,74,[in_us],inch,0ink_GRU
+0ink0ink003,clinical_finding,25,20,,SNOMED:726527001,Weight,,,163,[lb_av],pound,0ink_GRU
+0ink0ink004,disease,68,,,OMIM:236600,"HYDROCEPHALUS, CONGENITAL, 1; HYC1",SNOMED:373066001,Yes,,,,0ink_GRU
+0ink0ink004,phenotypic_feature,68,,,HP:0000238,Hydrocephalus,SNOMED:373066001,Yes,,,,0ink_GRU
+0ink0ink004,phenotypic_feature,68,,,HP:0001249,Intellectual disability,SNOMED:373066001,Yes,,,,0ink_GRU
+0ink0ink004,phenotypic_feature,68,,,HP:0001250,Seizure,SNOMED:373066001,Yes,,,,0ink_GRU
+0ink0ink004,clinical_finding,68,,,SNOMED:57054005,Acute myocardial infarction,SNOMED:373066001,Yes,,,,0ink_GRU
+0ink0ink004,clinical_finding,68,65,66,SNOMED:422868009,Unexplained weight loss,SNOMED:373066001,Yes,,,,0ink_GRU
+0ink0ink004,clinical_finding,68,,,SNOMED:233604007,Pneumonia,SNOMED:373067005,No,,,,0ink_GRU
+0ink0ink004,clinical_finding,68,,,SNOMED:271603002,Height / growth measure,,,67,[in_us],inch,0ink_GRU
+0ink0ink004,clinical_finding,68,,,SNOMED:726527001,Weight,,,178,[lb_av],pound,0ink_GRU
+0ink0ink005,disease,34,,,OMIM:236600,"HYDROCEPHALUS, CONGENITAL, 1; HYC1",SNOMED:373067005,No,,,,0ink_GRU
+0ink0ink005,phenotypic_feature,34,,,HP:0000238,Hydrocephalus,SNOMED:373067005,No,,,,0ink_GRU
+0ink0ink005,phenotypic_feature,34,,,HP:0001249,Intellectual disability,SNOMED:373067005,No,,,,0ink_GRU
+0ink0ink005,phenotypic_feature,34,32,33,HP:0001250,Seizure,SNOMED:373066001,Yes,,,,0ink_GRU
+0ink0ink005,clinical_finding,34,,,SNOMED:57054005,Acute myocardial infarction,SNOMED:373067005,No,,,,0ink_GRU
+0ink0ink005,clinical_finding,34,,,SNOMED:422868009,Unexplained weight loss,SNOMED:373066001,Yes,,,,0ink_GRU
+0ink0ink005,clinical_finding,34,,,SNOMED:233604007,Pneumonia,SNOMED:373067005,No,,,,0ink_GRU
+0ink0ink005,clinical_finding,34,,,SNOMED:271603002,Height / growth measure,,,76,[in_us],inch,0ink_GRU
+0ink0ink005,clinical_finding,34,,,SNOMED:726527001,Weight,,,205,[lb_av],pound,0ink_GRU
+0ink0ink006,disease,70,,,OMIM:236600,"HYDROCEPHALUS, CONGENITAL, 1; HYC1",SNOMED:373067005,No,,,,0ink_GRU
+0ink0ink006,phenotypic_feature,70,,,HP:0000238,Hydrocephalus,SNOMED:373067005,No,,,,0ink_GRU
+0ink0ink006,phenotypic_feature,70,,,HP:0001249,Intellectual disability,SNOMED:373067005,No,,,,0ink_GRU
+0ink0ink006,phenotypic_feature,70,,,HP:0001250,Seizure,SNOMED:373066001,Yes,,,,0ink_GRU
+0ink0ink006,clinical_finding,70,,,SNOMED:57054005,Acute myocardial infarction,SNOMED:373067005,No,,,,0ink_GRU
+0ink0ink006,clinical_finding,70,,,SNOMED:422868009,Unexplained weight loss,SNOMED:373066001,Yes,,,,0ink_GRU
+0ink0ink006,clinical_finding,70,,,SNOMED:233604007,Pneumonia,SNOMED:373067005,No,,,,0ink_GRU
+0ink0ink006,clinical_finding,70,,,SNOMED:271603002,Height / growth measure,,,76,[in_us],inch,0ink_GRU
+0ink0ink006,clinical_finding,70,,,SNOMED:726527001,Weight,,,205,[lb_av],pound,0ink_GRU
+0ink0ink007,disease,35,,,OMIM:236600,"HYDROCEPHALUS, CONGENITAL, 1; HYC1",SNOMED:373066001,Yes,,,,0ink_GRU
+0ink0ink007,phenotypic_feature,35,,,HP:0000238,Hydrocephalus,SNOMED:373066001,Yes,,,,0ink_GRU
+0ink0ink007,phenotypic_feature,35,,,HP:0001249,Intellectual disability,SNOMED:373066001,Yes,,,,0ink_GRU
+0ink0ink007,phenotypic_feature,35,,,HP:0001250,Seizure,SNOMED:373066001,Yes,,,,0ink_GRU
+0ink0ink007,clinical_finding,35,,,SNOMED:57054005,Acute myocardial infarction,SNOMED:373067005,No,,,,0ink_GRU
+0ink0ink007,clinical_finding,35,,,SNOMED:422868009,Unexplained weight loss,SNOMED:373066001,Yes,,,,0ink_GRU
+0ink0ink007,clinical_finding,35,,,SNOMED:233604007,Pneumonia,SNOMED:373067005,No,,,,0ink_GRU
+0ink0ink007,clinical_finding,35,,,SNOMED:271603002,Height / growth measure,,,69,[in_us],inch,0ink_GRU
+0ink0ink007,clinical_finding,35,,,SNOMED:726527001,Weight,,,197,[lb_av],pound,0ink_GRU
+0ink0ink008,disease,20,,,OMIM:236600,"HYDROCEPHALUS, CONGENITAL, 1; HYC1",SNOMED:373066001,Yes,,,,0ink_GRU
+0ink0ink008,phenotypic_feature,20,,,HP:0000238,Hydrocephalus,SNOMED:373066001,Yes,,,,0ink_GRU
+0ink0ink008,phenotypic_feature,20,,,HP:0001249,Intellectual disability,SNOMED:373067005,No,,,,0ink_GRU
+0ink0ink008,phenotypic_feature,20,,,HP:0001250,Seizure,SNOMED:373066001,Yes,,,,0ink_GRU
+0ink0ink008,clinical_finding,20,,,SNOMED:57054005,Acute myocardial infarction,SNOMED:373067005,No,,,,0ink_GRU
+0ink0ink008,clinical_finding,20,,,SNOMED:422868009,Unexplained weight loss,SNOMED:373066001,Yes,,,,0ink_GRU
+0ink0ink008,clinical_finding,20,,,SNOMED:233604007,Pneumonia,SNOMED:373067005,No,,,,0ink_GRU
+0ink0ink008,clinical_finding,20,,,SNOMED:271603002,Height / growth measure,,,48,[in_us],inch,0ink_GRU
+0ink0ink008,clinical_finding,20,,,SNOMED:726527001,Weight,,,120,[lb_av],pound,0ink_GRU
+0ink0ink009,disease,46,,,OMIM:236600,"HYDROCEPHALUS, CONGENITAL, 1; HYC1",SNOMED:373067005,No,,,,0ink_GRU
+0ink0ink009,phenotypic_feature,46,,,HP:0000238,Hydrocephalus,SNOMED:373067005,No,,,,0ink_GRU
+0ink0ink009,phenotypic_feature,46,,,HP:0001249,Intellectual disability,SNOMED:373066001,Yes,,,,0ink_GRU
+0ink0ink009,phenotypic_feature,46,,,HP:0001250,Seizure,SNOMED:373066001,Yes,,,,0ink_GRU
+0ink0ink009,clinical_finding,46,,,SNOMED:57054005,Acute myocardial infarction,SNOMED:373067005,No,,,,0ink_GRU
+0ink0ink009,clinical_finding,46,,,SNOMED:422868009,Unexplained weight loss,SNOMED:373067005,No,,,,0ink_GRU
+0ink0ink009,clinical_finding,46,,,SNOMED:233604007,Pneumonia,SNOMED:373066001,Yes,,,,0ink_GRU
+0ink0ink009,clinical_finding,46,,,SNOMED:271603002,Height / growth measure,,,58,[in_us],inch,0ink_GRU
+0ink0ink009,clinical_finding,46,,,SNOMED:726527001,Weight,,,158,[lb_av],pound,0ink_GRU
+0ink0ink010,disease,39,,,OMIM:236600,"HYDROCEPHALUS, CONGENITAL, 1; HYC1",SNOMED:373066001,Yes,,,,0ink_GRU
+0ink0ink010,phenotypic_feature,39,,,HP:0000238,Hydrocephalus,SNOMED:373066001,Yes,,,,0ink_GRU
+0ink0ink010,phenotypic_feature,39,,,HP:0001249,Intellectual disability,SNOMED:373066001,Yes,,,,0ink_GRU
+0ink0ink010,phenotypic_feature,39,,,HP:0001250,Seizure,SNOMED:373067005,No,,,,0ink_GRU
+0ink0ink010,clinical_finding,39,,,SNOMED:57054005,Acute myocardial infarction,SNOMED:373067005,No,,,,0ink_GRU
+0ink0ink010,clinical_finding,39,,,SNOMED:422868009,Unexplained weight loss,SNOMED:373067005,No,,,,0ink_GRU
+0ink0ink010,clinical_finding,39,,,SNOMED:233604007,Pneumonia,SNOMED:373066001,Yes,,,,0ink_GRU
+0ink0ink010,clinical_finding,39,,,SNOMED:271603002,Height / growth measure,,,60,[in_us],inch,0ink_GRU
+0ink0ink010,clinical_finding,39,,,SNOMED:726527001,Weight,,,172,[lb_av],pound,0ink_GRU

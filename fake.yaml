@@ -61,6 +61,14 @@ dataset:
     embed:
       dataset: participant
       colname: subject_id
+  condition:
+    hidden: true
+    filename: data/tables/fake/0ink0ink_SubjectAssertion.csv
+    data_dictionary:
+      filename: data/dd/condition.csv
+    embed:
+      dataset: participant
+      colname: subject_id
 active_tables:
   ALL: true
 #  family: true

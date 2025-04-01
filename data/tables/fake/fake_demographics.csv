@@ -1,0 +1,4 @@
+id,subject_id,date_of_birth,date_of_birth_type,sex,sex_display,race,race_display,ethnicity,ethnicity_display,age_at_last_vital_status,vital_status
+565cb35e-10f8-4785-9513-37822831cb86,29c32248,2000,year_only,male,Male,asian,Asian,unknown,Unknown,,Unspecified
+258bc1b0-b3ea-44a7-8776-3a71fb537363,cd4de057,1987-04-23,exact,female,Female,white|native_hawaiian_or_pacific_islander,White and Pacific Islander,unknown,Unknown,,Unspecified
+cdd5f737-f006-4505-ad4c-4700323fc78c,9ca1559b,,,unknown,Unknown,unknown,Unknown,hispanic_or_latino,Hispanic or Latino,10950,Dead

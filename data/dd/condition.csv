@@ -1,0 +1,17 @@
+variable_name,description,data_type,min,max,units,cardinality,enumerations
+subject_id,Subject ID,string,,,1,
+age_at_assertion,The age in decimal years of the Subject when the assertion was made.,number,,,0..1,
+age_at_event,"The age in decimal years of the Subject at the time point which the assertion describes, | eg, age of onset or when a measurement was performed.",number,,,0..1,
+age_at_resolution,The age in decimal years of the Subject when the asserted state was resolved.,number,,,0..1,
+assertion_type,"The semantic type of the resource, eg, Condition.",enumeration,,,1,phenotypic_feature;disease;comorbidity;histology;clinical_finding;ehr_billing_code
+code,The structured term defining the meaning of the assertion.,string,,,0..1,
+display,The friendly display string of the coded term,string,,,0..1,
+external_id,"Other identifiers for this entity, eg, from the submitting study or in systems link dbGaP",string,,,0..*,
+access_policy_id,Which access policy applies to this element?,string,,,0..1,
+id,ID associated with a class,string,,,1,
+source_data,The sources from which this assertion was derived,string,,,0..*,
+value_code,The structured term defining the value of the assertion.,string,,,0..1,
+value_display,The friendly display string of the coded term for the value of the assertion.,string,,,0..1,
+value_number,The numeric value of the assertion.,number,,,0..1,
+value_units,The structured term defining the units of the value.,string,,,0..1,
+value_units_display,The friendly display string of units of the value.,string,,,0..1,
