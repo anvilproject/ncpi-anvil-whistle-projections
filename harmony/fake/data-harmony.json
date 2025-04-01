@@ -4,6 +4,520 @@
   "version": "v1",
   "group": [
     {
+      "source": "assertion_type",
+      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig-2/CodeSystem/condition-type",
+      "element": [
+        {
+          "code": "phenotypic_feature",
+          "display": "Phenotypic Feature",
+          "target": [
+            {
+              "code": "Phenotypic-Feature",
+              "display": "Phenotypic Feature",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "disease",
+          "display": "Disease",
+          "target": [
+            {
+              "code": "Disease",
+              "display": "Disease",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "comorbidity",
+          "display": "Comorbidity",
+          "target": [
+            {
+              "code": "Comorbidity",
+              "display": "Comorbidity",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "histology",
+          "display": "Histology",
+          "target": [
+            {
+              "code": "Histology",
+              "display": "Histology",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "clinical_finding",
+          "display": "Clinical-Finding",
+          "target": [
+            {
+              "code": "Clinical-Finding",
+              "display": "Clinical-Finding",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "assertion_type",
+      "target": "self",
+      "element": [
+        {
+          "code": "phenotypic_feature",
+          "display": "Phenotypic Feature",
+          "target": [
+            {
+              "code": "phenotypic_feature",
+              "display": "Phenotypic Feature",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "disease",
+          "display": "Disease",
+          "target": [
+            {
+              "code": "disease",
+              "display": "Disease",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "comorbidity",
+          "display": "Comorbidity",
+          "target": [
+            {
+              "code": "comorbidity",
+              "display": "Comorbidity",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "histology",
+          "display": "Histology",
+          "target": [
+            {
+              "code": "histology",
+              "display": "Histology",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "clinical_finding",
+          "display": "Clinical-Finding",
+          "target": [
+            {
+              "code": "clinical_finding",
+              "display": "Clinical-Finding",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "curie_system",
+      "target": "http://purl.obolibrary.org/obo/hp.owl",
+      "element": [
+        {
+          "code": "HP",
+          "display": "The Human Phenotype Ontology",
+          "target": [
+            {
+              "code": "HP:hpo",
+              "display": "HPO",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "curie_system",
+      "target": "self",
+      "element": [
+        {
+          "code": "HP",
+          "display": "The Human Phenotype Ontology",
+          "target": [
+            {
+              "code": "HP",
+              "display": "The Human Phenotype Ontology",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "MONDO",
+          "display": "The Mondo Disease Ontology",
+          "target": [
+            {
+              "code": "MONDO",
+              "display": "The Mondo Disease Ontology",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "MAXO",
+          "display": "The Medical Action Ontology",
+          "target": [
+            {
+              "code": "MAXO",
+              "display": "The Medical Action Ontology",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "NCIT",
+          "display": "The National Cancer Institute Thesaurus",
+          "target": [
+            {
+              "code": "NCIT",
+              "display": "The National Cancer Institute Thesaurus",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SNOMED",
+          "display": "Systematized Nomenclature of Medicine Clinical Terminology",
+          "target": [
+            {
+              "code": "SNOMED",
+              "display": "Systematized Nomenclature of Medicine Clinical Terminology",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SYMP",
+          "display": "The Symptom Ontology",
+          "target": [
+            {
+              "code": "SYMP",
+              "display": "The Symptom Ontology",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "LOINC",
+          "display": "Logical Observation Identifiers Names and Codes",
+          "target": [
+            {
+              "code": "LOINC",
+              "display": "Logical Observation Identifiers Names and Codes",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "MEDDRA",
+          "display": " The Medical Dictionary of Regulatory Activities",
+          "target": [
+            {
+              "code": "MEDDRA",
+              "display": " The Medical Dictionary of Regulatory Activities",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "MESH",
+          "display": "The Medical Subject Headings Thesaurus",
+          "target": [
+            {
+              "code": "MESH",
+              "display": "The Medical Subject Headings Thesaurus",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "UCUM",
+          "display": "Units of Measure",
+          "target": [
+            {
+              "code": "UCUM",
+              "display": "Units of Measure",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "OMIT",
+          "display": "Ontology for MIRNA Target",
+          "target": [
+            {
+              "code": "OMIT",
+              "display": "Ontology for MIRNA Target",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "OMIM",
+          "display": "Online Mendelian Inheritance in Man",
+          "target": [
+            {
+              "code": "OMIM",
+              "display": "Online Mendelian Inheritance in Man",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "MIM",
+          "display": "Online Mendelian Inheritance in Man",
+          "target": [
+            {
+              "code": "MIM",
+              "display": "Online Mendelian Inheritance in Man",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "CDCREC",
+          "display": "The Centers for Disease Control and Prevention Race and Ethnicity Code System",
+          "target": [
+            {
+              "code": "CDCREC",
+              "display": "The Centers for Disease Control and Prevention Race and Ethnicity Code System",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "curie_system",
+      "target": "http://purl.obolibrary.org/obo/mondo.owl",
+      "element": [
+        {
+          "code": "MONDO",
+          "display": "The Mondo Disease Ontology",
+          "target": [
+            {
+              "code": "MONDO:mondo",
+              "display": "MONDO",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "curie_system",
+      "target": "http://purl.obolibrary.org/obo/maxo.owl",
+      "element": [
+        {
+          "code": "MAXO",
+          "display": "The Medical Action Ontology",
+          "target": [
+            {
+              "code": "MAXO:maxo",
+              "display": "MAXO",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "curie_system",
+      "target": "http://purl.obolibrary.org/obo/ncit.owl",
+      "element": [
+        {
+          "code": "NCIT",
+          "display": "The National Cancer Institute Thesaurus",
+          "target": [
+            {
+              "code": "NCIT:ncit",
+              "display": "NCIT",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "curie_system",
+      "target": "http://snomed.info/sct",
+      "element": [
+        {
+          "code": "SNOMED",
+          "display": "Systematized Nomenclature of Medicine Clinical Terminology",
+          "target": [
+            {
+              "code": "snomed",
+              "display": "SNOMED",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "curie_system",
+      "target": "https://purl.obolibrary.org/obo/symp.owl",
+      "element": [
+        {
+          "code": "SYMP",
+          "display": "The Symptom Ontology",
+          "target": [
+            {
+              "code": "symp",
+              "display": "SYMP",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "curie_system",
+      "target": "https://loinc.org/",
+      "element": [
+        {
+          "code": "LOINC",
+          "display": "Logical Observation Identifiers Names and Codes",
+          "target": [
+            {
+              "code": "loinc",
+              "display": "LOINC",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "curie_system",
+      "target": "https://www.meddra.org/",
+      "element": [
+        {
+          "code": "MEDDRA",
+          "display": " The Medical Dictionary of Regulatory Activities",
+          "target": [
+            {
+              "code": "meddra",
+              "display": "MEDDRA",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "curie_system",
+      "target": "urn:oid:2.16.840.1.113883.6.177",
+      "element": [
+        {
+          "code": "MESH",
+          "display": "The Medical Subject Headings Thesaurus",
+          "target": [
+            {
+              "code": "mesh",
+              "display": "MESH",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "curie_system",
+      "target": "http://unitsofmeasure.org",
+      "element": [
+        {
+          "code": "UCUM",
+          "display": "Units of Measure",
+          "target": [
+            {
+              "code": "ucum",
+              "display": "UCUM",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "curie_system",
+      "target": "http://purl.obolibrary.org/obo/omit.owl",
+      "element": [
+        {
+          "code": "OMIT",
+          "display": "Ontology for MIRNA Target",
+          "target": [
+            {
+              "code": "omit",
+              "display": "OMIT",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "curie_system",
+      "target": "https://omim.org/MIM:603903",
+      "element": [
+        {
+          "code": "OMIM",
+          "display": "Online Mendelian Inheritance in Man",
+          "target": [
+            {
+              "code": "omim",
+              "display": "OMIM",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "MIM",
+          "display": "Online Mendelian Inheritance in Man",
+          "target": [
+            {
+              "code": "mim",
+              "display": "MIM",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "curie_system",
+      "target": "http://terminology.hl7.org/NamingSystem/CDCREC",
+      "element": [
+        {
+          "code": "CDCREC",
+          "display": "The Centers for Disease Control and Prevention Race and Ethnicity Code System",
+          "target": [
+            {
+              "code": "cdcrec",
+              "display": "CDCREC",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "source": "Sex",
       "target": "http://hl7.org/fhir/administrative-gender",
       "element": [
@@ -735,6 +1249,138 @@
             {
               "code": "FKPART",
               "display": "Fake Participant Identifier",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "condition_assertion",
+      "target": "https://nih-ncpi.github.io/ncpi-fhir-ig-2/CodeSystem/condition-assertion",
+      "element": [
+        {
+          "code": "SNOMED:373066001",
+          "display": "Yes",
+          "target": [
+            {
+              "code": "Present",
+              "display": "Present",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SNOMED:373067005",
+          "display": "No",
+          "target": [
+            {
+              "code": "Absent",
+              "display": "Absent",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SNOMED:261665006",
+          "display": "Unknown",
+          "target": [
+            {
+              "code": "Unknown",
+              "display": "Unknown",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "condition_assertion",
+      "target": "self",
+      "element": [
+        {
+          "code": "SNOMED:373066001",
+          "display": "Yes",
+          "target": [
+            {
+              "code": "SNOMED:373066001",
+              "display": "Yes",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "SNOMED:373066001",
+              "display": "Yes",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SNOMED:373067005",
+          "display": "No",
+          "target": [
+            {
+              "code": "SNOMED:373067005",
+              "display": "No",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "SNOMED:373067005",
+              "display": "No",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SNOMED:261665006",
+          "display": "Unknown",
+          "target": [
+            {
+              "code": "SNOMED:261665006",
+              "display": "Unknown",
+              "equivalence": "equivalent"
+            },
+            {
+              "code": "SNOMED:261665006",
+              "display": "Unknown",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "condition_assertion",
+      "target": "http://snomed.info/sct",
+      "element": [
+        {
+          "code": "SNOMED:373066001",
+          "display": "Yes",
+          "target": [
+            {
+              "code": "SNOMED:373066001",
+              "display": "Yes",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SNOMED:373067005",
+          "display": "No",
+          "target": [
+            {
+              "code": "SNOMED:373067005",
+              "display": "No",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SNOMED:261665006",
+          "display": "Unknown",
+          "target": [
+            {
+              "code": "SNOMED:261665006",
+              "display": "Unknown",
               "equivalence": "equivalent"
             }
           ]
