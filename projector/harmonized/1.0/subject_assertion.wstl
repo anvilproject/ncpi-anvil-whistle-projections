@@ -91,7 +91,7 @@ def SubjectAssertion(study, assertion){
     _effectiveDateTime.extension[0] (if assertion.age_at_assertion?): AgeAtExtension(study, assertion.subject_id, assertion.age_at_assertion, "years");
     category[].coding[] (if assertion.assertion_type?): HarmonizeMappedFirst(assertion.assertion_type, "assertion_type");
     valueQuantity: {
-        value (if assertion.value_number?): $ParseInt(assertion.value_number);
+        value (if assertion.value_number?): $ParseFloat(assertion.value_number);
         unit (if assertion.value_units_display?): assertion.value_units_display;
         code (if assertion.value_units?): assertion.value_units;
         system: "http://unitsofmeasure.org";
