@@ -23,6 +23,8 @@ harmony_prefix: data-harmony
 # by this project.
 code_harmonization:
   - harmony/study.csv
+  - harmony/assertion_types.csv
+  - harmony/curie_systems.csv
   - harmony/dataset.csv
   - harmony/demographics.csv
   - harmony/encounter.csv

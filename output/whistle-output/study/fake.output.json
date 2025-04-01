@@ -1,69 +1,63 @@
 {
-  "participant": [
+  "condition": [
     {
-      "birthDate": "2000",
-      "extension": [
-        {
-          "extension": [
-            {
-              "url": "ombCategory",
-              "valueCoding": {
-                "code": "2028-9",
-                "display": "Asian",
-                "system": "urn:oid:2.16.840.1.113883.6.238",
-                "version": "v1"
-              }
-            },
-            {
-              "url": "text",
-              "valueString": "Asian"
-            }
-          ],
-          "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
-        },
-        {
-          "extension": [
-            {
-              "url": "ombCategory",
-              "valueCoding": {
-                "code": "UNK",
-                "display": "Unknown",
-                "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
-                "version": "v1"
-              }
-            },
-            {
-              "url": "text",
-              "valueString": "Unknown"
-            }
-          ],
-          "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
-        },
-        {
-          "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
-          "valueCoding": {
-            "code": "male",
-            "display": "Male",
-            "system": "http://hl7.org/fhir/administrative-gender",
-            "version": "v1"
+      "code": {
+        "coding": [
+          {
+            "code": "OMIM:236600",
+            "display": "HYDROCEPHALUS, CONGENITAL, 1; HYC1"
           }
-        },
+        ],
+        "text": "HYDROCEPHALUS, CONGENITAL, 1; HYC1"
+      },
+      "component": [
         {
-          "url": "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/research-date-of-birth-method",
-          "valueCoding": {
-            "code": "year-only",
-            "display": "Year Only",
-            "system": "https://nih-ncpi.github.io/ncpi-fhir-ig-2/CodeSystem/research-data-date-of-birth-method",
-            "version": "v1"
+          "_valueDateTime": {
+            "extension": [
+              {
+                "url": "target",
+                "valueReference": {
+                  "identifier": {
+                    "system": "https://fake.org/fhir/ids/patient",
+                    "value": "0ink0ink001"
+                  }
+                }
+              },
+              {
+                "url": "targetPath",
+                "valueString": "birthDate"
+              },
+              {
+                "url": "relationship",
+                "valueCode": "after"
+              },
+              {
+                "url": "offset",
+                "valueDuration": {
+                  "code": "a",
+                  "system": "http://unitsofmeasure.org",
+                  "value": 35
+                }
+              }
+            ],
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-relativeDateTime"
+          },
+          "code": {
+            "coding": [
+              {
+                "code": "age_at_onset",
+                "display": "Age at onset",
+                "system": "https://anvilproject.org/acr-harmonized-data-model/"
+              }
+            ]
           }
         }
       ],
-      "id": "29c32248-0bf5-4bd3-af87-ec4b4d6cb7e2",
       "identifier": [
         {
-          "system": "https://anvilproject.github.io/acr-harmonized-data-model/participant",
+          "system": "https://fake.org/fhir/ids/condition",
           "use": "official",
-          "value": "29c32248"
+          "value": "0ink0ink001.OMIM:236600"
         }
       ],
       "meta": {
@@ -74,10 +68,3716 @@
           }
         ]
       },
-      "resourceType": "Patient"
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373066001",
+                "display": "Yes"
+              }
+            ],
+            "text": "Yes"
+          }
+        ]
+      }
     },
     {
-      "birthDate": "1987-04-23",
+      "code": {
+        "coding": [
+          {
+            "code": "HP:0000238",
+            "display": "Hydrocephalus"
+          }
+        ],
+        "text": "Hydrocephalus"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink001.HP:0000238"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373066001",
+                "display": "Yes"
+              }
+            ],
+            "text": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "HP:0001249",
+            "display": "Intellectual disability"
+          }
+        ],
+        "text": "Intellectual disability"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink001.HP:0001249"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373067005",
+                "display": "No"
+              }
+            ],
+            "text": "No"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "HP:0001250",
+            "display": "Seizure"
+          }
+        ],
+        "text": "Seizure"
+      },
+      "component": [
+        {
+          "_valueDateTime": {
+            "extension": [
+              {
+                "url": "target",
+                "valueReference": {
+                  "identifier": {
+                    "system": "https://fake.org/fhir/ids/patient",
+                    "value": "0ink0ink001"
+                  }
+                }
+              },
+              {
+                "url": "targetPath",
+                "valueString": "birthDate"
+              },
+              {
+                "url": "relationship",
+                "valueCode": "after"
+              },
+              {
+                "url": "offset",
+                "valueDuration": {
+                  "code": "a",
+                  "system": "http://unitsofmeasure.org",
+                  "value": 15
+                }
+              }
+            ],
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-relativeDateTime"
+          },
+          "code": {
+            "coding": [
+              {
+                "code": "age_at_onset",
+                "display": "Age at onset",
+                "system": "https://anvilproject.org/acr-harmonized-data-model/"
+              }
+            ]
+          }
+        }
+      ],
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink001.HP:0001250"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373066001",
+                "display": "Yes"
+              }
+            ],
+            "text": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "SNOMED:57054005",
+            "display": "Acute myocardial infarction"
+          }
+        ],
+        "text": "Acute myocardial infarction"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink001.SNOMED:57054005"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373066001",
+                "display": "Yes"
+              }
+            ],
+            "text": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "SNOMED:422868009",
+            "display": "Unexplained weight loss"
+          }
+        ],
+        "text": "Unexplained weight loss"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink001.SNOMED:422868009"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373066001",
+                "display": "Yes"
+              }
+            ],
+            "text": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "SNOMED:233604007",
+            "display": "Pneumonia"
+          }
+        ],
+        "text": "Pneumonia"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink001.SNOMED:233604007"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373067005",
+                "display": "No"
+              }
+            ],
+            "text": "No"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "SNOMED:271603002",
+            "display": "Height / growth measure"
+          }
+        ],
+        "text": "Height / growth measure"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink001.SNOMED:271603002"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final"
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "SNOMED:726527001",
+            "display": "Weight"
+          }
+        ],
+        "text": "Weight"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink001.SNOMED:726527001"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final"
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "OMIM:236600",
+            "display": "HYDROCEPHALUS, CONGENITAL, 1; HYC1"
+          }
+        ],
+        "text": "HYDROCEPHALUS, CONGENITAL, 1; HYC1"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink002.OMIM:236600"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373066001",
+                "display": "Yes"
+              }
+            ],
+            "text": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "HP:0000238",
+            "display": "Hydrocephalus"
+          }
+        ],
+        "text": "Hydrocephalus"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink002.HP:0000238"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373066001",
+                "display": "Yes"
+              }
+            ],
+            "text": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "HP:0001249",
+            "display": "Intellectual disability"
+          }
+        ],
+        "text": "Intellectual disability"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink002.HP:0001249"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373067005",
+                "display": "No"
+              }
+            ],
+            "text": "No"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "HP:0001250",
+            "display": "Seizure"
+          }
+        ],
+        "text": "Seizure"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink002.HP:0001250"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373067005",
+                "display": "No"
+              }
+            ],
+            "text": "No"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "SNOMED:57054005",
+            "display": "Acute myocardial infarction"
+          }
+        ],
+        "text": "Acute myocardial infarction"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink002.SNOMED:57054005"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373066001",
+                "display": "Yes"
+              }
+            ],
+            "text": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "SNOMED:422868009",
+            "display": "Unexplained weight loss"
+          }
+        ],
+        "text": "Unexplained weight loss"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink002.SNOMED:422868009"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373067005",
+                "display": "No"
+              }
+            ],
+            "text": "No"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "SNOMED:233604007",
+            "display": "Pneumonia"
+          }
+        ],
+        "text": "Pneumonia"
+      },
+      "component": [
+        {
+          "_valueDateTime": {
+            "extension": [
+              {
+                "url": "target",
+                "valueReference": {
+                  "identifier": {
+                    "system": "https://fake.org/fhir/ids/patient",
+                    "value": "0ink0ink002"
+                  }
+                }
+              },
+              {
+                "url": "targetPath",
+                "valueString": "birthDate"
+              },
+              {
+                "url": "relationship",
+                "valueCode": "after"
+              },
+              {
+                "url": "offset",
+                "valueDuration": {
+                  "code": "a",
+                  "system": "http://unitsofmeasure.org",
+                  "value": 54
+                }
+              }
+            ],
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-relativeDateTime"
+          },
+          "code": {
+            "coding": [
+              {
+                "code": "age_at_onset",
+                "display": "Age at onset",
+                "system": "https://anvilproject.org/acr-harmonized-data-model/"
+              }
+            ]
+          }
+        }
+      ],
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink002.SNOMED:233604007"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373067005",
+                "display": "No"
+              }
+            ],
+            "text": "No"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "SNOMED:271603002",
+            "display": "Height / growth measure"
+          }
+        ],
+        "text": "Height / growth measure"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink002.SNOMED:271603002"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final"
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "SNOMED:726527001",
+            "display": "Weight"
+          }
+        ],
+        "text": "Weight"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink002.SNOMED:726527001"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final"
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "OMIM:236600",
+            "display": "HYDROCEPHALUS, CONGENITAL, 1; HYC1"
+          }
+        ],
+        "text": "HYDROCEPHALUS, CONGENITAL, 1; HYC1"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink003.OMIM:236600"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373067005",
+                "display": "No"
+              }
+            ],
+            "text": "No"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "HP:0000238",
+            "display": "Hydrocephalus"
+          }
+        ],
+        "text": "Hydrocephalus"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink003.HP:0000238"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373067005",
+                "display": "No"
+              }
+            ],
+            "text": "No"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "HP:0001249",
+            "display": "Intellectual disability"
+          }
+        ],
+        "text": "Intellectual disability"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink003.HP:0001249"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373067005",
+                "display": "No"
+              }
+            ],
+            "text": "No"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "HP:0001250",
+            "display": "Seizure"
+          }
+        ],
+        "text": "Seizure"
+      },
+      "component": [
+        {
+          "_valueDateTime": {
+            "extension": [
+              {
+                "url": "target",
+                "valueReference": {
+                  "identifier": {
+                    "system": "https://fake.org/fhir/ids/patient",
+                    "value": "0ink0ink003"
+                  }
+                }
+              },
+              {
+                "url": "targetPath",
+                "valueString": "birthDate"
+              },
+              {
+                "url": "relationship",
+                "valueCode": "after"
+              },
+              {
+                "url": "offset",
+                "valueDuration": {
+                  "code": "a",
+                  "system": "http://unitsofmeasure.org",
+                  "value": 20
+                }
+              }
+            ],
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-relativeDateTime"
+          },
+          "code": {
+            "coding": [
+              {
+                "code": "age_at_onset",
+                "display": "Age at onset",
+                "system": "https://anvilproject.org/acr-harmonized-data-model/"
+              }
+            ]
+          }
+        }
+      ],
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink003.HP:0001250"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373066001",
+                "display": "Yes"
+              }
+            ],
+            "text": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "SNOMED:57054005",
+            "display": "Acute myocardial infarction"
+          }
+        ],
+        "text": "Acute myocardial infarction"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink003.SNOMED:57054005"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373066001",
+                "display": "Yes"
+              }
+            ],
+            "text": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "SNOMED:422868009",
+            "display": "Unexplained weight loss"
+          }
+        ],
+        "text": "Unexplained weight loss"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink003.SNOMED:422868009"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373066001",
+                "display": "Yes"
+              }
+            ],
+            "text": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "SNOMED:233604007",
+            "display": "Pneumonia"
+          }
+        ],
+        "text": "Pneumonia"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink003.SNOMED:233604007"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373067005",
+                "display": "No"
+              }
+            ],
+            "text": "No"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "SNOMED:271603002",
+            "display": "Height / growth measure"
+          }
+        ],
+        "text": "Height / growth measure"
+      },
+      "component": [
+        {
+          "_valueDateTime": {
+            "extension": [
+              {
+                "url": "target",
+                "valueReference": {
+                  "identifier": {
+                    "system": "https://fake.org/fhir/ids/patient",
+                    "value": "0ink0ink003"
+                  }
+                }
+              },
+              {
+                "url": "targetPath",
+                "valueString": "birthDate"
+              },
+              {
+                "url": "relationship",
+                "valueCode": "after"
+              },
+              {
+                "url": "offset",
+                "valueDuration": {
+                  "code": "a",
+                  "system": "http://unitsofmeasure.org",
+                  "value": 20
+                }
+              }
+            ],
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-relativeDateTime"
+          },
+          "code": {
+            "coding": [
+              {
+                "code": "age_at_onset",
+                "display": "Age at onset",
+                "system": "https://anvilproject.org/acr-harmonized-data-model/"
+              }
+            ]
+          }
+        }
+      ],
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink003.SNOMED:271603002"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final"
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "SNOMED:726527001",
+            "display": "Weight"
+          }
+        ],
+        "text": "Weight"
+      },
+      "component": [
+        {
+          "_valueDateTime": {
+            "extension": [
+              {
+                "url": "target",
+                "valueReference": {
+                  "identifier": {
+                    "system": "https://fake.org/fhir/ids/patient",
+                    "value": "0ink0ink003"
+                  }
+                }
+              },
+              {
+                "url": "targetPath",
+                "valueString": "birthDate"
+              },
+              {
+                "url": "relationship",
+                "valueCode": "after"
+              },
+              {
+                "url": "offset",
+                "valueDuration": {
+                  "code": "a",
+                  "system": "http://unitsofmeasure.org",
+                  "value": 20
+                }
+              }
+            ],
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-relativeDateTime"
+          },
+          "code": {
+            "coding": [
+              {
+                "code": "age_at_onset",
+                "display": "Age at onset",
+                "system": "https://anvilproject.org/acr-harmonized-data-model/"
+              }
+            ]
+          }
+        }
+      ],
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink003.SNOMED:726527001"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final"
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "OMIM:236600",
+            "display": "HYDROCEPHALUS, CONGENITAL, 1; HYC1"
+          }
+        ],
+        "text": "HYDROCEPHALUS, CONGENITAL, 1; HYC1"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink004.OMIM:236600"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373066001",
+                "display": "Yes"
+              }
+            ],
+            "text": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "HP:0000238",
+            "display": "Hydrocephalus"
+          }
+        ],
+        "text": "Hydrocephalus"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink004.HP:0000238"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373066001",
+                "display": "Yes"
+              }
+            ],
+            "text": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "HP:0001249",
+            "display": "Intellectual disability"
+          }
+        ],
+        "text": "Intellectual disability"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink004.HP:0001249"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373066001",
+                "display": "Yes"
+              }
+            ],
+            "text": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "HP:0001250",
+            "display": "Seizure"
+          }
+        ],
+        "text": "Seizure"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink004.HP:0001250"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373066001",
+                "display": "Yes"
+              }
+            ],
+            "text": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "SNOMED:57054005",
+            "display": "Acute myocardial infarction"
+          }
+        ],
+        "text": "Acute myocardial infarction"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink004.SNOMED:57054005"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373066001",
+                "display": "Yes"
+              }
+            ],
+            "text": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "SNOMED:422868009",
+            "display": "Unexplained weight loss"
+          }
+        ],
+        "text": "Unexplained weight loss"
+      },
+      "component": [
+        {
+          "_valueDateTime": {
+            "extension": [
+              {
+                "url": "target",
+                "valueReference": {
+                  "identifier": {
+                    "system": "https://fake.org/fhir/ids/patient",
+                    "value": "0ink0ink004"
+                  }
+                }
+              },
+              {
+                "url": "targetPath",
+                "valueString": "birthDate"
+              },
+              {
+                "url": "relationship",
+                "valueCode": "after"
+              },
+              {
+                "url": "offset",
+                "valueDuration": {
+                  "code": "a",
+                  "system": "http://unitsofmeasure.org",
+                  "value": 65
+                }
+              }
+            ],
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-relativeDateTime"
+          },
+          "code": {
+            "coding": [
+              {
+                "code": "age_at_onset",
+                "display": "Age at onset",
+                "system": "https://anvilproject.org/acr-harmonized-data-model/"
+              }
+            ]
+          }
+        }
+      ],
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink004.SNOMED:422868009"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373066001",
+                "display": "Yes"
+              }
+            ],
+            "text": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "SNOMED:233604007",
+            "display": "Pneumonia"
+          }
+        ],
+        "text": "Pneumonia"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink004.SNOMED:233604007"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373067005",
+                "display": "No"
+              }
+            ],
+            "text": "No"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "SNOMED:271603002",
+            "display": "Height / growth measure"
+          }
+        ],
+        "text": "Height / growth measure"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink004.SNOMED:271603002"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final"
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "SNOMED:726527001",
+            "display": "Weight"
+          }
+        ],
+        "text": "Weight"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink004.SNOMED:726527001"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final"
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "OMIM:236600",
+            "display": "HYDROCEPHALUS, CONGENITAL, 1; HYC1"
+          }
+        ],
+        "text": "HYDROCEPHALUS, CONGENITAL, 1; HYC1"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink005.OMIM:236600"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373067005",
+                "display": "No"
+              }
+            ],
+            "text": "No"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "HP:0000238",
+            "display": "Hydrocephalus"
+          }
+        ],
+        "text": "Hydrocephalus"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink005.HP:0000238"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373067005",
+                "display": "No"
+              }
+            ],
+            "text": "No"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "HP:0001249",
+            "display": "Intellectual disability"
+          }
+        ],
+        "text": "Intellectual disability"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink005.HP:0001249"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373067005",
+                "display": "No"
+              }
+            ],
+            "text": "No"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "HP:0001250",
+            "display": "Seizure"
+          }
+        ],
+        "text": "Seizure"
+      },
+      "component": [
+        {
+          "_valueDateTime": {
+            "extension": [
+              {
+                "url": "target",
+                "valueReference": {
+                  "identifier": {
+                    "system": "https://fake.org/fhir/ids/patient",
+                    "value": "0ink0ink005"
+                  }
+                }
+              },
+              {
+                "url": "targetPath",
+                "valueString": "birthDate"
+              },
+              {
+                "url": "relationship",
+                "valueCode": "after"
+              },
+              {
+                "url": "offset",
+                "valueDuration": {
+                  "code": "a",
+                  "system": "http://unitsofmeasure.org",
+                  "value": 32
+                }
+              }
+            ],
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-relativeDateTime"
+          },
+          "code": {
+            "coding": [
+              {
+                "code": "age_at_onset",
+                "display": "Age at onset",
+                "system": "https://anvilproject.org/acr-harmonized-data-model/"
+              }
+            ]
+          }
+        }
+      ],
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink005.HP:0001250"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373066001",
+                "display": "Yes"
+              }
+            ],
+            "text": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "SNOMED:57054005",
+            "display": "Acute myocardial infarction"
+          }
+        ],
+        "text": "Acute myocardial infarction"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink005.SNOMED:57054005"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373067005",
+                "display": "No"
+              }
+            ],
+            "text": "No"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "SNOMED:422868009",
+            "display": "Unexplained weight loss"
+          }
+        ],
+        "text": "Unexplained weight loss"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink005.SNOMED:422868009"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373066001",
+                "display": "Yes"
+              }
+            ],
+            "text": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "SNOMED:233604007",
+            "display": "Pneumonia"
+          }
+        ],
+        "text": "Pneumonia"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink005.SNOMED:233604007"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373067005",
+                "display": "No"
+              }
+            ],
+            "text": "No"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "SNOMED:271603002",
+            "display": "Height / growth measure"
+          }
+        ],
+        "text": "Height / growth measure"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink005.SNOMED:271603002"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final"
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "SNOMED:726527001",
+            "display": "Weight"
+          }
+        ],
+        "text": "Weight"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink005.SNOMED:726527001"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final"
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "OMIM:236600",
+            "display": "HYDROCEPHALUS, CONGENITAL, 1; HYC1"
+          }
+        ],
+        "text": "HYDROCEPHALUS, CONGENITAL, 1; HYC1"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink006.OMIM:236600"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373067005",
+                "display": "No"
+              }
+            ],
+            "text": "No"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "HP:0000238",
+            "display": "Hydrocephalus"
+          }
+        ],
+        "text": "Hydrocephalus"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink006.HP:0000238"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373067005",
+                "display": "No"
+              }
+            ],
+            "text": "No"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "HP:0001249",
+            "display": "Intellectual disability"
+          }
+        ],
+        "text": "Intellectual disability"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink006.HP:0001249"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373067005",
+                "display": "No"
+              }
+            ],
+            "text": "No"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "HP:0001250",
+            "display": "Seizure"
+          }
+        ],
+        "text": "Seizure"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink006.HP:0001250"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373066001",
+                "display": "Yes"
+              }
+            ],
+            "text": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "SNOMED:57054005",
+            "display": "Acute myocardial infarction"
+          }
+        ],
+        "text": "Acute myocardial infarction"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink006.SNOMED:57054005"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373067005",
+                "display": "No"
+              }
+            ],
+            "text": "No"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "SNOMED:422868009",
+            "display": "Unexplained weight loss"
+          }
+        ],
+        "text": "Unexplained weight loss"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink006.SNOMED:422868009"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373066001",
+                "display": "Yes"
+              }
+            ],
+            "text": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "SNOMED:233604007",
+            "display": "Pneumonia"
+          }
+        ],
+        "text": "Pneumonia"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink006.SNOMED:233604007"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373067005",
+                "display": "No"
+              }
+            ],
+            "text": "No"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "SNOMED:271603002",
+            "display": "Height / growth measure"
+          }
+        ],
+        "text": "Height / growth measure"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink006.SNOMED:271603002"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final"
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "SNOMED:726527001",
+            "display": "Weight"
+          }
+        ],
+        "text": "Weight"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink006.SNOMED:726527001"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final"
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "OMIM:236600",
+            "display": "HYDROCEPHALUS, CONGENITAL, 1; HYC1"
+          }
+        ],
+        "text": "HYDROCEPHALUS, CONGENITAL, 1; HYC1"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink007.OMIM:236600"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373066001",
+                "display": "Yes"
+              }
+            ],
+            "text": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "HP:0000238",
+            "display": "Hydrocephalus"
+          }
+        ],
+        "text": "Hydrocephalus"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink007.HP:0000238"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373066001",
+                "display": "Yes"
+              }
+            ],
+            "text": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "HP:0001249",
+            "display": "Intellectual disability"
+          }
+        ],
+        "text": "Intellectual disability"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink007.HP:0001249"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373066001",
+                "display": "Yes"
+              }
+            ],
+            "text": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "HP:0001250",
+            "display": "Seizure"
+          }
+        ],
+        "text": "Seizure"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink007.HP:0001250"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373066001",
+                "display": "Yes"
+              }
+            ],
+            "text": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "SNOMED:57054005",
+            "display": "Acute myocardial infarction"
+          }
+        ],
+        "text": "Acute myocardial infarction"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink007.SNOMED:57054005"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373067005",
+                "display": "No"
+              }
+            ],
+            "text": "No"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "SNOMED:422868009",
+            "display": "Unexplained weight loss"
+          }
+        ],
+        "text": "Unexplained weight loss"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink007.SNOMED:422868009"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373066001",
+                "display": "Yes"
+              }
+            ],
+            "text": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "SNOMED:233604007",
+            "display": "Pneumonia"
+          }
+        ],
+        "text": "Pneumonia"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink007.SNOMED:233604007"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373067005",
+                "display": "No"
+              }
+            ],
+            "text": "No"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "SNOMED:271603002",
+            "display": "Height / growth measure"
+          }
+        ],
+        "text": "Height / growth measure"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink007.SNOMED:271603002"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final"
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "SNOMED:726527001",
+            "display": "Weight"
+          }
+        ],
+        "text": "Weight"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink007.SNOMED:726527001"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final"
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "OMIM:236600",
+            "display": "HYDROCEPHALUS, CONGENITAL, 1; HYC1"
+          }
+        ],
+        "text": "HYDROCEPHALUS, CONGENITAL, 1; HYC1"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink008.OMIM:236600"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373066001",
+                "display": "Yes"
+              }
+            ],
+            "text": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "HP:0000238",
+            "display": "Hydrocephalus"
+          }
+        ],
+        "text": "Hydrocephalus"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink008.HP:0000238"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373066001",
+                "display": "Yes"
+              }
+            ],
+            "text": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "HP:0001249",
+            "display": "Intellectual disability"
+          }
+        ],
+        "text": "Intellectual disability"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink008.HP:0001249"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373067005",
+                "display": "No"
+              }
+            ],
+            "text": "No"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "HP:0001250",
+            "display": "Seizure"
+          }
+        ],
+        "text": "Seizure"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink008.HP:0001250"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373066001",
+                "display": "Yes"
+              }
+            ],
+            "text": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "SNOMED:57054005",
+            "display": "Acute myocardial infarction"
+          }
+        ],
+        "text": "Acute myocardial infarction"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink008.SNOMED:57054005"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373067005",
+                "display": "No"
+              }
+            ],
+            "text": "No"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "SNOMED:422868009",
+            "display": "Unexplained weight loss"
+          }
+        ],
+        "text": "Unexplained weight loss"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink008.SNOMED:422868009"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373066001",
+                "display": "Yes"
+              }
+            ],
+            "text": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "SNOMED:233604007",
+            "display": "Pneumonia"
+          }
+        ],
+        "text": "Pneumonia"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink008.SNOMED:233604007"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373067005",
+                "display": "No"
+              }
+            ],
+            "text": "No"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "SNOMED:271603002",
+            "display": "Height / growth measure"
+          }
+        ],
+        "text": "Height / growth measure"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink008.SNOMED:271603002"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final"
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "SNOMED:726527001",
+            "display": "Weight"
+          }
+        ],
+        "text": "Weight"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink008.SNOMED:726527001"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final"
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "OMIM:236600",
+            "display": "HYDROCEPHALUS, CONGENITAL, 1; HYC1"
+          }
+        ],
+        "text": "HYDROCEPHALUS, CONGENITAL, 1; HYC1"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink009.OMIM:236600"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373067005",
+                "display": "No"
+              }
+            ],
+            "text": "No"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "HP:0000238",
+            "display": "Hydrocephalus"
+          }
+        ],
+        "text": "Hydrocephalus"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink009.HP:0000238"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373067005",
+                "display": "No"
+              }
+            ],
+            "text": "No"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "HP:0001249",
+            "display": "Intellectual disability"
+          }
+        ],
+        "text": "Intellectual disability"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink009.HP:0001249"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373066001",
+                "display": "Yes"
+              }
+            ],
+            "text": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "HP:0001250",
+            "display": "Seizure"
+          }
+        ],
+        "text": "Seizure"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink009.HP:0001250"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373066001",
+                "display": "Yes"
+              }
+            ],
+            "text": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "SNOMED:57054005",
+            "display": "Acute myocardial infarction"
+          }
+        ],
+        "text": "Acute myocardial infarction"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink009.SNOMED:57054005"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373067005",
+                "display": "No"
+              }
+            ],
+            "text": "No"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "SNOMED:422868009",
+            "display": "Unexplained weight loss"
+          }
+        ],
+        "text": "Unexplained weight loss"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink009.SNOMED:422868009"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373067005",
+                "display": "No"
+              }
+            ],
+            "text": "No"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "SNOMED:233604007",
+            "display": "Pneumonia"
+          }
+        ],
+        "text": "Pneumonia"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink009.SNOMED:233604007"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373066001",
+                "display": "Yes"
+              }
+            ],
+            "text": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "SNOMED:271603002",
+            "display": "Height / growth measure"
+          }
+        ],
+        "text": "Height / growth measure"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink009.SNOMED:271603002"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final"
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "SNOMED:726527001",
+            "display": "Weight"
+          }
+        ],
+        "text": "Weight"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink009.SNOMED:726527001"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final"
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "OMIM:236600",
+            "display": "HYDROCEPHALUS, CONGENITAL, 1; HYC1"
+          }
+        ],
+        "text": "HYDROCEPHALUS, CONGENITAL, 1; HYC1"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink010.OMIM:236600"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373066001",
+                "display": "Yes"
+              }
+            ],
+            "text": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "HP:0000238",
+            "display": "Hydrocephalus"
+          }
+        ],
+        "text": "Hydrocephalus"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink010.HP:0000238"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373066001",
+                "display": "Yes"
+              }
+            ],
+            "text": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "HP:0001249",
+            "display": "Intellectual disability"
+          }
+        ],
+        "text": "Intellectual disability"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink010.HP:0001249"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373066001",
+                "display": "Yes"
+              }
+            ],
+            "text": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "HP:0001250",
+            "display": "Seizure"
+          }
+        ],
+        "text": "Seizure"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink010.HP:0001250"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373067005",
+                "display": "No"
+              }
+            ],
+            "text": "No"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "SNOMED:57054005",
+            "display": "Acute myocardial infarction"
+          }
+        ],
+        "text": "Acute myocardial infarction"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink010.SNOMED:57054005"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373067005",
+                "display": "No"
+              }
+            ],
+            "text": "No"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "SNOMED:422868009",
+            "display": "Unexplained weight loss"
+          }
+        ],
+        "text": "Unexplained weight loss"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink010.SNOMED:422868009"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373067005",
+                "display": "No"
+              }
+            ],
+            "text": "No"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "SNOMED:233604007",
+            "display": "Pneumonia"
+          }
+        ],
+        "text": "Pneumonia"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink010.SNOMED:233604007"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "coding": [
+              {
+                "code": "SNOMED:373066001",
+                "display": "Yes"
+              }
+            ],
+            "text": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "SNOMED:271603002",
+            "display": "Height / growth measure"
+          }
+        ],
+        "text": "Height / growth measure"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink010.SNOMED:271603002"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final"
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "SNOMED:726527001",
+            "display": "Weight"
+          }
+        ],
+        "text": "Weight"
+      },
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/condition",
+          "use": "official",
+          "value": "0ink0ink010.SNOMED:726527001"
+        }
+      ],
+      "meta": {
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Observation",
+      "status": "final"
+    }
+  ],
+  "participant": [
+    {
+      "birthDate": "1987",
       "extension": [
         {
           "extension": [
@@ -92,101 +3792,7 @@
             },
             {
               "url": "text",
-              "valueString": "White and Pacific Islander"
-            }
-          ],
-          "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
-        },
-        {
-          "extension": [
-            {
-              "url": "ombCategory",
-              "valueCoding": {
-                "code": "2076-8",
-                "display": "Native Hawaiian or Other Pacific Islander",
-                "system": "urn:oid:2.16.840.1.113883.6.238",
-                "version": "v1"
-              }
-            },
-            {
-              "url": "text",
-              "valueString": "White and Pacific Islander"
-            }
-          ],
-          "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
-        },
-        {
-          "extension": [
-            {
-              "url": "ombCategory",
-              "valueCoding": {
-                "code": "UNK",
-                "display": "Unknown",
-                "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
-                "version": "v1"
-              }
-            },
-            {
-              "url": "text",
-              "valueString": "Unknown"
-            }
-          ],
-          "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
-        },
-        {
-          "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
-          "valueCoding": {
-            "code": "female",
-            "display": "Female",
-            "system": "http://hl7.org/fhir/administrative-gender",
-            "version": "v1"
-          }
-        },
-        {
-          "url": "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/research-date-of-birth-method",
-          "valueCoding": {
-            "code": "exact",
-            "display": "Exact",
-            "system": "https://nih-ncpi.github.io/ncpi-fhir-ig-2/CodeSystem/research-data-date-of-birth-method",
-            "version": "v1"
-          }
-        }
-      ],
-      "id": "cd4de057-9035-4061-b7a8-435c18a7ec6c",
-      "identifier": [
-        {
-          "system": "https://anvilproject.github.io/acr-harmonized-data-model/participant",
-          "use": "official",
-          "value": "cd4de057"
-        }
-      ],
-      "meta": {
-        "tag": [
-          {
-            "code": "Fake_Study",
-            "system": "https://fake.org/fhir/ids/researchstudy"
-          }
-        ]
-      },
-      "resourceType": "Patient"
-    },
-    {
-      "deceasedBoolean": true,
-      "extension": [
-        {
-          "extension": [
-            {
-              "url": "ombCategory",
-              "valueCoding": {
-                "code": "UNK",
-                "display": "Unknown",
-                "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
-                "version": "v1"
-              }
-            },
-            {
-              "url": "text",
-              "valueString": "Unknown"
+              "valueString": "White"
             }
           ],
           "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
@@ -212,8 +3818,8 @@
         {
           "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
           "valueCoding": {
-            "code": "unknown",
-            "display": "Unknown",
+            "code": "female",
+            "display": "Female",
             "system": "http://hl7.org/fhir/administrative-gender",
             "version": "v1"
           }
@@ -221,19 +3827,31 @@
         {
           "url": "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/research-age-at-last-vital-status",
           "valueQuantity": {
-            "value": 10950
+            "value": 38
+          }
+        },
+        {
+          "url": "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/research-date-of-birth-method",
+          "valueCoding": {
+            "code": "year-only",
+            "display": "Year Only",
+            "system": "https://nih-ncpi.github.io/ncpi-fhir-ig-2/CodeSystem/research-data-date-of-birth-method",
+            "version": "v1"
           }
         }
       ],
-      "id": "9ca1559b-94cd-46fc-8582-1ff907cdb13d",
+      "id": "0ink0ink001",
       "identifier": [
         {
-          "system": "https://anvilproject.github.io/acr-harmonized-data-model/participant",
+          "system": "https://fake.org/fhir/ids/patient",
           "use": "official",
-          "value": "9ca1559b"
+          "value": "0ink0ink001"
         }
       ],
       "meta": {
+        "profile": [
+          "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/ncpi-participant"
+        ],
         "tag": [
           {
             "code": "Fake_Study",
@@ -244,15 +3862,761 @@
       "resourceType": "Patient"
     },
     {
-      "id": "9c1dea0b-7011-438f-8c6e-7e3c7cfd68ec",
+      "birthDate": "1966",
+      "extension": [
+        {
+          "extension": [
+            {
+              "url": "ombCategory",
+              "valueCoding": {
+                "code": "2028-9",
+                "display": "Asian",
+                "system": "urn:oid:2.16.840.1.113883.6.238",
+                "version": "v1"
+              }
+            },
+            {
+              "url": "text",
+              "valueString": "Asian"
+            }
+          ],
+          "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
+        },
+        {
+          "extension": [
+            {
+              "url": "ombCategory",
+              "valueCoding": {
+                "code": "2186-5",
+                "display": "Not Hispanic or Latino",
+                "system": "urn:oid:2.16.840.1.113883.6.238",
+                "version": "v1"
+              }
+            },
+            {
+              "url": "text",
+              "valueString": "Not hispanic or Latino"
+            }
+          ],
+          "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
+        },
+        {
+          "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
+          "valueCoding": {
+            "code": "female",
+            "display": "Female",
+            "system": "http://hl7.org/fhir/administrative-gender",
+            "version": "v1"
+          }
+        },
+        {
+          "url": "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/research-age-at-last-vital-status",
+          "valueQuantity": {
+            "value": 59
+          }
+        },
+        {
+          "url": "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/research-date-of-birth-method",
+          "valueCoding": {
+            "code": "year-only",
+            "display": "Year Only",
+            "system": "https://nih-ncpi.github.io/ncpi-fhir-ig-2/CodeSystem/research-data-date-of-birth-method",
+            "version": "v1"
+          }
+        }
+      ],
+      "id": "0ink0ink002",
       "identifier": [
         {
-          "system": "https://anvilproject.github.io/acr-harmonized-data-model/participant",
+          "system": "https://fake.org/fhir/ids/patient",
           "use": "official",
-          "value": "9c1dea0b"
+          "value": "0ink0ink002"
         }
       ],
       "meta": {
+        "profile": [
+          "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/ncpi-participant"
+        ],
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Patient"
+    },
+    {
+      "birthDate": "2000",
+      "extension": [
+        {
+          "extension": [
+            {
+              "url": "ombCategory",
+              "valueCoding": {
+                "code": "ASKU",
+                "display": "asked but unknown",
+                "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor/",
+                "version": "v1"
+              }
+            },
+            {
+              "url": "text",
+              "valueString": "Asked but Unknown"
+            }
+          ],
+          "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
+        },
+        {
+          "extension": [
+            {
+              "url": "ombCategory",
+              "valueCoding": {
+                "code": "2186-5",
+                "display": "Not Hispanic or Latino",
+                "system": "urn:oid:2.16.840.1.113883.6.238",
+                "version": "v1"
+              }
+            },
+            {
+              "url": "text",
+              "valueString": "Not hispanic or Latino"
+            }
+          ],
+          "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
+        },
+        {
+          "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
+          "valueCoding": {
+            "code": "male",
+            "display": "Male",
+            "system": "http://hl7.org/fhir/administrative-gender",
+            "version": "v1"
+          }
+        },
+        {
+          "url": "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/research-age-at-last-vital-status",
+          "valueQuantity": {
+            "value": 25
+          }
+        },
+        {
+          "url": "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/research-date-of-birth-method",
+          "valueCoding": {
+            "code": "year-only",
+            "display": "Year Only",
+            "system": "https://nih-ncpi.github.io/ncpi-fhir-ig-2/CodeSystem/research-data-date-of-birth-method",
+            "version": "v1"
+          }
+        }
+      ],
+      "id": "0ink0ink003",
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/patient",
+          "use": "official",
+          "value": "0ink0ink003"
+        }
+      ],
+      "meta": {
+        "profile": [
+          "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/ncpi-participant"
+        ],
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Patient"
+    },
+    {
+      "birthDate": "1957",
+      "extension": [
+        {
+          "extension": [
+            {
+              "url": "ombCategory",
+              "valueCoding": {
+                "code": "2054-5",
+                "display": "Black or African American",
+                "system": "urn:oid:2.16.840.1.113883.6.238",
+                "version": "v1"
+              }
+            },
+            {
+              "url": "text",
+              "valueString": "Black or African American"
+            }
+          ],
+          "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
+        },
+        {
+          "extension": [
+            {
+              "url": "ombCategory",
+              "valueCoding": {
+                "code": "2135-2",
+                "display": "Hispanic or Latino",
+                "system": "urn:oid:2.16.840.1.113883.6.238",
+                "version": "v1"
+              }
+            },
+            {
+              "url": "text",
+              "valueString": "Hispanic or Latino"
+            }
+          ],
+          "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
+        },
+        {
+          "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
+          "valueCoding": {
+            "code": "male",
+            "display": "Male",
+            "system": "http://hl7.org/fhir/administrative-gender",
+            "version": "v1"
+          }
+        },
+        {
+          "url": "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/research-age-at-last-vital-status",
+          "valueQuantity": {
+            "value": 68
+          }
+        },
+        {
+          "url": "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/research-date-of-birth-method",
+          "valueCoding": {
+            "code": "year-only",
+            "display": "Year Only",
+            "system": "https://nih-ncpi.github.io/ncpi-fhir-ig-2/CodeSystem/research-data-date-of-birth-method",
+            "version": "v1"
+          }
+        }
+      ],
+      "id": "0ink0ink004",
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/patient",
+          "use": "official",
+          "value": "0ink0ink004"
+        }
+      ],
+      "meta": {
+        "profile": [
+          "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/ncpi-participant"
+        ],
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Patient"
+    },
+    {
+      "birthDate": "1991",
+      "extension": [
+        {
+          "extension": [
+            {
+              "url": "ombCategory",
+              "valueCoding": {
+                "code": "2106-3",
+                "display": "White",
+                "system": "urn:oid:2.16.840.1.113883.6.238",
+                "version": "v1"
+              }
+            },
+            {
+              "url": "text",
+              "valueString": "White"
+            }
+          ],
+          "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
+        },
+        {
+          "extension": [
+            {
+              "url": "ombCategory",
+              "valueCoding": {
+                "code": "2186-5",
+                "display": "Not Hispanic or Latino",
+                "system": "urn:oid:2.16.840.1.113883.6.238",
+                "version": "v1"
+              }
+            },
+            {
+              "url": "text",
+              "valueString": "Not hispanic or Latino"
+            }
+          ],
+          "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
+        },
+        {
+          "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
+          "valueCoding": {
+            "code": "female",
+            "display": "Female",
+            "system": "http://hl7.org/fhir/administrative-gender",
+            "version": "v1"
+          }
+        },
+        {
+          "url": "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/research-age-at-last-vital-status",
+          "valueQuantity": {
+            "value": 34
+          }
+        },
+        {
+          "url": "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/research-date-of-birth-method",
+          "valueCoding": {
+            "code": "year-only",
+            "display": "Year Only",
+            "system": "https://nih-ncpi.github.io/ncpi-fhir-ig-2/CodeSystem/research-data-date-of-birth-method",
+            "version": "v1"
+          }
+        }
+      ],
+      "id": "0ink0ink005",
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/patient",
+          "use": "official",
+          "value": "0ink0ink005"
+        }
+      ],
+      "meta": {
+        "profile": [
+          "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/ncpi-participant"
+        ],
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Patient"
+    },
+    {
+      "birthDate": "1955",
+      "extension": [
+        {
+          "extension": [
+            {
+              "url": "ombCategory",
+              "valueCoding": {
+                "code": "2076-8",
+                "display": "Native Hawaiian or Other Pacific Islander",
+                "system": "urn:oid:2.16.840.1.113883.6.238",
+                "version": "v1"
+              }
+            },
+            {
+              "url": "text",
+              "valueString": "Native Hawaiian or Other Pacific Islander"
+            }
+          ],
+          "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
+        },
+        {
+          "extension": [
+            {
+              "url": "ombCategory",
+              "valueCoding": {
+                "code": "2186-5",
+                "display": "Not Hispanic or Latino",
+                "system": "urn:oid:2.16.840.1.113883.6.238",
+                "version": "v1"
+              }
+            },
+            {
+              "url": "text",
+              "valueString": "Not hispanic or Latino"
+            }
+          ],
+          "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
+        },
+        {
+          "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
+          "valueCoding": {
+            "code": "male",
+            "display": "Male",
+            "system": "http://hl7.org/fhir/administrative-gender",
+            "version": "v1"
+          }
+        },
+        {
+          "url": "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/research-age-at-last-vital-status",
+          "valueQuantity": {
+            "value": 70
+          }
+        },
+        {
+          "url": "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/research-date-of-birth-method",
+          "valueCoding": {
+            "code": "year-only",
+            "display": "Year Only",
+            "system": "https://nih-ncpi.github.io/ncpi-fhir-ig-2/CodeSystem/research-data-date-of-birth-method",
+            "version": "v1"
+          }
+        }
+      ],
+      "id": "0ink0ink006",
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/patient",
+          "use": "official",
+          "value": "0ink0ink006"
+        }
+      ],
+      "meta": {
+        "profile": [
+          "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/ncpi-participant"
+        ],
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Patient"
+    },
+    {
+      "birthDate": "1990",
+      "extension": [
+        {
+          "extension": [
+            {
+              "url": "ombCategory",
+              "valueCoding": {
+                "code": "2131-1",
+                "display": "Other Race",
+                "system": "urn:oid:2.16.840.1.113883.6.238",
+                "version": "v1"
+              }
+            },
+            {
+              "url": "text",
+              "valueString": "Other Race"
+            }
+          ],
+          "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
+        },
+        {
+          "extension": [
+            {
+              "url": "ombCategory",
+              "valueCoding": {
+                "code": "2135-2",
+                "display": "Hispanic or Latino",
+                "system": "urn:oid:2.16.840.1.113883.6.238",
+                "version": "v1"
+              }
+            },
+            {
+              "url": "text",
+              "valueString": "Hispanic or Latino"
+            }
+          ],
+          "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
+        },
+        {
+          "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
+          "valueCoding": {
+            "code": "male",
+            "display": "Male",
+            "system": "http://hl7.org/fhir/administrative-gender",
+            "version": "v1"
+          }
+        },
+        {
+          "url": "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/research-age-at-last-vital-status",
+          "valueQuantity": {
+            "value": 35
+          }
+        },
+        {
+          "url": "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/research-date-of-birth-method",
+          "valueCoding": {
+            "code": "year-only",
+            "display": "Year Only",
+            "system": "https://nih-ncpi.github.io/ncpi-fhir-ig-2/CodeSystem/research-data-date-of-birth-method",
+            "version": "v1"
+          }
+        }
+      ],
+      "id": "0ink0ink007",
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/patient",
+          "use": "official",
+          "value": "0ink0ink007"
+        }
+      ],
+      "meta": {
+        "profile": [
+          "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/ncpi-participant"
+        ],
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Patient"
+    },
+    {
+      "birthDate": "2005",
+      "extension": [
+        {
+          "extension": [
+            {
+              "url": "ombCategory",
+              "valueCoding": {
+                "code": "2106-3",
+                "display": "White",
+                "system": "urn:oid:2.16.840.1.113883.6.238",
+                "version": "v1"
+              }
+            },
+            {
+              "url": "text",
+              "valueString": "White"
+            }
+          ],
+          "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
+        },
+        {
+          "extension": [
+            {
+              "url": "ombCategory",
+              "valueCoding": {
+                "code": "2186-5",
+                "display": "Not Hispanic or Latino",
+                "system": "urn:oid:2.16.840.1.113883.6.238",
+                "version": "v1"
+              }
+            },
+            {
+              "url": "text",
+              "valueString": "Not hispanic or Latino"
+            }
+          ],
+          "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
+        },
+        {
+          "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
+          "valueCoding": {
+            "code": "female",
+            "display": "Female",
+            "system": "http://hl7.org/fhir/administrative-gender",
+            "version": "v1"
+          }
+        },
+        {
+          "url": "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/research-age-at-last-vital-status",
+          "valueQuantity": {
+            "value": 20
+          }
+        },
+        {
+          "url": "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/research-date-of-birth-method",
+          "valueCoding": {
+            "code": "year-only",
+            "display": "Year Only",
+            "system": "https://nih-ncpi.github.io/ncpi-fhir-ig-2/CodeSystem/research-data-date-of-birth-method",
+            "version": "v1"
+          }
+        }
+      ],
+      "id": "0ink0ink008",
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/patient",
+          "use": "official",
+          "value": "0ink0ink008"
+        }
+      ],
+      "meta": {
+        "profile": [
+          "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/ncpi-participant"
+        ],
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Patient"
+    },
+    {
+      "birthDate": "1979",
+      "extension": [
+        {
+          "extension": [
+            {
+              "url": "ombCategory",
+              "valueCoding": {
+                "code": "2028-9",
+                "display": "Asian",
+                "system": "urn:oid:2.16.840.1.113883.6.238",
+                "version": "v1"
+              }
+            },
+            {
+              "url": "text",
+              "valueString": "Asian"
+            }
+          ],
+          "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
+        },
+        {
+          "extension": [
+            {
+              "url": "ombCategory",
+              "valueCoding": {
+                "code": "2186-5",
+                "display": "Not Hispanic or Latino",
+                "system": "urn:oid:2.16.840.1.113883.6.238",
+                "version": "v1"
+              }
+            },
+            {
+              "url": "text",
+              "valueString": "Not hispanic or Latino"
+            }
+          ],
+          "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
+        },
+        {
+          "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
+          "valueCoding": {
+            "code": "male",
+            "display": "Male",
+            "system": "http://hl7.org/fhir/administrative-gender",
+            "version": "v1"
+          }
+        },
+        {
+          "url": "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/research-age-at-last-vital-status",
+          "valueQuantity": {
+            "value": 46
+          }
+        },
+        {
+          "url": "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/research-date-of-birth-method",
+          "valueCoding": {
+            "code": "year-only",
+            "display": "Year Only",
+            "system": "https://nih-ncpi.github.io/ncpi-fhir-ig-2/CodeSystem/research-data-date-of-birth-method",
+            "version": "v1"
+          }
+        }
+      ],
+      "id": "0ink0ink009",
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/patient",
+          "use": "official",
+          "value": "0ink0ink009"
+        }
+      ],
+      "meta": {
+        "profile": [
+          "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/ncpi-participant"
+        ],
+        "tag": [
+          {
+            "code": "Fake_Study",
+            "system": "https://fake.org/fhir/ids/researchstudy"
+          }
+        ]
+      },
+      "resourceType": "Patient"
+    },
+    {
+      "birthDate": "1986",
+      "extension": [
+        {
+          "extension": [
+            {
+              "url": "ombCategory",
+              "valueCoding": {
+                "code": "2106-3",
+                "display": "White",
+                "system": "urn:oid:2.16.840.1.113883.6.238",
+                "version": "v1"
+              }
+            },
+            {
+              "url": "text",
+              "valueString": "White"
+            }
+          ],
+          "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
+        },
+        {
+          "extension": [
+            {
+              "url": "ombCategory",
+              "valueCoding": {
+                "code": "2186-5",
+                "display": "Not Hispanic or Latino",
+                "system": "urn:oid:2.16.840.1.113883.6.238",
+                "version": "v1"
+              }
+            },
+            {
+              "url": "text",
+              "valueString": "Not hispanic or Latino"
+            }
+          ],
+          "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
+        },
+        {
+          "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
+          "valueCoding": {
+            "code": "female",
+            "display": "Female",
+            "system": "http://hl7.org/fhir/administrative-gender",
+            "version": "v1"
+          }
+        },
+        {
+          "url": "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/research-age-at-last-vital-status",
+          "valueQuantity": {
+            "value": 39
+          }
+        },
+        {
+          "url": "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/research-date-of-birth-method",
+          "valueCoding": {
+            "code": "year-only",
+            "display": "Year Only",
+            "system": "https://nih-ncpi.github.io/ncpi-fhir-ig-2/CodeSystem/research-data-date-of-birth-method",
+            "version": "v1"
+          }
+        }
+      ],
+      "id": "0ink0ink010",
+      "identifier": [
+        {
+          "system": "https://fake.org/fhir/ids/patient",
+          "use": "official",
+          "value": "0ink0ink010"
+        }
+      ],
+      "meta": {
+        "profile": [
+          "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/ncpi-participant"
+        ],
         "tag": [
           {
             "code": "Fake_Study",
@@ -270,27 +4634,7 @@
           "extension": [
             {
               "url": "name",
-              "valueString": "John Doe"
-            },
-            {
-              "url": "role",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "code": "primary-investigator",
-                    "system": "https://hl7.org/fhir/valueset-research-study-party-role.html"
-                  }
-                ]
-              }
-            }
-          ],
-          "url": "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/research-study-associated-party"
-        },
-        {
-          "extension": [
-            {
-              "url": "name",
-              "valueString": "Jane Doe"
+              "valueString": "Robert Carroll"
             },
             {
               "url": "role",
@@ -307,12 +4651,11 @@
           "url": "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/research-study-associated-party"
         }
       ],
-      "id": "6dd14c00-c336-45fa-8f65-19ff166ac8c4",
       "identifier": [
         {
           "system": "https://fake.org/fhir/ids/researchstudy",
           "use": "official",
-          "value": "Super Fake Study"
+          "value": "0ink0ink"
         }
       ],
       "meta": {
@@ -325,12 +4668,7 @@
       },
       "relatedArtifact": [
         {
-          "display": "Funding Source",
-          "label": "funding source",
-          "type": "documentation"
-        },
-        {
-          "display": "Funding Source 2",
+          "display": "NHGRI",
           "label": "funding source",
           "type": "documentation"
         }
@@ -339,41 +4677,70 @@
       "status": "active"
     },
     {
-      "extension": [
-        {
-          "extension": [
-            {
-              "url": "name",
-              "valueString": "Larry Smith"
-            },
-            {
-              "url": "role",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "code": "primary-investigator",
-                    "system": "https://hl7.org/fhir/valueset-research-study-party-role.html"
-                  }
-                ]
-              }
-            }
-          ],
-          "url": "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/research-study-associated-party"
-        }
-      ],
-      "id": "0c9d277b-ac49-4a39-89b0-19ee37cc11da",
+      "actual": true,
       "identifier": [
         {
-          "system": "https://fake.org/fhir/ids/researchstudy",
+          "system": "https://fake.org/fhir/ids/group",
           "use": "official",
-          "value": "Fake Study"
+          "value": "Fake_Study"
+        }
+      ],
+      "member": [
+        {
+          "entity": {
+            "reference": "Patient/0ink0ink001"
+          }
         },
         {
-          "system": "https://fake.org/fhir/ids/researchstudy",
-          "value": "Fake Study 2"
+          "entity": {
+            "reference": "Patient/0ink0ink002"
+          }
+        },
+        {
+          "entity": {
+            "reference": "Patient/0ink0ink003"
+          }
+        },
+        {
+          "entity": {
+            "reference": "Patient/0ink0ink004"
+          }
+        },
+        {
+          "entity": {
+            "reference": "Patient/0ink0ink005"
+          }
+        },
+        {
+          "entity": {
+            "reference": "Patient/0ink0ink006"
+          }
+        },
+        {
+          "entity": {
+            "reference": "Patient/0ink0ink007"
+          }
+        },
+        {
+          "entity": {
+            "reference": "Patient/0ink0ink008"
+          }
+        },
+        {
+          "entity": {
+            "reference": "Patient/0ink0ink009"
+          }
+        },
+        {
+          "entity": {
+            "reference": "Patient/0ink0ink010"
+          }
         }
       ],
       "meta": {
+        "profile": [
+          "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/research-study-group"
+        ],
         "tag": [
           {
             "code": "Fake_Study",
@@ -381,20 +4748,9 @@
           }
         ]
       },
-      "partOf": [
-        {
-          "reference": "ResearchStudy/6dd14c00-c336-45fa-8f65-19ff166ac8c4"
-        }
-      ],
-      "relatedArtifact": [
-        {
-          "display": "Funding Source 3",
-          "label": "funding source",
-          "type": "documentation"
-        }
-      ],
-      "resourceType": "ResearchStudy",
-      "status": "active"
+      "quantity": 10,
+      "resourceType": "Group",
+      "type": "person"
     }
   ]
 }

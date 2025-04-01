@@ -1,0 +1,6 @@
+local code,text,table_name,parent_varname,local code system,code,display,code system,comment
+phenotypic_feature,Phenotypic Feature,,,assertion_type,Phenotypic-Feature,Phenotypic Feature,https://nih-ncpi.github.io/ncpi-fhir-ig-2/CodeSystem/condition-type,,
+disease,Disease,,,assertion_type,Disease,Disease,https://nih-ncpi.github.io/ncpi-fhir-ig-2/CodeSystem/condition-type,,
+comorbidity,Comorbidity,,,assertion_type,Comorbidity,Comorbidity,https://nih-ncpi.github.io/ncpi-fhir-ig-2/CodeSystem/condition-type,,
+histology,Histology,,,assertion_type,Histology,Histology,https://nih-ncpi.github.io/ncpi-fhir-ig-2/CodeSystem/condition-type,,
+clinical_finding,Clinical-Finding,,,assertion_type,Clinical-Finding,Clinical-Finding,https://nih-ncpi.github.io/ncpi-fhir-ig-2/CodeSystem/condition-type,,

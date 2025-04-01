@@ -1,0 +1,106 @@
+def ConditionAssertion(study, condition) {
+    // This works if all 3 data points, value_number, value_units_display, and value_units are absent
+    if (~condition.value_number or ~condition.value_units_display or ~condition.value_units?){
+    meta.tag[]: StudyMeta(study);
+    //  21887     meta.profile[]: "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/ncpi-condition";
+    resourceType: "Observation";
+    status: "final";
+    identifier[]: BuildConditionIdentifier(study, condition.code, condition.subject_id);
+    identifier[0].use: "official";
+    subject: ParticipantsCondition(condition);
+    code: CompletePartialCoding(condition.code, condition.display, "curie_system");    
+    _effectiveDateTime.extension[0] (if condition.age_at_assertion?): AgeAtExtension(study, condition.subject_id, condition.age_at_assertion, "years");
+    valueCodeableConcept.coding[]: HarmonizeMapped(condition.value_code, "condition_assertion");
+    valueCodeableConcept.text: condition.display;
+    category[].coding[] (if condition.assertion_type?): HarmonizeMappedFirst(condition.assertion_type, "assertion_type");
+
+    component[] (if condition.age_at_event?): BuildAgeAtOnset(study, condition);
+    component[] (if condition.age_at_resolution?): BuildAgeAtResolution(study, condition);
+    }
+    }
+    
+    
+
+def BuildAgeAtResolution(study, condition) {
+    code: {
+        coding[]: {
+            code: "age_at_resolution";
+            system: "https://anvilproject.org/acr-harmonized-data-model/";
+            display: "Age at resolution";
+            }
+            }
+    _valueDateTime.extension[]: AgeAtExtension(study, condition.subject_id, condition.age_at_resolution, "years")
+}
+
+def BuildAgeAtOnset(study, condition) {
+    code: {
+        coding[]: {
+            code: "age_at_onset";
+            system: "https://anvilproject.org/acr-harmonized-data-model/";
+            display: "Age at onset";
+            }
+            }
+    _valueDateTime.extension[]: AgeAtExtension(study, condition.subject_id, condition.age_at_event, "years")
+}
+
+
+def BuildConditionIdentifier(study, required condition_code, required subject_id) {
+    $this: Key_Identifier(study, "Condition", $StrCat(subject_id, ".", condition_code));
+}
+
+def ParticipantsCondition(condition) {
+      reference: $StrCat("Patient","/",condition.subject_id)
+}
+
+// Currently supporting both "MIM" and "OMIM" curies for the OMIM ontology.
+def BuildConditionCode(condition) {
+    if (condition.code?) {
+        var SplitCode: $StrSplit(condition.code, ":");
+    coding[]: {
+        system: HarmonizeAsSystem(SplitCode[0], "curie_system");
+        code: condition.code;
+        display: condition.display;
+    }
+    text: condition.display;
+    }
+}
+
+def CompletePartialCoding(resource_code, resource_display, resource_system) {
+    if (resource_code?) {
+        var SplitCode: $StrSplit(resource_code, ":");
+    coding[]: {
+        system: HarmonizeAsSystem(SplitCode[0], resource_system);
+        code: resource_code;
+        display: resource_display;
+    }
+    text: resource_display;
+    }
+}
+
+def SubjectAssertion(study, assertion){
+    // This works if all 3 data points, value_number, value_units_display, and value_units are present
+    if (assertion.value_number or assertion.value_units_display or assertion.value_units?) {
+     meta.tag[]: StudyMeta(study);
+    //meta.profile[]: "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/ncpi-condition";
+    resourceType: "Observation";
+    status: "final";
+    identifier[]: BuildConditionIdentifier(study, assertion.code, assertion.subject_id);
+    identifier[0].use: "official";
+    subject: ParticipantsCondition(assertion);
+    code: CompletePartialCoding(assertion.code, assertion.display, "curie_system");    
+    _effectiveDateTime.extension[0] (if assertion.age_at_assertion?): AgeAtExtension(study, assertion.subject_id, assertion.age_at_assertion, "years");
+    category[].coding[] (if assertion.assertion_type?): HarmonizeMappedFirst(assertion.assertion_type, "assertion_type");
+    valueQuantity: {
+        value (if assertion.value_number?): $ParseFloat(assertion.value_number);
+        unit (if assertion.value_units_display?): assertion.value_units_display;
+        code (if assertion.value_units?): assertion.value_units;
+        system: "http://unitsofmeasure.org";
+        };
+    }
+}
+
+
+def ProcessCondition(study, participant) {
+    out condition: ConditionAssertion(study, participant.condition[]);
+    out assertion: SubjectAssertion(study,participant.condition[]);
+} 

@@ -1,5 +1,6 @@
 def Study(study, study_meta) {
     meta.tag[]: StudyMeta(study);
+    meta.profile[]: "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/ncpi-research-study";
     id: study_meta.id;
     resourceType: "ResearchStudy";
     title: study.study_title;
