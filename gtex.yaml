@@ -48,16 +48,16 @@ env:
   prod: tbd-prod
 dataset:
   study_meta:
-    filename: data/tables/gtex/GTEx_Study_Draft.csv
+    filename: data/tables/GTEx/GTEx_Study_Draft.csv
     data_dictionary:
       filename: data/dd/study.csv
   participant:
-    filename: data/tables/gtex/GTEx_Subject_Draft.csv
+    filename: data/tables/GTEx/GTEx_Subject_Draft.csv
     data_dictionary:
       filename: data/dd/participant.csv
   demographics:
     hidden: true
-    filename: data/tables/gtex/GTEx_Demographics_Draft.csv
+    filename: data/tables/GTEx/GTEx_Demographics_Draft.csv
     data_dictionary:
       filename: data/dd/demographics.csv
     embed:
@@ -65,7 +65,7 @@ dataset:
       colname: subject_id
   condition:
     hidden: true
-    filename: data/tables/gtex/GTEx_SubjectAssertion_Draft.csv
+    filename: data/tables/GTEx/GTEx_SubjectAssertion_Draft.csv
     data_dictionary:
       filename: data/dd/condition.csv
     embed:

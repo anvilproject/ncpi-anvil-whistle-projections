@@ -48,16 +48,16 @@ env:
   prod: tbd-prod
 dataset:
   study_meta:
-    filename: data/tables/bhcmg/BH_CMG_Study_Draft.csv
+    filename: data/tables/BHCMG/BH_CMG_Study_Draft.csv
     data_dictionary:
       filename: data/dd/study.csv
   participant:
-    filename: data/tables/bhcmg/BH_CMG_Subject_Draft.csv
+    filename: data/tables/BHCMG/BH_CMG_Subject_Draft.csv
     data_dictionary:
       filename: data/dd/participant.csv
   demographics:
     hidden: true
-    filename: data/tables/bhcmg/BH_CMG_Demographics_Draft.csv
+    filename: data/tables/BHCMG/BH_CMG_Demographics_Draft.csv
     data_dictionary:
       filename: data/dd/demographics.csv
     embed:
@@ -65,7 +65,7 @@ dataset:
       colname: subject_id
   condition:
     hidden: true
-    filename: data/tables/bhcmg/BH_CMG_SubjectAssertion_Draft.csv
+    filename: data/tables/BHCMG/BH_CMG_SubjectAssertion_Draft.csv
     data_dictionary:
       filename: data/dd/condition.csv
     embed:
