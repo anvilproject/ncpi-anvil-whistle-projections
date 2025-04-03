@@ -31,8 +31,8 @@ code_harmonization:
   - harmony/identifier_curies.csv
   - harmony/misc.csv
 projections:
-  study: projector/study_only
-  dataset: projector/dataset
+  study: projector/harmonized
+  dataset: projector/harmonized
   harmonized: projector/harmonized
 
 require_official: True
