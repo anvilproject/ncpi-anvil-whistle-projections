@@ -1,7 +1,7 @@
 def ConditionAssertion(study, condition) {
     if (~condition.value_number and ~condition.value_units_display and ~condition.value_units?){
     meta.tag[]: StudyMeta(study);
-    //  21887     meta.profile[]: "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/ncpi-condition";
+    //meta.profile[]: "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/ncpi-condition";
     resourceType: "Observation";
     status: "final";
     identifier[]: BuildConditionIdentifier(study, condition.code, condition.subject_id);
