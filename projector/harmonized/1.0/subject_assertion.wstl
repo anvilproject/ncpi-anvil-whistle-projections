@@ -1,8 +1,7 @@
 def ConditionAssertion(study, condition) {
-    // This works if all 3 data points, value_number, value_units_display, and value_units are absent
-    if (~condition.value_number or ~condition.value_units_display or ~condition.value_units?){
+    if (~condition.value_number and ~condition.value_units_display and ~condition.value_units?){
     meta.tag[]: StudyMeta(study);
-    //  21887     meta.profile[]: "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/ncpi-condition";
+    //meta.profile[]: "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/ncpi-condition";
     resourceType: "Observation";
     status: "final";
     identifier[]: BuildConditionIdentifier(study, condition.code, condition.subject_id);
@@ -78,7 +77,6 @@ def CompletePartialCoding(resource_code, resource_display, resource_system) {
 }
 
 def SubjectAssertion(study, assertion){
-    // This works if all 3 data points, value_number, value_units_display, and value_units are present
     if (assertion.value_number or assertion.value_units_display or assertion.value_units?) {
      meta.tag[]: StudyMeta(study);
     //meta.profile[]: "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/ncpi-condition";
