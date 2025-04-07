@@ -4,7 +4,12 @@ def ConditionAssertion(study, condition) {
     //  meta.profile[]: "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/ncpi-condition";
     resourceType: "Observation";
     status: "final";
-    identifier[]: BuildConditionIdentifier(study, condition.code, condition.subject_id);
+
+    if (condition.code?) {
+        var condition_code: condition.code;
+    } else {var condition_code: condition.display;}
+
+    identifier[]: BuildConditionIdentifier(study, condition_code, condition.subject_id);
     identifier[0].use: "official";
     subject: ParticipantsCondition(condition);
     code: CompletePartialCoding(condition.code, condition.display, "curie_system");    
@@ -82,7 +87,12 @@ def SubjectAssertion(study, assertion){
     //meta.profile[]: "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/ncpi-condition";
     resourceType: "Observation";
     status: "final";
-    identifier[]: BuildConditionIdentifier(study, assertion.code, assertion.subject_id);
+
+    if (assertion.code?) {
+        var assertion_code: assertion.code;
+    } else {var assertion_code: assertion.display;}
+
+    identifier[]: BuildConditionIdentifier(study, assertion_code, assertion.subject_id);
     identifier[0].use: "official";
     subject: ParticipantsCondition(assertion);
     code: CompletePartialCoding(assertion.code, assertion.display, "curie_system");    
