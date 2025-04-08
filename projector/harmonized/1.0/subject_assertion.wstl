@@ -1,11 +1,17 @@
 def ConditionAssertion(study, condition) {
-    // This works if all 3 data points, value_number, value_units_display, and value_units are absent
-    if (~condition.value_number or ~condition.value_units_display or ~condition.value_units?){
+    // currently dropping rows that don't have codes, as per Robert 4/7/25, but allows plain codeableConcept.text
+    if (condition.code?){
+    if (~condition.value_number and ~condition.value_units_display and ~condition.value_units?){
     meta.tag[]: StudyMeta(study);
-    //  21887     meta.profile[]: "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/ncpi-condition";
+    //meta.profile[]: "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/ncpi-condition";
     resourceType: "Observation";
     status: "final";
-    identifier[]: BuildConditionIdentifier(study, condition.code, condition.subject_id);
+
+    if (condition.code?) {
+        var condition_code: condition.code;
+    } else {var condition_code: condition.display;}
+
+    identifier[]: BuildConditionIdentifier(study, condition_code, condition.subject_id);
     identifier[0].use: "official";
     subject: ParticipantsCondition(condition);
     code: CompletePartialCoding(condition.code, condition.display, "curie_system");    
@@ -16,6 +22,7 @@ def ConditionAssertion(study, condition) {
 
     component[] (if condition.age_at_event?): BuildAgeAtOnset(study, condition);
     component[] (if condition.age_at_resolution?): BuildAgeAtResolution(study, condition);
+    }
     }
     }
     
@@ -68,23 +75,27 @@ def BuildConditionCode(condition) {
 def CompletePartialCoding(resource_code, resource_display, resource_system) {
     if (resource_code?) {
         var SplitCode: $StrSplit(resource_code, ":");
-    coding[]: {
-        system: HarmonizeAsSystem(SplitCode[0], resource_system);
-        code: resource_code;
-        display: resource_display;
-    }
+        coding[]: {
+            system: HarmonizeAsSystem(SplitCode[0], resource_system);
+            code: resource_code;
+            display: resource_display;
+        }
+    }  
     text: resource_display;
-    }
 }
 
 def SubjectAssertion(study, assertion){
-    // This works if all 3 data points, value_number, value_units_display, and value_units are present
     if (assertion.value_number or assertion.value_units_display or assertion.value_units?) {
      meta.tag[]: StudyMeta(study);
     //meta.profile[]: "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/ncpi-condition";
     resourceType: "Observation";
     status: "final";
-    identifier[]: BuildConditionIdentifier(study, assertion.code, assertion.subject_id);
+
+    if (assertion.code?) {
+        var assertion_code: assertion.code;
+    } else {var assertion_code: assertion.display;}
+
+    identifier[]: BuildConditionIdentifier(study, assertion_code, assertion.subject_id);
     identifier[0].use: "official";
     subject: ParticipantsCondition(assertion);
     code: CompletePartialCoding(assertion.code, assertion.display, "curie_system");    

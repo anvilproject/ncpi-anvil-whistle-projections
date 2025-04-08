@@ -3,4 +3,6 @@ def Transform_Dataset(resource) {
     $this: ProcessParticipants(resource.study, resource.participant[]);
     $this: ProcessGroup(resource.study, resource.participant);
     $this: ProcessCondition(resource.study, resource.participant[]);
+    $this: ProcessAccessPolicy(resource.study, resource.access_policy);
+    $this: ProcessFamilyRelationship(resource.study, resource.family_relationship[]);
 }
