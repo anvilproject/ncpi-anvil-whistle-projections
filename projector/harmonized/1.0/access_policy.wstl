@@ -25,12 +25,8 @@ def AccessPolicy(study, access_policy) {
         display: "Research Information Access";
     }
 
-    //make harmony file to harmony
     provision: AccessPolicyCodes(access_policy.access_policy_code);
-    policyRule.coding[]: {
-    system: "http://terminology.hl7.org/CodeSystem/consentpolicycodes";
-    code: access_policy.data_access_type;
-   }
+    policyRule.coding[]: HarmonizeMappedFirst(access_policy.data_access_type, "access_type");
 }
 
 def AccessPolicyCodes(code) {
