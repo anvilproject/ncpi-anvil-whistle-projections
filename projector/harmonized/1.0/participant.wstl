@@ -19,9 +19,9 @@ def DobMethod(method) {
 def Participant(study, participant) {
     meta.tag[]: StudyMeta(study);
     //meta.profile[]: "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/ncpi-participant";
-    id: participant.id;
+    id: participant.subject_id;
     resourceType: "Patient";
-    identifier[]: Key_Identifier(study, "Patient", participant.id);
+    identifier[]: Key_Identifier(study, "Patient", participant.subject_id);
     identifier[0].use: "official";
 
     var races: $StrSplit(participant.demographics[0].race, "|");
