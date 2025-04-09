@@ -1,0 +1,7 @@
+variable_name,description,data_type,enumerations,min,max,Comment
+data_access_type,Data Access Type,enumeration,Open Access;Registered Access;Controlled;GSR Restricted;GSR Allowed,,,,
+access_policy_code,Access Policy Code,enumeration,General Research Use;Health/Medical/Biomedical;Disease-Specific (Disease/Trait/Exposure);IRB Approval Required;Publication Required;Collaboration Required;Not-for-profit use only;Methods;Genetic Studies only;Genomic Summary Results,,,,
+disease_limitation,Disease Use Limitations,String,,,,,
+description,Description,String,,,,,
+website,Website,String,,,,,
+id,ID associated with a class,String,,,,,

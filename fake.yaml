@@ -23,11 +23,13 @@ harmony_prefix: data-harmony
 # by this project.
 code_harmonization:
   - harmony/study.csv
+  - harmony/access_types.csv
   - harmony/assertion_types.csv
   - harmony/curie_systems.csv
   - harmony/dataset.csv
   - harmony/demographics.csv
   - harmony/encounter.csv
+  - harmony/family_member.csv
   - harmony/identifier_curies.csv
   - harmony/misc.csv
 projections:
@@ -71,6 +73,14 @@ dataset:
     embed:
       dataset: participant
       colname: subject_id
+  access_policy:
+    filename: data/tables/fake/0ink0ink_AccessPolicy.csv
+    data_dictionary:
+      filename: data/dd/access_policy.csv
+  family_relationship:
+    filename: data/tables/fake/0ink0ink_FamilyRelationship.csv
+    data_dictionary:
+      filename: data/dd/family_relationship.csv
 active_tables:
   ALL: true
 #  family: true

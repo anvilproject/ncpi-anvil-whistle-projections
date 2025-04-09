@@ -1,5 +1,5 @@
 subject_id,assertion_type,age_at_assertion,age_at_event,age_at_resolution,code,display,value_code,value_display,value_number,value_units,value_units_display,access_policy_id
-0ink0ink001,disease,38,35,,OMIM:236600,"HYDROCEPHALUS, CONGENITAL, 1; HYC1",SNOMED:373066001,Yes,,,,0ink_GRU
+0ink0ink001,disease,38,35,,,"HYDROCEPHALUS, CONGENITAL, 1; HYC1",SNOMED:373066001,Yes,,,,0ink_GRU
 0ink0ink001,phenotypic_feature,38,,,HP:0000238,Hydrocephalus,SNOMED:373066001,Yes,,,,0ink_GRU
 0ink0ink001,phenotypic_feature,38,,,HP:0001249,Intellectual disability,SNOMED:373067005,No,,,,0ink_GRU
 0ink0ink001,phenotypic_feature,38,15,25,HP:0001250,Seizure,SNOMED:373066001,Yes,,,,0ink_GRU

@@ -1,0 +1,44 @@
+def AccessPolicy(study, access_policy) {
+    meta.tag[]: StudyMeta(study);
+    meta.profile[]: "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/ncpi-research-access-policy";
+    resourceType: "Consent";
+    identifier[]: Key_Identifier(study, "AccessPolicy", access_policy.access_policy_id);
+    identifier[0].use: "official";
+    extension[]: { 
+    url: "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/access-policy-description";
+    valueMarkdown: access_policy.description;
+    };
+    extension[]: AccessTypeExtension(access_policy.data_access_type);
+    extension[]: {
+        url: "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/research-web-Link";
+        valueUrl: access_policy.website; 
+    }
+    status: "active";
+    scope.coding[]: {
+                system: "http://terminology.hl7.org/CodeSystem/consentscope";
+                code: "research";
+                display: "Research";
+    }
+    category[].coding[]: {
+        system: "http://terminology.hl7.org/CodeSystem/consentcategorycodes";
+        code: "research";
+        display: "Research Information Access";
+    }
+
+    provision: AccessPolicyCodes(access_policy.access_policy_code);
+    policyRule.coding[]: HarmonizeMappedFirst(access_policy.data_access_type, "access_type");
+}
+
+def AccessPolicyCodes(code) {
+    var SplitCodes: $StrSplit(code, "-");
+    purpose[]: HarmonizeMappedFirst(SplitCodes[], "policy_code")
+}
+
+def AccessTypeExtension(type) {
+    url: "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/access-type";
+    valueCodeableConcept.coding[]: HarmonizeMapped(type, "access_type");
+    }
+
+def ProcessAccessPolicy(study, access_policy) {
+    out access_policy: AccessPolicy(study, access_policy[]);
+}
