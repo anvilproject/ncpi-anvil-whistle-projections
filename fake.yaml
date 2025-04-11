@@ -101,6 +101,10 @@ dataset:
     embed:
       dataset: specimen
       colname: sample_id
+  family:
+    filename: data/tables/fake/0ink0ink_Family.csv
+    data_dictionary:
+      filename: data/dd/family.csv
 active_tables:
   ALL: true
 #  family: true
