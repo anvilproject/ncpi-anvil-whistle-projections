@@ -5,4 +5,5 @@ def Transform_Dataset(resource) {
     $this: ProcessCondition(resource.study, resource.participant[]);
     $this: ProcessAccessPolicy(resource.study, resource.access_policy);
     $this: ProcessFamilyRelationship(resource.study, resource.family_relationship[]);
+    $this: ProcessSpecimen(resource.study, resource.specimen[]);
 }

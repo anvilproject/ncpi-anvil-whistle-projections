@@ -1,0 +1,11 @@
+sample_id,biospecimen_collection_id,age_at_collection,method,site,spatial_qualifier,laterality,access_policy_id
+0ink0ink001-1,0ink0ink001_biospec,38,14604-3,8887007,,,0ink_GRU
+0ink0ink002,0ink0ink002_biospec,59,14604-3,8887007,,,0ink_GRU
+0ink0ink003,0ink0ink003_biospec,25,14604-3,8887007,,,0ink_GRU
+0ink0ink004,0ink0ink004_biospec,68,14604-3,8887007,,,0ink_GRU
+0ink0ink005,0ink0ink005_biospec,34,14604-3,8887007,,,0ink_GRU
+0ink0ink006,0ink0ink006_biospec,70,14604-3,8887007,,,0ink_GRU
+0ink0ink007,0ink0ink007_biospec,35,14604-3,8887007,,,0ink_GRU
+0ink0ink008,0ink0ink008_biospec,20,14604-3,8887007,,,0ink_GRU
+0ink0ink009,0ink0ink009_biospec,46,14604-3,8887007,,,0ink_GRU
+0ink0ink010,0ink0ink010_biospec,39,14604-3,8887007,,,0ink_GRU

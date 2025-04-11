@@ -1,0 +1,9 @@
+variable_name,description,data_type,enumerations,min,max,Comment
+availability_status,Can this Sample be requested for further analysis?,enumeration,available;unavailable,,,,
+quantity_number,The total quantity of the specimen,Float,,,,,
+quantity_units,The structured term defining the units of the quantity,String,,,,,
+concentration_number,What is the concentration of the analyte in the Aliquot?,Float,,,,,
+concentration_unit,Units associated with the concentration of the analyte in the Aliquot? UCUM coding preferred,String,,,,,
+has_access_policy,Which access policy applies to this element?,String,,,,,
+id,ID associated with a class,String,,,,,
+external_id,Other identifiers for this entity,String,,,,,
