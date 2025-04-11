@@ -22,6 +22,7 @@ def AgeAtExtension(study, subject_id, required age, age_unit) {
             extension[2].valueCode: "after";
             extension[3].url: "offset";
             extension[3].valueDuration.value: $ParseInt(age);
+            extension[3].valueDuration.unit: "Year";
             extension[3].valueDuration.system: "http://unitsofmeasure.org";
             extension[3].valueDuration.code: "a";
         }
@@ -37,9 +38,9 @@ def AgeAtExtension(study, subject_id, required age, age_unit) {
             extension[2].valueCode: "after";
             extension[3].url: "offset";
             extension[3].valueDuration.value: days;
-            extension[3].valueDuration.unit: "d";
+            extension[3].valueDuration.unit: "Day";
             extension[3].valueDuration.system: "http://unitsofmeasure.org";
-            extension[3].valueDuration.code: "days";
+            extension[3].valueDuration.code: "d";
         }
     }
 }

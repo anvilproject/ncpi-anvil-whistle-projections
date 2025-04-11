@@ -1,0 +1,13 @@
+sample_id,aliquot_id,availability_status,quantity_number,quantity_units,concentration_number,concentration_unit,access_policy_id
+0ink0ink001-2,0ink0ink001-2_bld_aliquot,available,0.7,mL,,,0ink_GRU
+0ink0ink001-3,0ink0ink001-3-1_bld_aliquot,available,0.2,mL,,,0ink_GRU
+0ink0ink001-3,0ink0ink001-3-2_bld_aliquot,available,0.3,mL,,,0ink_GRU
+0ink0ink002,0ink0ink002_bld_aliquot,available,2.9,mL,,,0ink_GRU
+0ink0ink003,0ink0ink003_bld_aliquot,available,2.2,mL,,,0ink_GRU
+0ink0ink004,0ink0ink004_bld_aliquot,available,1.5,mL,,,0ink_GRU
+0ink0ink005,0ink0ink005_bld_aliquot,available,3.3,mL,,,0ink_GRU
+0ink0ink006,0ink0ink006_bld_aliquot,available,3.6,mL,,,0ink_GRU
+0ink0ink007,0ink0ink007_bld_aliquot,available,2.14,mL,,,0ink_GRU
+0ink0ink008,0ink0ink008_bld_aliquot,available,2.09,mL,,,0ink_GRU
+0ink0ink009,0ink0ink009_bld_aliquot,available,1.35,mL,,,0ink_GRU
+0ink0ink010,0ink0ink010_bld_aliquot,available,1.8,mL,,,0ink_GRU

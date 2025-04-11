@@ -81,6 +81,26 @@ dataset:
     filename: data/tables/fake/0ink0ink_FamilyRelationship.csv
     data_dictionary:
       filename: data/dd/family_relationship.csv
+  specimen:
+    filename: data/tables/fake/0ink0ink_Sample.csv
+    data_dictionary:
+      filename: data/dd/sample.csv
+  aliquot:
+    hidden: true
+    filename: data/tables/fake/0ink0ink_Aliquot.csv
+    data_dictionary:
+      filename: data/dd/aliquot.csv
+    embed:
+      dataset: specimen
+      colname: sample_id
+  biospecimen_collection:
+    hidden: true
+    filename: data/tables/fake/0ink0ink_BiospecimenCollection.csv
+    data_dictionary:
+      filename: data/dd/biospecimen_collection.csv
+    embed:
+      dataset: specimen
+      colname: sample_id
 active_tables:
   ALL: true
 #  family: true

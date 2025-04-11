@@ -1,0 +1,13 @@
+variable_name,description,data_type,enumerations,min,max,Comment
+biospecimen_collection,Biospecimen Collection that generated this sample,String,,,,,
+parent_sample,Sample from which this sample is derived,String,,,,,
+sample_type,Type of material of which this Sample is comprised,String,,,,,
+processing,Processing that was applied to the Parent Sample or from the Biospecimen Collection that yielded this distinct sample,String,,,,,
+availability_status,Can this Sample be requested for further analysis?,enumeration,available;unavailable,,,,
+storage_method,Sample storage method,String,,,,,
+quantity_number,The total quantity of the specimen,Float,,,,,
+quantity_units,The structured term defining the units of the quantity,String,,,,,
+aliquots,Aliquot(s) from this Sample,String,,,,,
+has_access_policy,Which access policy applies to this element?,String,,,,,
+id,ID associated with a class,String,,,,,
+external_id,Other identifiers for this entity,String,,,,,

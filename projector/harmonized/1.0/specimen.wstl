@@ -1,0 +1,58 @@
+def Specimen(study, specimen) {
+    meta.tag[]: StudyMeta(study);
+    //meta.profile[]: "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/ncpi-sample";
+    identifier[]: Key_Identifier(study, "Specimen", specimen.sample_id);
+    identifier[0].use: "official";
+    resourceType: "Specimen";
+    subject: SubjectReference(specimen.subject_id);
+    parent[] (if specimen.parent_sample?): ParentReference(specimen.parent_sample);
+    status: specimen.availability_status;
+    type.coding[]: {code: specimen.sample_type;};
+    collection.quantity: {
+        value (if specimen.quantity_number?): $ParseFloat(specimen.quantity_number);
+        unit: specimen.quantity_units;
+    };
+    collection.method.coding[]: {
+        code: specimen.biospecimen_collection[0].method;
+    }
+    collection._collectedDateTime.extension[0] (if specimen.biospecimen_collection[0].age_at_collection?): AgeAtExtension(study, specimen.biospecimen_collection[0].sample_id, specimen.biospecimen_collection[0].age_at_collection, "years");
+    collection.bodySite.coding[]: {
+        code: specimen.biospecimen_collection[0].site;
+    }
+    collection.extension[] (if specimen.biospecimen_collection[0].spatial_qualifier?): {
+        url: "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/biospecimen-spatial";
+        value: specimen.biospecimen_collection[0].spatial_qualifier;
+    }
+    collection.extension[] (if specimen.biospecimen_collection[0].laterality?): {
+        url: "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/biospecimen-laterality";
+        value: specimen.biospecimen_collection[0].laterality;
+    }
+    container[]: Aliquot(specimen.aliquot[]);
+}
+
+def Aliquot(aliquot) {
+    identifier[]: {
+        value: aliquot.aliquot_id;
+    };
+    extension[] (if aliquot.availability_status?): {
+       url: "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/aliquot-availability";
+       valueCode: aliquot.availability_status;
+    }
+    extension[] (if aliquot.concentration_number or aliquot.concentration_unit?): {
+        url: "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/aliquot-concentration";
+        value (if aliquot.concentration_number): $ParseFloat(aliquot.concentration_number);
+        unit: aliquot.concentration_unit;
+    }
+    specimenQuantity:  {
+        value  (if aliquot.quantity_number?): $ParseFloat(aliquot.quantity_number);
+        unit: aliquot.quantity_units;
+    }
+}
+
+def ParentReference(parent) {
+      reference: $StrCat("Specimen","/", parent)
+}
+
+def ProcessSpecimen(study, specimen) {
+    out specimen: Specimen(study, specimen);
+}

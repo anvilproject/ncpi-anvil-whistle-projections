@@ -1,0 +1,9 @@
+variable_name,description,data_type,enumerations,min,max,Comment
+age_at_collection,The age at which this biospecimen was collected,Integer,,,,,
+method,The approach used to collect the biospecimen,String,,,,,
+site,The location of the specimen collection,String,,,,,
+spatial_qualifier,Any spatial/location qualifiers,String,,,,,
+laterality,Laterality information for the site,String,,,,,
+has_access_policy,Which access policy applies to this element?,String,,,,,
+id,ID associated with a class,String,,,,,
+external_id,Other identifiers for this entity,String,,,,,
