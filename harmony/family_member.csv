@@ -110,3 +110,7 @@ proband_only,Proband Only,,,family_type,proband_only,Proband Only,https://nih-nc
 trio,Trio (2 parents and affected child),,,family_type,trio,Trio,https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/family-type,,
 trio_plus,2 Parents and 2 or more children,,,family_type,trio_plus,Trio+,https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/family-type,,
 other,Other,,,family_type,other,Other,https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/family-type,,
+not_suspected,Not Suspected,,,consanguinity,428263003,NOT suspected,http://snomed.info/sct,,
+suspected,Suspected,,,consanguinity,415684004,Suspected,http://snomed.info/sct,,
+known_present,Known Present,,,consanguinity,410515003,Known Present,http://snomed.info/sct,,
+unknown,Unknown,,,consanguinity,261665006,Unknown,http://snomed.info/sct,,
