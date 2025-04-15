@@ -105,6 +105,13 @@ dataset:
     filename: data/tables/fake/0ink0ink_Family.csv
     data_dictionary:
       filename: data/dd/family.csv
+  family_role:
+    filename: data/tables/fake/0ink0ink_FamilyRelationship.csv
+    data_dictionary:
+      filename: data/dd/family_relationship.csv
+    embed:
+      dataset: family
+      colname: family_id
 active_tables:
   ALL: true
 #  family: true
