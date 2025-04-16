@@ -18,7 +18,9 @@ def Family(study, family) {
         url: "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/consanguinity";
     }
     extension[] (if family.family_study_focus?): {
+        var SplitCode: $StrSplit(family.family_study_focus, ":");
         valueCodeableConcept.coding[]: {
+            system: HarmonizeAsSystem(SplitCode[0], "curie_system");
             code: family.family_study_focus;
         }
         url: "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/study-family-focus";
