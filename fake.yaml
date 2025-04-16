@@ -112,6 +112,10 @@ dataset:
     embed:
       dataset: family
       colname: family_id
+  file:
+    filename: data/tables/fake/0ink0ink_File.csv
+    data_dictionary:
+      filename: data/dd/file.csv
 active_tables:
   ALL: true
 #  family: true
