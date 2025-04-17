@@ -1,0 +1,7 @@
+variable_name,description,data_type,enumerations,min,max,Comment
+code,The structured term defining the meaning of the assertion,String,,,,
+display,The friendly display string of the coded term,String,,,,,
+value_code,The structured term defining the value of the assertion,String,,,,,
+value_display,The friendly display string of the coded term for the value of the assertion,String,,,,,
+id,ID associated with a class,String,,,,,
+external_id,Other identifiers for this entity,String,,,,,

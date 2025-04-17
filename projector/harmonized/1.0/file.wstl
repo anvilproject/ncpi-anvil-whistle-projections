@@ -8,15 +8,30 @@ def File(study, file) {
     extension[]: Format_Extension(file);
     extension[]: File_Size_Extension(file);
     status: "current";
-    content[]: Content_Files(file);
-    
+    content[]: Content_Attachment_Extension(file);
     type.coding[]: {
         system: "http://edamontology.org";
         code: file.data_type;
     }
+    component[]: Component_Contents(file.file_metadata[]);
 }
 
-def Content_Files(file) {
+def Component_Contents(meta) {
+    code: {
+        coding[]: {
+            code: meta.code;
+            display: meta.display;
+        }
+    }
+
+    valueCodeableConcept.coding[] (if meta.value_code?): {
+        code: meta.value_code;
+        display: meta.value_display;
+        }
+    valueString (if ~meta.value_code?): meta.value_display;
+}
+
+def Content_Attachment_Extension(file) {
     attachment.url: $StrCat("drs://", file.drs_uri);
     extension[]:  {
         url: " https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/location-access";

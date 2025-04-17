@@ -116,6 +116,13 @@ dataset:
     filename: data/tables/fake/0ink0ink_File.csv
     data_dictionary:
       filename: data/dd/file.csv
+  file_metadata:
+    filename: data/tables/fake/0ink0ink_FileMetadata.csv
+    data_dictionary:
+      filename: data/dd/file_metadata.csv
+    embed:
+      dataset: file
+      colname: filename
 active_tables:
   ALL: true
 #  family: true
