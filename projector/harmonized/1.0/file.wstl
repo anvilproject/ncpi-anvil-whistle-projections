@@ -1,6 +1,6 @@
 def File(study, file) {
     meta.tag[]: StudyMeta(study);
-    //meta.profile[]: "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/ncpi-file";
+    meta.profile[]: "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/ncpi-file";
     identifier[]: Key_Identifier(study, "DocumentReference", file.filename);
     identifier[0].use: "official";
     resourceType: "DocumentReference";
@@ -10,10 +10,10 @@ def File(study, file) {
     status: "current";
     content[]: Content_Attachment_Extension(file);
     type.coding[]: {
-        system: "http://edamontology.org";
+        var SplitType: $StrSplit(file.data_type, ":");
+        system: HarmonizeAsSystem(SplitType[0], "curie_system");
         code: file.data_type;
     }
-    component[]: Component_Contents(file.file_metadata[]);
 }
 
 def Component_Contents(meta) {
@@ -55,6 +55,30 @@ def File_Size_Extension(file) {
     }
 }
 
+def File_Metadata_Code(resource_code, resource_display, resource_system) {
+        coding[]: {
+            system: resource_system;
+            code: resource_code;
+            display: resource_display;
+        }
+    text: resource_display;
+}
+
+
+def File_Metadata(study, file_metadata) {
+    meta.tag[]: StudyMeta(study);
+    //meta.profile[]: "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/ncpi-file-metadata";
+    identifier[]: Key_Identifier(study, "DocumentReference", file_metadata.filename);
+    identifier[0].use: "official";
+    resourceType: "Observation";
+    status: "final";
+    focus[].reference: $StrCat("DocumentReference", "/", file_metadata.filename);
+    component[]: Component_Contents(file_metadata);
+    code: CompletePartialCoding(file_metadata.code, file_metadata.display, "curie_system");
+}
+
+
 def ProcessFile(study, file) {
     out file: File(study, file);
+    out file_metadata: File_Metadata(study, file.file_metadata[]);
 } 

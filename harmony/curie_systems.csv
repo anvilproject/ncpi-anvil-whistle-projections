@@ -13,3 +13,4 @@ OMIT,Ontology for MIRNA Target,,,curie_system,omit,OMIT,http://purl.obolibrary.o
 OMIM,Online Mendelian Inheritance in Man,,,curie_system,omim,OMIM,https://omim.org/MIM:603903,,
 MIM,Online Mendelian Inheritance in Man,,,curie_system,mim,MIM,https://omim.org/MIM:603903,,
 CDCREC,The Centers for Disease Control and Prevention Race and Ethnicity Code System,,,curie_system,cdcrec,CDCREC,http://terminology.hl7.org/NamingSystem/CDCREC,,
+EDAM,Ontology of bioscientific data analysis and data management,,,curie_system,edam,EDAM,http://edamontology.org,,
