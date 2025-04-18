@@ -1,9 +1,18 @@
+
+def BuildConfig(resource) {
+    identifier-prefix: $StrCat("https://anvilproject.org/fhir/", resource.study_meta[0].external_study_id);
+    id: resource.study_meta[0].id;
+    study_meta: resource.study_meta[0];
+}
+
 def Transform_Dataset(resource) {
-    $this: ProcessStudy(resource.study, resource.study_meta[]); // resource.participant
-    $this: ProcessParticipants(resource.study, resource.participant[]);
-    $this: ProcessGroup(resource.study, resource.participant);
-    $this: ProcessCondition(resource.study, resource.participant[]);
-    $this: ProcessAccessPolicy(resource.study, resource.access_policy);
-    $this: ProcessFamilyRelationship(resource.study, resource.family_relationship[]);
-    $this: ProcessSpecimen(resource.study, resource.specimen[]);
+    var config: BuildConfig(resource);
+
+    $this: ProcessStudy(config, resource.study_meta[]); // resource.participant
+    $this: ProcessParticipants(config, resource.participant[]);
+    $this: ProcessGroup(config, resource.participant);
+    $this: ProcessCondition(config, resource.participant[]);
+    $this: ProcessAccessPolicy(config, resource.access_policy);
+    $this: ProcessFamilyRelationship(config, resource.family_relationship[]);
+    $this: ProcessSpecimen(config, resource.specimen[]);
 }
