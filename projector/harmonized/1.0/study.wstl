@@ -27,8 +27,6 @@ def Study(config, study_meta) {
 // If no curie, we assume it's ANVIL. Otherwise, we expect the curie to have a valid system from harmony ("study_curie")
 def StudyIdentifier(config, identifier) {
     var SplitId: $StrSplit(identifier, ":");
-    var orig_identifier: identifier;
-    var stuff: SplitId;
     if $ListLen(SplitId) > 1 {
         var curie: SplitId[0];
         var identifier_only: SplitId[1];
@@ -37,7 +35,7 @@ def StudyIdentifier(config, identifier) {
         } else {
             var system: config.identifier-prefix;
             use: "official";
-        }
+        } 
     } else {
         var identifier_only: identifier;
         var system: config.identifier-prefix;

@@ -1,8 +1,8 @@
-def ConditionAssertion(study_meta, condition) {
+def ConditionAssertion(config, study_meta, condition) {
     // currently dropping rows that don't have codes, as per Robert 4/7/25, but allows plain codeableConcept.text
     if (condition.code?){
     if (~condition.value_number and ~condition.value_units_display and ~condition.value_units?){
-    meta.tag[]: StudyMeta(study_meta);
+    meta.tag[]: StudyMeta(config, study_meta);
     //meta.profile[]: "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/ncpi-condition";
     resourceType: "Observation";
     status: "final";
@@ -11,24 +11,24 @@ def ConditionAssertion(study_meta, condition) {
         var condition_code: condition.code;
     } else {var condition_code: condition.display;}
 
-    identifier[]: BuildConditionIdentifier(study_meta, condition_code, condition.subject_id);
+    identifier[]: BuildConditionIdentifier(config, condition_code, condition.subject_id);
     identifier[0].use: "official";
     subject: ParticipantsCondition(condition);
     code: CompletePartialCoding(condition.code, condition.display, "curie_system");    
-    _effectiveDateTime.extension[0] (if condition.age_at_assertion?): AgeAtExtension(study_meta, condition.subject_id, condition.age_at_assertion, "years");
+    _effectiveDateTime.extension[0] (if condition.age_at_assertion?): AgeAtExtension(config, condition.subject_id, condition.age_at_assertion, "years");
     valueCodeableConcept.coding[]: HarmonizeMapped(condition.value_code, "condition_assertion");
     valueCodeableConcept.text: condition.display;
     category[].coding[] (if condition.assertion_type?): HarmonizeMappedFirst(condition.assertion_type, "assertion_type");
 
-    component[] (if condition.age_at_event?): BuildAgeAtOnset(study_meta, condition);
-    component[] (if condition.age_at_resolution?): BuildAgeAtResolution(study_meta, condition);
+    component[] (if condition.age_at_event?): BuildAgeAtOnset(config, condition);
+    component[] (if condition.age_at_resolution?): BuildAgeAtResolution(config, condition);
     }
     }
     }
     
     
 
-def BuildAgeAtResolution(study_meta, condition) {
+def BuildAgeAtResolution(config, condition) {
     code: {
         coding[]: {
             code: "age_at_resolution";
@@ -36,10 +36,10 @@ def BuildAgeAtResolution(study_meta, condition) {
             display: "Age at resolution";
             }
             }
-    _valueDateTime.extension[]: AgeAtExtension(study_meta, condition.subject_id, condition.age_at_resolution, "years")
+    _valueDateTime.extension[]: AgeAtExtension(config, condition.subject_id, condition.age_at_resolution, "years")
 }
 
-def BuildAgeAtOnset(study_meta, condition) {
+def BuildAgeAtOnset(config, condition) {
     code: {
         coding[]: {
             code: "age_at_onset";
@@ -47,12 +47,12 @@ def BuildAgeAtOnset(study_meta, condition) {
             display: "Age at onset";
             }
             }
-    _valueDateTime.extension[]: AgeAtExtension(study_meta, condition.subject_id, condition.age_at_event, "years")
+    _valueDateTime.extension[]: AgeAtExtension(config, condition.subject_id, condition.age_at_event, "years")
 }
 
 
-def BuildConditionIdentifier(study_meta, required condition_code, required subject_id) {
-    $this: Key_Identifier(study_meta, "Condition", $StrCat(subject_id, ".", condition_code));
+def BuildConditionIdentifier(config, required condition_code, required subject_id) {
+    $this: Key_Identifier(config, "Condition", $StrCat(subject_id, ".", condition_code));
 }
 
 def ParticipantsCondition(condition) {
@@ -84,9 +84,9 @@ def CompletePartialCoding(resource_code, resource_display, resource_system) {
     text: resource_display;
 }
 
-def SubjectAssertion(study_meta, assertion){
+def SubjectAssertion(config, study_meta, assertion){
     if (assertion.value_number or assertion.value_units_display or assertion.value_units?) {
-     meta.tag[]: StudyMeta(study_meta);
+     meta.tag[]: StudyMeta(config, study_meta);
     //meta.profile[]: "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/ncpi-condition";
     resourceType: "Observation";
     status: "final";
@@ -95,11 +95,11 @@ def SubjectAssertion(study_meta, assertion){
         var assertion_code: assertion.code;
     } else {var assertion_code: assertion.display;}
 
-    identifier[]: BuildConditionIdentifier(study_meta, assertion_code, assertion.subject_id);
+    identifier[]: BuildConditionIdentifier(config, assertion_code, assertion.subject_id);
     identifier[0].use: "official";
     subject: ParticipantsCondition(assertion);
     code: CompletePartialCoding(assertion.code, assertion.display, "curie_system");    
-    _effectiveDateTime.extension[0] (if assertion.age_at_assertion?): AgeAtExtension(study_meta, assertion.subject_id, assertion.age_at_assertion, "years");
+    _effectiveDateTime.extension[0] (if assertion.age_at_assertion?): AgeAtExtension(config, assertion.subject_id, assertion.age_at_assertion, "years");
     category[].coding[] (if assertion.assertion_type?): HarmonizeMappedFirst(assertion.assertion_type, "assertion_type");
     valueQuantity: {
         value (if assertion.value_number?): $ParseFloat(assertion.value_number);
@@ -111,7 +111,9 @@ def SubjectAssertion(study_meta, assertion){
 }
 
 
-def ProcessCondition(study_meta, participant) {
-    out condition: ConditionAssertion(study_meta, participant.condition[]);
-    out assertion: SubjectAssertion(study_meta, participant.condition[]);
+def ProcessCondition(config, study_meta, participant) {
+    var conditions: $Unique(participant.condition);
+
+    out condition: ConditionAssertion(config, study_meta, conditions[]);
+    out assertion: SubjectAssertion(config, study_meta, conditions[]);
 } 

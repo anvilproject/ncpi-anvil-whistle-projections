@@ -1,10 +1,10 @@
-def FamilyRelationship(study_meta, family_relationship) {
-    meta.tag[]: StudyMeta(study_meta);
+def FamilyRelationship(config, study_meta, family_relationship) {
+    meta.tag[]: StudyMeta(config, study_meta);
     meta.profile[]: "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/ncpi-family-relationship";
 
     // No id because we don't have id data - YAC 4/8/25 
     id: family_relationship.id;
-    identifier[]: Key_Identifier(study_meta, "Observation", $StrCat(family_relationship.family_member, "-", family_relationship.other_family_member));
+    identifier[]: Key_Identifier(config, "Observation", $StrCat(family_relationship.family_member, "-", family_relationship.other_family_member));
     identifier[0].use: "official";
     resourceType: "Observation";
     status: "final";
@@ -17,6 +17,6 @@ def SubjectReference(subject) {
     reference: $StrCat("Patient", "/", subject);
 }
 
-def ProcessFamilyRelationship(study_meta, family_relationship) {
-    out family_relationship: FamilyRelationship(study_meta, family_relationship);
+def ProcessFamilyRelationship(config, study_meta, family_relationship) {
+    out family_relationship: FamilyRelationship(config, study_meta, family_relationship);
 }

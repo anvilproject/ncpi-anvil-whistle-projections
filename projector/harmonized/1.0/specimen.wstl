@@ -1,7 +1,7 @@
-def Specimen(study_meta, specimen) {
-    meta.tag[]: StudyMeta(study_meta);
+def Specimen(config, study_meta, specimen) {
+    meta.tag[]: StudyMeta(config, study_meta);
     //meta.profile[]: "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/ncpi-sample";
-    identifier[]: Key_Identifier(study_meta, "Specimen", specimen.sample_id);
+    identifier[]: Key_Identifier(config, "Specimen", specimen.sample_id);
     identifier[0].use: "official";
     resourceType: "Specimen";
     subject: SubjectReference(specimen.subject_id);
@@ -53,6 +53,6 @@ def ParentReference(parent) {
       reference: $StrCat("Specimen","/", parent)
 }
 
-def ProcessSpecimen(study_meta, specimen) {
-    out specimen: Specimen(study_meta, specimen);
+def ProcessSpecimen(config, study_meta, specimen) {
+    out specimen: Specimen(config, study_meta, specimen);
 }

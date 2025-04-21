@@ -1,8 +1,8 @@
-def AccessPolicy(study_meta, access_policy) {
-    meta.tag[]: StudyMeta(study_meta);
+def AccessPolicy(config, study_meta, access_policy) {
+    meta.tag[]: StudyMeta(config, study_meta);
     meta.profile[]: "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/ncpi-research-access-policy";
     resourceType: "Consent";
-    identifier[]: Key_Identifier(study_meta, "AccessPolicy", access_policy.access_policy_id);
+    identifier[]: Key_Identifier(config, "AccessPolicy", access_policy.access_policy_id);
     identifier[0].use: "official";
     extension[]: { 
     url: "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/access-policy-description";
@@ -39,6 +39,6 @@ def AccessTypeExtension(type) {
     valueCodeableConcept.coding[]: HarmonizeMapped(type, "access_type");
     }
 
-def ProcessAccessPolicy(study_meta, access_policy) {
-    out access_policy: AccessPolicy(study_meta, access_policy[]);
+def ProcessAccessPolicy(config, study_meta, access_policy) {
+    out access_policy: AccessPolicy(config, study_meta, access_policy[]);
 }
