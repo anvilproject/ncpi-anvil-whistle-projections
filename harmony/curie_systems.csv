@@ -14,3 +14,4 @@ OMIM,Online Mendelian Inheritance in Man,,,curie_system,omim,OMIM,https://omim.o
 MIM,Online Mendelian Inheritance in Man,,,curie_system,mim,MIM,https://omim.org/MIM:603903,,
 CDCREC,The Centers for Disease Control and Prevention Race and Ethnicity Code System,,,curie_system,cdcrec,CDCREC,http://terminology.hl7.org/NamingSystem/CDCREC,,
 EDAM,Ontology of bioscientific data analysis and data management,,,curie_system,edam,EDAM,http://edamontology.org,,
+DBGAP,dbGaP,,,study_curie,dbgap,dbGaP,https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=,,

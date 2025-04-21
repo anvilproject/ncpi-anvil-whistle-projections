@@ -1,2 +1,2 @@
-external_study_id,parent_study_id,funding_source,principal_investigator,study_title
-0ink0ink,,NHGRI,Robert Carroll,Herr Hog's Research Study
+external_id,parent_study_id,funding_source,principal_investigator,study_title
+ANVIL:0ink0ink|DBGAP:phs0012345,,NHGRI,Robert Carroll,Herr Hog's Research Study

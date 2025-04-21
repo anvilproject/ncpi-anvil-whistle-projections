@@ -1,11 +1,23 @@
+// Right now, we assume the primary study will always come first in that string. 
+def BuildConfig(resource) {
+    var SplitExternalId: $StrSplit(resource.study_meta[0].external_id, "|");
+    var primary_identifier: SplitIdentifier(SplitExternalId[0]);
+    identifier-prefix: $StrCat("https://anvilproject.org/fhir/", primary_identifier.identifier);
+    id: resource.study_meta[0].external_id;
+    study_meta: resource.study_meta[0];
+}
+
+
 def Transform_Dataset(resource) {
-    $this: ProcessStudy(resource.study, resource.study_meta[]); // resource.participant
-    $this: ProcessParticipants(resource.study, resource.participant[]);
-    $this: ProcessGroup(resource.study, resource.participant);
-    $this: ProcessCondition(resource.study, resource.participant[]);
-    $this: ProcessAccessPolicy(resource.study, resource.access_policy);
-    $this: ProcessFamilyRelationship(resource.study, resource.family_relationship[]);
-    $this: ProcessSpecimen(resource.study, resource.specimen[]);
-    $this: ProcessFamily(resource.study, resource.family[]);
-    $this: ProcessFile(resource.study, resource.file[]);
+    var config: BuildConfig(resource);
+
+    $this: ProcessStudy(config, resource.study_meta[0]); // resource.participant
+//    $this: ProcessParticipants(resource.study, resource.study_meta[0], resource.participant[]);
+//    $this: ProcessGroup(resource.study, resource.study_meta[0], resource.participant);
+//    $this: ProcessCondition(resource.study, resource.study_meta[0], resource.participant[]);
+//    $this: ProcessAccessPolicy(resource.study, resource.study_meta[0], resource.access_policy);
+//    $this: ProcessFamilyRelationship(resource.study, resource.study_meta[0], resource.family_relationship[]);
+//    $this: ProcessSpecimen(resource.study, resource.study_meta[0], resource.specimen[]);
+//    $this: ProcessFamily(resource.study, resource.study_meta[0], resource.family[]);
+//    $this: ProcessFile(resource.study, resource.study_meta[0], resource.file[]);
 }
