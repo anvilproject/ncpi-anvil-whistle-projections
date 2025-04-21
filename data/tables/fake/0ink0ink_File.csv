@@ -1,0 +1,11 @@
+subject,sample,filename,format,data_type,size,drs_uri,file_metadata,has_access_policy,id,external_id
+0ink0ink001,0ink0ink001-biospec,0ink0ink001-biospec-dna.bam,EDAM:2572,EDAM:3494,123456,nhlbi-nih-example/source/0ink0ink-study-files/0ink0ink001-biospec-dna.bam,,0ink-GRU,,
+0ink0ink002,0ink0ink002-biospec,0ink0ink002-biospec-dna.bam,EDAM:2572,EDAM:3494,345678,nhlbi-nih-example/source/0ink0ink-study-files/0ink0ink002-biospec-dna.bam,,0ink-GRU,,
+0ink0ink003,0ink0ink003-biospec,0ink0ink003-biospec-dna.bam,EDAM:2572,EDAM:3494,456789,nhlbi-nih-example/source/0ink0ink-study-files/0ink0ink003-biospec-dna.bam,,0ink-GRU,,
+0ink0ink004,0ink0ink004-biospec,0ink0ink004-biospec-dna.bam,EDAM:2572,EDAM:3494,891011,nhlbi-nih-example/source/0ink0ink-study-files/0ink0ink004-biospec-dna.bam,,0ink-GRU,,
+0ink0ink005,0ink0ink005-biospec,0ink0ink005-biospec-dna.bam,EDAM:2572,EDAM:3494,123456,nhlbi-nih-example/source/0ink0ink-study-files/0ink0ink005-biospec-dna.bam,,0ink-GRU,,
+0ink0ink006,0ink0ink006-biospec,0ink0ink006-biospec-dna.bam,EDAM:2572,EDAM:3494,435263,nhlbi-nih-example/source/0ink0ink-study-files/0ink0ink006-biospec-dna.bam,,0ink-GRU,,
+0ink0ink007,0ink0ink007-biospec,0ink0ink007-biospec-dna.bam,EDAM:2572,EDAM:3494,543526,nhlbi-nih-example/source/0ink0ink-study-files/0ink0ink007-biospec-dna.bam,,0ink-GRU,,
+0ink0ink008,0ink0ink008-biospec,0ink0ink008-biospec-dna.bam,EDAM:2572,EDAM:3494,637482,nhlbi-nih-example/source/0ink0ink-study-files/0ink0ink008-biospec-dna.bam,,0ink-GRU,,
+0ink0ink009,0ink0ink009-biospec,0ink0ink009-biospec-dna.bam,EDAM:2572,EDAM:3494,121232,nhlbi-nih-example/source/0ink0ink-study-files/0ink0ink009-biospec-dna.bam,,0ink-GRU,,
+0ink0ink010,0ink0ink010-biospec,0ink0ink010-biospec-dna.bam,EDAM:2572,EDAM:3494,732894,nhlbi-nih-example/source/0ink0ink-study-files/0ink0ink010-biospec-dna.bam,,0ink-GRU,,

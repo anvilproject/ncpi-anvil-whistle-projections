@@ -1,0 +1,84 @@
+def File(study, file) {
+    meta.tag[]: StudyMeta(study);
+    meta.profile[]: "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/ncpi-file";
+    identifier[]: Key_Identifier(study, "DocumentReference", file.filename);
+    identifier[0].use: "official";
+    resourceType: "DocumentReference";
+    subject.reference: $StrCat("Patient","/",file.subject);
+    extension[]: Format_Extension(file);
+    extension[]: File_Size_Extension(file);
+    status: "current";
+    content[]: Content_Attachment_Extension(file);
+    type.coding[]: {
+        var SplitType: $StrSplit(file.data_type, ":");
+        system: HarmonizeAsSystem(SplitType[0], "curie_system");
+        code: file.data_type;
+    }
+}
+
+def Component_Contents(meta) {
+    code: {
+        coding[]: {
+            code: meta.code;
+            display: meta.display;
+        }
+    }
+
+    valueCodeableConcept.coding[] (if meta.value_code?): {
+        code: meta.value_code;
+        display: meta.value_display;
+        }
+    valueString (if ~meta.value_code?): meta.value_display;
+}
+
+def Content_Attachment_Extension(file) {
+    attachment.url: $StrCat("drs://", file.drs_uri);
+    extension[]:  {
+        url: " https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/location-access";
+        valueReference: {
+            reference: $StrCat("Consent", "/", file.has_access_policy);
+        }
+    }
+}
+
+def Format_Extension(file) {
+    url: "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/file-format";
+    valueCodeableConcept.coding[]: {
+        code: file.format;
+    }
+}
+
+def File_Size_Extension(file) {
+    url: "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/file-size";
+    valueQuantity: {
+        value: $ParseInt(file.size);
+    }
+}
+
+def File_Metadata_Code(resource_code, resource_display, resource_system) {
+        coding[]: {
+            system: resource_system;
+            code: resource_code;
+            display: resource_display;
+        }
+    text: resource_display;
+}
+
+
+def File_Metadata(study, file_metadata) {
+    meta.tag[]: StudyMeta(study);
+    //meta.profile[]: "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/ncpi-file-metadata";
+    identifier[]: Key_Identifier(study, "DocumentReference", file_metadata.filename);
+    identifier[0].use: "official";
+    resourceType: "Observation";
+    status: "final";
+    focus[].reference: $StrCat("DocumentReference", "/", file_metadata.filename);
+    component[]: Component_Contents(file_metadata);
+    code: CompletePartialCoding(file_metadata.code, file_metadata.display, "curie_system");
+}
+
+
+def ProcessFile(study, file) {
+    out file: File(study, file);
+    out file_metadata: File_Metadata(study, file.file_metadata[]);
+} 

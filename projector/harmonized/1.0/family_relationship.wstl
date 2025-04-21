@@ -14,7 +14,7 @@ def FamilyRelationship(study, family_relationship) {
 }
 
 def SubjectReference(subject) {
-    reference: $StrCat("Patient", "/", subject)
+    reference: $StrCat("Patient", "/", subject);
 }
 
 def ProcessFamilyRelationship(study, family_relationship) {
