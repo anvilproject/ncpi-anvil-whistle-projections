@@ -1,7 +1,9 @@
 def Study(config, study_meta) {
     meta.tag[]: StudyMeta(config, study_meta);
     meta.profile[]: "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/ncpi-research-study";
-    id: study_meta.external_id;
+
+    var split_id: FirstIdentifier(study_meta.external_id);
+    id: split_id.identifier;
     resourceType: "ResearchStudy";
     title: study_meta.study_title;
 
@@ -22,7 +24,6 @@ def Study(config, study_meta) {
     var principal_investigators: $StrSplit(study_meta.principal_investigator, "|");
     extension[]: PrincipalInvestigatorExtension(principal_investigators[]);
 }
-
 
 // If no curie, we assume it's ANVIL. Otherwise, we expect the curie to have a valid system from harmony ("study_curie")
 def StudyIdentifier(config, identifier) {
