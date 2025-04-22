@@ -5,7 +5,6 @@ def Family(config, study_meta, family) {
     identifier[0].use: "official";
     resourceType: "Group";
     id: family.family_id;
-    ooga_booga: family;
     extension[]: {
         valueCodeableConcept.coding[]: HarmonizeMappedFirst(family.family_type, "family_type");
         url: "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/family-type";

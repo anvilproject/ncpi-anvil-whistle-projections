@@ -1,4 +1,4 @@
-family_id,family_member,other_family_member,relationship_code,access_policy_id
+family_id,family_member_id,other_family_member_id,relationship_code,access_policy_id
 0inkfam01,0ink0ink007,0ink0ink001,SIS,0ink_GRU
 0inkfam01,0ink0ink001,0ink0ink007,BRO,0ink_GRU
 0inkfam02,0ink0ink006,0ink0ink010,MTH,0ink_GRU
