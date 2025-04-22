@@ -44,5 +44,7 @@ def Family_Members(role) {
 
 
 def ProcessFamily(config, study_meta, family) {
-    out family: Family(config, study_meta, family);
+    var unique_family: $Unique(family);
+
+    out family: Family(config, study_meta, unique_family);
 }
