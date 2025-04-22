@@ -5,6 +5,7 @@ def Family(config, study_meta, family) {
     identifier[0].use: "official";
     resourceType: "Group";
     id: family.family_id;
+    ooga_booga: family;
     extension[]: {
         valueCodeableConcept.coding[]: HarmonizeMappedFirst(family.family_type, "family_type");
         url: "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/family-type";
@@ -44,7 +45,8 @@ def Family_Members(role) {
 
 
 def ProcessFamily(config, study_meta, family) {
-    var unique_family: $Unique(family);
+// We cannot get f_id to come in singular    
+//    var unique_family: family[where $.family_id = f_id] ;
 
-    out family: Family(config, study_meta, unique_family);
+    out family: Family(config, study_meta, family);
 }
