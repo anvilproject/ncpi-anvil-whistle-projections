@@ -1,9 +1,11 @@
-def Study(study, study_meta) {
-    meta.tag[]: StudyMeta(study);
+def Study(config, study_meta) {
+    meta.tag[]: StudyMeta(config, study_meta);
     meta.profile[]: "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/ncpi-research-study";
-    id: study_meta.id;
+
+    var split_id: FirstIdentifier(study_meta.external_id);
+    id: split_id.identifier;
     resourceType: "ResearchStudy";
-    title: study.study_title;
+    title: study_meta.study_title;
 
     if (study_meta.parent_study_id?) {
         partOf[]: {
@@ -11,9 +13,8 @@ def Study(study, study_meta) {
         }
     }    
 
-    var identifiers: $StrSplit(study_meta.external_study_id, "|");
-    identifier[]: Key_Identifier(study, "ResearchStudy", identifiers[]);
-    identifier[0].use: "official";
+    var identifiers: $StrSplit(study_meta.external_id, "|");
+    identifier[]: StudyIdentifier(config, identifiers[]);
 
     status: "active";
 
@@ -22,6 +23,27 @@ def Study(study, study_meta) {
 
     var principal_investigators: $StrSplit(study_meta.principal_investigator, "|");
     extension[]: PrincipalInvestigatorExtension(principal_investigators[]);
+}
+
+// If no curie, we assume it's ANVIL. Otherwise, we expect the curie to have a valid system from harmony ("study_curie")
+def StudyIdentifier(config, identifier) {
+    var SplitId: $StrSplit(identifier, ":");
+    if $ListLen(SplitId) > 1 {
+        var curie: SplitId[0];
+        var identifier_only: SplitId[1];
+        if curie ~= "ANVIL" {
+            var system: HarmonizeAsSystem(curie, "study_curie");
+        } else {
+            var system: config.identifier-prefix;
+            use: "official";
+        } 
+    } else {
+        var identifier_only: identifier;
+        var system: config.identifier-prefix;
+        use: "official";
+    }
+    value: identifier_only;
+    system: system;
 }
 
 def FundingArtifact(funding) {
@@ -45,6 +67,6 @@ def PrincipalInvestigatorExtension(pi) {
     }
 }
 
-def ProcessStudy(study, study_meta) {
-    out research_study: Study(study, study_meta);
+def ProcessStudy(config, study_meta) {
+    out research_study: Study(config, study_meta);
 }

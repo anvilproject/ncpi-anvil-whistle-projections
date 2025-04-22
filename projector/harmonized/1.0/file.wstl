@@ -1,7 +1,7 @@
-def File(study, file) {
-    meta.tag[]: StudyMeta(study);
+def File(config, study_meta, file) {
+    meta.tag[]: StudyMeta(config, study_meta);
     meta.profile[]: "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/ncpi-file";
-    identifier[]: Key_Identifier(study, "DocumentReference", file.filename);
+    identifier[]: Key_Identifier(config, "DocumentReference", file.filename);
     identifier[0].use: "official";
     resourceType: "DocumentReference";
     subject.reference: $StrCat("Patient","/",file.subject);
@@ -65,10 +65,10 @@ def File_Metadata_Code(resource_code, resource_display, resource_system) {
 }
 
 
-def File_Metadata(study, file_metadata) {
-    meta.tag[]: StudyMeta(study);
+def File_Metadata(config, study_meta, file_metadata) {
+    meta.tag[]: StudyMeta(config, study_meta);
     //meta.profile[]: "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/ncpi-file-metadata";
-    identifier[]: Key_Identifier(study, "DocumentReference", file_metadata.filename);
+    identifier[]: Key_Identifier(config, "DocumentReference", file_metadata.filename);
     identifier[0].use: "official";
     resourceType: "Observation";
     status: "final";
@@ -78,7 +78,7 @@ def File_Metadata(study, file_metadata) {
 }
 
 
-def ProcessFile(study, file) {
-    out file: File(study, file);
-    out file_metadata: File_Metadata(study, file.file_metadata[]);
+def ProcessFile(config, study_meta, file) {
+    out file: File(config, study_meta, file);
+    out file_metadata: File_Metadata(config, study_meta, file.file_metadata[]);
 } 

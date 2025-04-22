@@ -1,5 +1,5 @@
 variable_name,description,data_type,enumerations,min,max,Comment
-external_study_id,External Study ID,String,,,,May be pipe delimited
+external_id,External Study ID,String,,,,May be pipe delimited
 parent_study_id,External Study ID,String,,,,
 funding_source,Funding Source,String,,,,May be pipe delimited
 principal_investigator,Principal Investigator,String,,,,May be pipe delimited

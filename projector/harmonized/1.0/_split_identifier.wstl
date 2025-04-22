@@ -1,0 +1,15 @@
+def SplitIdentifier(identifier) {
+    var SplitId: $StrSplit(identifier, ":");
+
+    if $ListLen(SplitId) > 1 {
+        curie: SplitId[0];
+        identifier: SplitId[1];
+    } else {
+        identifier: identifier;
+    }
+}
+
+def FirstIdentifier(identifier) {
+    var identifiers: $StrSplit(identifier, "|");
+    $this: SplitIdentifier(identifiers[0]);
+}

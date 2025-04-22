@@ -2,8 +2,9 @@
 // their data pulls
 
 // Grab the study "ID" as code and use the study's system
-def StudyMeta(study) {
-    var study_identifier: Key_Identifier(study, "ResearchStudy", study.id);
+def StudyMeta(config, study_meta) {
+    var identifier: FirstIdentifier(study_meta.external_id);
+    var study_identifier: Key_Identifier(config, "ResearchStudy", identifier.identifier);
     code: study_identifier.value;
     system: study_identifier.system;
 }

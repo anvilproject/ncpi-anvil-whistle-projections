@@ -1,7 +1,7 @@
-def Specimen(study, specimen) {
-    meta.tag[]: StudyMeta(study);
+def Specimen(config, study_meta, specimen) {
+    meta.tag[]: StudyMeta(config, study_meta);
     //meta.profile[]: "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/ncpi-sample";
-    identifier[]: Key_Identifier(study, "Specimen", specimen.sample_id);
+    identifier[]: Key_Identifier(config, "Specimen", specimen.sample_id);
     identifier[0].use: "official";
     resourceType: "Specimen";
     subject: SubjectReference(specimen.subject_id);
@@ -15,7 +15,7 @@ def Specimen(study, specimen) {
     collection.method.coding[]: {
         code: specimen.biospecimen_collection[0].method;
     }
-    collection._collectedDateTime.extension[0] (if specimen.biospecimen_collection[0].age_at_collection?): AgeAtExtension(study, specimen.biospecimen_collection[0].sample_id, specimen.biospecimen_collection[0].age_at_collection, "years");
+    collection._collectedDateTime.extension[0] (if specimen.biospecimen_collection[0].age_at_collection?): AgeAtExtension(config, specimen.biospecimen_collection[0].sample_id, specimen.biospecimen_collection[0].age_at_collection, "years");
     collection.bodySite.coding[]: {
         code: specimen.biospecimen_collection[0].site;
     }
@@ -53,6 +53,6 @@ def ParentReference(parent) {
       reference: $StrCat("Specimen","/", parent)
 }
 
-def ProcessSpecimen(study, specimen) {
-    out specimen: Specimen(study, specimen);
+def ProcessSpecimen(config, study_meta, specimen) {
+    out specimen: Specimen(config, study_meta, specimen);
 }

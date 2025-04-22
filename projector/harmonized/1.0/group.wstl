@@ -18,14 +18,13 @@ def Group_Participants(subjects) {
       }
     }
 
-def Group(study, subjects) {
-    meta.tag[]: StudyMeta(study);
+def Group(config, study_meta, subjects) {
+    meta.tag[]: StudyMeta(config, study_meta);
     meta.profile[]: "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/research-study-group";
-    
-    identifier[0]: Key_Identifier(study, "Group", study.id);
+    identifier[0]: Key_Identifier(config, "Group", study_meta.external_id);
     identifier[0].use: "official";
-    identifier[1].value (if study.accession?): study.accession;
-    identifier[1].system (if study.accession?): "https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id="
+    identifier[1].value (if config.accession?): config.accession;
+    identifier[1].system (if config.accession?): "https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id="
 
     type: "person";
     actual: true;
@@ -39,7 +38,7 @@ def Group(study, subjects) {
 // 
 //  study - This is the full study object created by Whistler
 //  demo - Array of demo objects  
-def ProcessGroup(study, participant) {
-    out research_study: Group(study, participant);
+def ProcessGroup(config, study_meta, participant) {
+    out research_study: Group(config, study_meta, participant);
 }
 

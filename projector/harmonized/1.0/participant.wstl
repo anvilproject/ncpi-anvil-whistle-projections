@@ -16,12 +16,12 @@ def DobMethod(method) {
 }
 }
 
-def Participant(study, participant) {
-    meta.tag[]: StudyMeta(study);
+def Participant(config, study_meta, participant) {
+    meta.tag[]: StudyMeta(config, study_meta);
     //meta.profile[]: "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/ncpi-participant";
     id: participant.subject_id;
     resourceType: "Patient";
-    identifier[]: Key_Identifier(study, "Patient", participant.subject_id);
+    identifier[]: Key_Identifier(config, "Patient", participant.subject_id);
     identifier[0].use: "official";
 
     var races: $StrSplit(participant.demographics[0].race, "|");
@@ -34,6 +34,6 @@ def Participant(study, participant) {
     extension[]: DobMethod(participant.demographics[0].date_of_birth_type);
 }
 
-def ProcessParticipants(study, participants) {
-    out participant: Participant(study, participants);
+def ProcessParticipants(config, study_meta, participants) {
+    out participant: Participant(config, study_meta, participants);
 }
