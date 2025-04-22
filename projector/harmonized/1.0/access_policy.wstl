@@ -2,7 +2,7 @@ def AccessPolicy(config, study_meta, access_policy) {
     meta.tag[]: StudyMeta(config, study_meta);
     meta.profile[]: "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/ncpi-research-access-policy";
     resourceType: "Consent";
-    identifier[]: Key_Identifier(config, "AccessPolicy", access_policy.id);
+    identifier[]: Key_Identifier(config, "AccessPolicy", access_policy.access_policy_code);
     identifier[0].use: "official";
     extension[]: { 
     url: "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/access-policy-description";
