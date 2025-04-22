@@ -11,7 +11,7 @@ def ConditionAssertion(config, study_meta, condition) {
         var condition_code: condition.code;
     } else {var condition_code: condition.display;}
 
-    identifier[]: BuildConditionIdentifier(config, condition_code, condition.subject_id, condition.value_display);
+    identifier[]: BuildConditionIdentifier(config, condition_code, condition.subject_id);
     identifier[0].use: "official";
     subject: ParticipantsCondition(condition);
     code: CompletePartialCoding(condition.code, condition.display, "curie_system");    
@@ -51,8 +51,8 @@ def BuildAgeAtOnset(config, condition) {
 }
 
 
-def BuildConditionIdentifier(config, required condition_code, required subject_id, value_display) {
-    $this: Key_Identifier(config, "Condition", $StrCat(subject_id, ".", condition_code, ".", value_display));
+def BuildConditionIdentifier(config, required condition_code, required subject_id) {
+    $this: Key_Identifier(config, "Condition", $StrCat(subject_id, ".", condition_code));
 }
 
 def ParticipantsCondition(condition) {
