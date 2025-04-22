@@ -82,7 +82,7 @@ dataset:
     data_dictionary:
       filename: data/dd/family_relationship.csv
   family:
-    filename: data/tables/BHCMG/BH_CMG_Family_Draft.csv
+    filename: data/tables/BHCMG/BH_CMG_Family_Draft_Unique.csv
     data_dictionary:
       filename: data/dd/family.csv
   family_role:
