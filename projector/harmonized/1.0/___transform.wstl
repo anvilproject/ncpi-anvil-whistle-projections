@@ -1,9 +1,9 @@
 // Right now, we assume the primary study will always come first in that string. 
 def BuildConfig(resource) {
-    var SplitExternalId: $StrSplit(resource.study_meta[0].external_id, "|");
+    var SplitExternalId: $StrSplit(resource.study_meta[0].external_study_id, "|");
     var primary_identifier: SplitIdentifier(SplitExternalId[0]);
     identifier-prefix: $StrCat("https://anvilproject.org/fhir/", primary_identifier.identifier);
-    id: resource.study_meta[0].external_id;
+    id: resource.study_meta[0].external_study_id;
     study_meta: resource.study_meta[0];
 }
 
