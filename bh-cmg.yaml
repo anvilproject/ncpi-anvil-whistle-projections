@@ -73,10 +73,10 @@ dataset:
     embed:
       dataset: participant
       colname: subject_id
-  # access_policy:
-  #   filename: data/tables/BHCMG/BH_CMG_AccessPolicy_Draft.csv
-  #   data_dictionary:
-  #     filename: data/dd/access_policy.csv
+  access_policy:
+    filename: data/tables/BHCMG/BH_CMG_AccessPolicy_Draft.csv
+    data_dictionary:
+      filename: data/dd/access_policy.csv
   family_relationship:
     filename: data/tables/BHCMG/BH_CMG_FamilyMember_Draft.csv
     data_dictionary:
