@@ -19,7 +19,7 @@ projections:
 # theoretically, we could have more than one. 
 harmony:
   # This is the file containing the harmony concept map. 
-  filename: fake/data-harmony.json 
+  filename: harmony/fake/data-harmony.json 
   # This could be used inside whistle if we wanted to harmonize different
   # chunks of code to different mappings. In this case, "data-harmony" is
   # used in the actual Whistle Harmony function call
