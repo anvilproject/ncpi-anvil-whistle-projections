@@ -1,0 +1,27 @@
+# This is a first pass of a piper configuration which 
+
+
+# Projection definition is required for each of the whistle repositories. This
+# will inform Piper which options are valid. 
+# The projection "module" and its version will determine which projection 
+# directory to pass to whistle 
+projections:
+  modules:
+    - harmonized: 
+        path: projector/harmonized
+        whistle_src: projector/harmonized/_entry.wstl
+
+  # Presumably, the caller should be able to override this. 
+  default_version: current 
+  default_module: harmonized
+
+# For now, we'll just assume we have a single harmony file, but
+# theoretically, we could have more than one. 
+harmony:
+  # This is the file containing the harmony concept map. 
+  filename: harmony/fake/data-harmony.json 
+  # This could be used inside whistle if we wanted to harmonize different
+  # chunks of code to different mappings. In this case, "data-harmony" is
+  # used in the actual Whistle Harmony function call
+  prefix: data-harmony 
+  
