@@ -13,6 +13,7 @@ projections:
 
   # Presumably, the caller should be able to override this. 
   default_version: current 
+  default_module: harmonized
 
 # For now, we'll just assume we have a single harmony file, but
 # theoretically, we could have more than one. 
