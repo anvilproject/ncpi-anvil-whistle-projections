@@ -1,16 +1,19 @@
 def FamilyRelationship(config, study_meta, family_relationship) {
+    var relationship_code: HarmonizeMappedFirst(family_relationship.relationship_code, "family_member");
+    if relationship_code? {
     meta.tag[]: StudyMeta(config, study_meta);
     meta.profile[]: "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/ncpi-family-relationship";
 
     // No id because we don't have id data - YAC 4/8/25 
     id: family_relationship.id;
-    identifier[]: Key_Identifier(config, "Observation", $StrCat(family_relationship.family_member, "-", family_relationship.other_family_member));
+    identifier[]: Key_Identifier(config, "Observation", $StrCat(family_relationship.family_member_id, "-", family_relationship.other_family_member));
     identifier[0].use: "official";
     resourceType: "Observation";
     status: "final";
-    subject: SubjectReference(family_relationship.family_member);
-    focus[]: SubjectReference(family_relationship.other_family_member);
+    subject: SubjectReference(family_relationship.family_member_id);
+    focus[]: SubjectReference(family_relationship.other_family_member_d);
     code.coding[]: HarmonizeMappedFirst(family_relationship.relationship_code, "family_member");
+    }
 }
 
 def SubjectReference(subject) {

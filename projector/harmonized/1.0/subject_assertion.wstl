@@ -9,9 +9,11 @@ def ConditionAssertion(config, study_meta, condition) {
 
     if (condition.code?) {
         var condition_code: condition.code;
-    } else {var condition_code: condition.display;}
+    } else {
+        var condition_code: condition.display;
+        }
 
-    identifier[]: BuildConditionIdentifier(config, condition_code, condition.subject_id);
+    identifier[]: BuildConditionIdentifier(config, condition_code, condition.subject_id, condition);
     identifier[0].use: "official";
     subject: ParticipantsCondition(condition);
     code: CompletePartialCoding(condition.code, condition.display, "curie_system");    
@@ -50,9 +52,16 @@ def BuildAgeAtOnset(config, condition) {
     _valueDateTime.extension[]: AgeAtExtension(config, condition.subject_id, condition.age_at_event, "years")
 }
 
+def GetAssertionValue(assertion) {
+    var value (if assertion.value_display?): assertion.value_display;
+    var value (if assertion.value_number?): assertion.value_number;
+    var value (if assertion.value_code?): assertion.value_code;
+    $this: value;
+}
 
-def BuildConditionIdentifier(config, required condition_code, required subject_id) {
-    $this: Key_Identifier(config, "Condition", $StrCat(subject_id, ".", condition_code));
+def BuildConditionIdentifier(config, required condition_code, required subject_id, condition) {
+    var value: GetAssertionValue(condition);
+    $this: Key_Identifier(config, "Condition", $StrCat(subject_id, "|", condition_code, "|", value));
 }
 
 def ParticipantsCondition(condition) {
@@ -95,7 +104,7 @@ def SubjectAssertion(config, study_meta, assertion){
         var assertion_code: assertion.code;
     } else {var assertion_code: assertion.display;}
 
-    identifier[]: BuildConditionIdentifier(config, assertion_code, assertion.subject_id);
+    identifier[]: BuildConditionIdentifier(config, assertion_code, assertion.subject_id, assertion);
     identifier[0].use: "official";
     subject: ParticipantsCondition(assertion);
     code: CompletePartialCoding(assertion.code, assertion.display, "curie_system");    

@@ -44,5 +44,8 @@ def Family_Members(role) {
 
 
 def ProcessFamily(config, study_meta, family) {
+// We cannot get f_id to come in singular    
+//    var unique_family: family[where $.family_id = f_id] ;
+
     out family: Family(config, study_meta, family);
 }

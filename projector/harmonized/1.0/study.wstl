@@ -2,7 +2,7 @@ def Study(config, study_meta) {
     meta.tag[]: StudyMeta(config, study_meta);
     meta.profile[]: "https://nih-ncpi.github.io/ncpi-fhir-ig-2/StructureDefinition/ncpi-research-study";
 
-    var split_id: FirstIdentifier(study_meta.external_id);
+    var split_id: FirstIdentifier(study_meta.external_study_id);
     id: split_id.identifier;
     resourceType: "ResearchStudy";
     title: study_meta.study_title;
@@ -13,7 +13,7 @@ def Study(config, study_meta) {
         }
     }    
 
-    var identifiers: $StrSplit(study_meta.external_id, "|");
+    var identifiers: $StrSplit(study_meta.external_study_id, "|");
     identifier[]: StudyIdentifier(config, identifiers[]);
 
     status: "active";
