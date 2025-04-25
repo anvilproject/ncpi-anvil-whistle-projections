@@ -6,10 +6,11 @@
 # The projection "module" and its version will determine which projection 
 # directory to pass to whistle 
 projections:
+  directory: projector
   modules:
     - harmonized: 
-        path: projector/harmonized
-        whistle_src: projector/harmonized/_entry.wstl
+        module_name: harmonized
+        whistle_src: _entry.wstl
 
   # Presumably, the caller should be able to override this. 
   default_version: current 
@@ -19,7 +20,8 @@ projections:
 # theoretically, we could have more than one. 
 harmony:
   # This is the file containing the harmony concept map. 
-  filename: harmony/fake/data-harmony.json 
+  path: harmony/fake
+  
   # This could be used inside whistle if we wanted to harmonize different
   # chunks of code to different mappings. In this case, "data-harmony" is
   # used in the actual Whistle Harmony function call
